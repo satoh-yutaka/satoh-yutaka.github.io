@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>あなたの名前 - 研究者プロフィール</title>
+  <title>Your Name - Academic Profile</title>
   <style>
     :root {
       --bg-color: #ffffff;
       --text-color: #222222;
       --accent-color: #007acc;
-      --sidebar-width: 240px;
       --transition-speed: 0.3s;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,174 +16,149 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--text-color);
       background: var(--bg-color);
-      display: flex;
       min-height: 100vh;
-      overflow-x: hidden;
     }
-    /* サイドバー */
-    .sidebar {
+    /* Header & Navigation */
+    header {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: var(--sidebar-width);
-      height: 100%;
-      background: var(--bg-color);
-      border-right: 1px solid #e0e0e0;
+      top: 0; left: 0;
+      width: 100%; background: var(--bg-color);
+      border-bottom: 1px solid #e0e0e0; z-index: 1000;
+    }
+    .nav-container {
+      max-width: 960px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 1rem;
-      transform: translateX(0);
-      transition: transform var(--transition-speed) ease;
-      z-index: 1000;
     }
-    .sidebar .nav-close {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      cursor: pointer;
-    }
-    .nav-list {
-      list-style: none;
-      margin-top: 2rem;
-    }
-    .nav-list li + li {
-      margin-top: 1rem;
-    }
+    .site-title { font-size: 1.25rem; font-weight: 600; }
+    .nav-list { list-style: none; display: flex; gap: 1.5rem; }
     .nav-list a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-      transition: color var(--transition-speed) ease;
+      text-decoration: none; color: var(--text-color);
+      font-weight: 500; transition: color var(--transition-speed) ease;
     }
-    .nav-list a:hover {
-      color: var(--accent-color);
-    }
-    /* ヘッダー（モバイル時） */
-    .header {
-      position: fixed;
-      top: 0;
-      left: var(--sidebar-width);
-      right: 0;
-      height: 60px;
-      background: var(--bg-color);
-      border-bottom: 1px solid #e0e0e0;
-      display: none;
-      align-items: center;
-      padding: 0 1rem;
-      z-index: 900;
-    }
-    .site-title {
-      font-size: 1.25rem;
-    }
+    .nav-list a:hover { color: var(--accent-color); }
     .nav-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      margin-right: 1rem;
+      display: none; font-size: 1.5rem;
+      background: none; border: none; cursor: pointer;
     }
-    /* コンテンツ */
+    .mobile-nav {
+      display: none; flex-direction: column;
+      background: var(--bg-color); border-top: 1px solid #e0e0e0;
+    }
+    .mobile-nav a {
+      padding: 0.75rem 1rem; border-bottom: 1px solid #e0e0e0;
+      text-decoration: none; color: var(--text-color);
+    }
+    /* Content */
     .content {
-      margin-left: var(--sidebar-width);
-      padding: 80px 2rem 2rem;
-      flex: 1;
+      max-width: 960px; margin: 0 auto;
+      padding: 120px 1rem 2rem;
     }
-    section {
+    section { margin-bottom: 4rem; }
+    section h2 {
+      font-size: 1.75rem; margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block; padding-bottom: 0.25rem;
+    }
+    /* Profile Intro Section */
+    .profile-section {
+      display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;
       margin-bottom: 4rem;
     }
-    section h2 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--accent-color);
-      display: inline-block;
-      padding-bottom: 0.25rem;
+    .profile-pic {
+      flex: 0 0 200px; max-width: 200px; border-radius: 50%; overflow: hidden;
     }
-    /* レスポンシブ */
+    .profile-pic img {
+      width: 100%; height: auto; display: block;
+    }
+    .profile-info {
+      flex: 1;
+    }
+    .affiliation {
+      font-size: 1rem; color: #555; margin-top: 0.5rem;
+    }
+    /* Responsive */
     @media (max-width: 768px) {
-      .sidebar {
-        transform: translateX(-100%);
-      }
-      .header {
-        display: flex;
-      }
-      .nav-toggle {
-        display: block;
-      }
-      .sidebar.show {
-        transform: translateX(0);
-      }
-      .sidebar .nav-close {
-        display: block;
-      }
-      .content {
-        margin-left: 0;
-        padding-top: 80px;
-      }
+      .nav-list { display: none; }
+      .nav-toggle { display: block; }
+      .mobile-nav.show { display: flex; }
+      .content { padding-top: 120px; }
+      .profile-section { flex-direction: column; text-align: center; }
+      .profile-pic { margin: 0 auto; }
     }
   </style>
 </head>
 <body>
-  <nav class="sidebar">
-    <button class="nav-close" aria-label="閉じる">&times;</button>
-    <ul class="nav-list">
-      <li><a href="#about">私について</a></li>
-      <li><a href="#topics">トピックス</a></li>
-      <li><a href="#keywords">研究キーワード</a></li>
-      <li><a href="#themes">テーマ & 主要論文</a></li>
-      <li><a href="#awards">受賞歴</a></li>
-      <li><a href="#society">学会活動</a></li>
-      <li><a href="#academic">学術業務</a></li>
-    </ul>
-  </nav>
-  <header class="header">
-    <button class="nav-toggle" aria-label="メニューを開く">&#9776;</button>
-    <h1 class="site-title">あなたの名前</h1>
+  <header>
+    <div class="nav-container">
+      <h1 class="site-title">Your Name</h1>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#keywords">Research Keywords</a></li>
+        <li><a href="#themes">Themes &amp; Key Papers</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#society">Society Activities</a></li>
+        <li><a href="#academic">Academic Affairs</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav">
+      <a href="#about">About</a>
+      <a href="#topics">Topics</a>
+      <a href="#keywords">Research Keywords</a>
+      <a href="#themes">Themes &amp; Key Papers</a>
+      <a href="#awards">Awards</a>
+      <a href="#society">Society Activities</a>
+      <a href="#academic">Academic Affairs</a>
+    </div>
   </header>
   <main class="content">
     <section id="about">
-      <h2>私について</h2>
-      <p>ここに自己紹介文を入力してください。所属や研究分野などを記載します。</p>
+      <div class="profile-section">
+        <div class="profile-pic">
+          <img src="path/to/your-photo.jpg" alt="Your Name">
+        </div>
+        <div class="profile-info">
+          <h2>About Me</h2>
+          <p class="affiliation">Affiliation / Position</p>
+          <p>Your self-introduction goes here. Write about your background, research interests, and any key info.</p>
+        </div>
+      </div>
     </section>
     <section id="topics">
-      <h2>トピックス</h2>
-      <p>現在の研究トピックや講演情報などを入力してください。</p>
+      <h2>Topics</h2>
+      <p>List current research topics or presentations here.</p>
     </section>
     <section id="keywords">
-      <h2>研究キーワード</h2>
-      <p>研究に関連するキーワードを列挙します。</p>
+      <h2>Research Keywords</h2>
+      <p>Enumerate keywords relevant to your work.</p>
     </section>
     <section id="themes">
-      <h2>テーマ &amp; 主要論文</h2>
-      <p>研究テーマと主要論文を紹介します。</p>
+      <h2>Themes &amp; Key Papers</h2>
+      <p>Describe major themes and list key publications.</p>
     </section>
     <section id="awards">
-      <h2>受賞歴</h2>
-      <p>受賞歴を記載します。</p>
+      <h2>Awards</h2>
+      <p>Detail your awards and honors.</p>
     </section>
     <section id="society">
-      <h2>学会活動</h2>
-      <p>学会活動や役職を記載します。</p>
+      <h2>Society Activities</h2>
+      <p>List professional society roles and memberships.</p>
     </section>
     <section id="academic">
-      <h2>学術業務</h2>
-      <p>教育活動や委員会、学術サービスなどを記載します。</p>
+      <h2>Academic Affairs</h2>
+      <p>Outline teaching, committee work, and service.</p>
     </section>
   </main>
   <script>
-    const sidebar = document.querySelector('.sidebar');
     const navToggle = document.querySelector('.nav-toggle');
-    const navClose = document.querySelector('.nav-close');
-
+    const mobileNav = document.querySelector('.mobile-nav');
     navToggle.addEventListener('click', () => {
-      sidebar.classList.add('show');
+      mobileNav.classList.toggle('show');
     });
-    navClose.addEventListener('click', () => {
-      sidebar.classList.remove('show');
-    });
-    // モバイル時にリンク選択で閉じる
-    document.querySelectorAll('.nav-list a').forEach(link => {
-      link.addEventListener('click', () => sidebar.classList.remove('show'));
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.remove('show'));
     });
   </script>
 </body>
