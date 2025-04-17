@@ -65,17 +65,22 @@
       display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;
       margin-bottom: 4rem;
     }
+    .profile-pic-wrapper {
+      flex: 0 0 200px; max-width: 200px;
+      text-align: center;
+    }
     .profile-pic {
-      flex: 0 0 200px; max-width: 200px; border-radius: 50%; overflow: hidden;
+      border-radius: 50%; overflow: hidden;
+      width: 200px; height: 200px; margin: 0 auto;
     }
     .profile-pic img {
       width: 100%; height: auto; display: block;
     }
-    .profile-info {
-      flex: 1;
-    }
     .affiliation {
       font-size: 1rem; color: #555; margin-top: 0.5rem;
+    }
+    .profile-info {
+      flex: 1;
     }
     /* Responsive */
     @media (max-width: 768px) {
@@ -84,7 +89,7 @@
       .mobile-nav.show { display: flex; }
       .content { padding-top: 120px; }
       .profile-section { flex-direction: column; text-align: center; }
-      .profile-pic { margin: 0 auto; }
+      .profile-pic-wrapper { margin: 0 auto; }
     }
   </style>
 </head>
@@ -116,12 +121,14 @@
   <main class="content">
     <section id="about">
       <div class="profile-section">
-        <div class="profile-pic">
-          <img src="path/to/your-photo.jpg" alt="Your Name">
+        <div class="profile-pic-wrapper">
+          <div class="profile-pic">
+            <img src="path/to/your-photo.jpg" alt="Your Name">
+          </div>
+          <p class="affiliation">Affiliation / Position</p>
         </div>
         <div class="profile-info">
           <h2>About Me</h2>
-          <p class="affiliation">Affiliation / Position</p>
           <p>Your self-introduction goes here. Write about your background, research interests, and any key info.</p>
         </div>
       </div>
