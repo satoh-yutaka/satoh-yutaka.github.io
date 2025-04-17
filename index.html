@@ -3,66 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Academic Profile</title>
+  <title>佐藤 雄隆 博士（工学）（Yutaka Satoh, Ph.D.）</title>
   <style>
     :root {
       --bg-color: #ffffff;
       --text-color: #222222;
       --accent-color: #007acc;
+      --secondary-color: #555555;
+      --degree-color: #444444;
       --transition-speed: 0.3s;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
+        padding-left: 2rem;
+        padding-right: 2rem;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--text-color);
       background: var(--bg-color);
       min-height: 100vh;
     }
-    /* Header & Navigation */
+    /* Header with Banner and Last Updated */
     header {
-      position: fixed;
-      top: 0; left: 0;
+      position: fixed; top: 0; left: 0;
       width: 100%; background: var(--bg-color);
       border-bottom: 1px solid #e0e0e0; z-index: 1000;
     }
-    .nav-container {
+    .header-inner {
       max-width: 960px; margin: 0 auto;
+      padding: 0.5rem 1rem;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem;
     }
-    .site-title { font-size: 1.25rem; font-weight: 600; }
-    .nav-list { list-style: none; display: flex; gap: 1.5rem; }
-    .nav-list a {
-      text-decoration: none; color: var(--text-color);
-      font-weight: 500; transition: color var(--transition-speed) ease;
+    .site-banner { display: block; height: 60px; object-fit: contain; }
+    .last-updated {
+      font-size: 0.875rem;
+      color: var(--secondary-color);
     }
-    .nav-list a:hover { color: var(--accent-color); }
-    .nav-toggle {
-      display: none; font-size: 1.5rem;
-      background: none; border: none; cursor: pointer;
-    }
-    .mobile-nav {
-      display: none; flex-direction: column;
-      background: var(--bg-color); border-top: 1px solid #e0e0e0;
-    }
-    .mobile-nav a {
-      padding: 0.75rem 1rem; border-bottom: 1px solid #e0e0e0;
-      text-decoration: none; color: var(--text-color);
-    }
-    /* Banner */
-    .banner {
-      margin-top: 60px; /* header height */
-      width: 100%;
-      overflow: hidden;
-    }
-    .banner img {
-      width: 100%; display: block;
-      object-fit: cover;
-    }
-    /* Content */
+
+    /* Content (padding for header only) */
     .content {
       max-width: 960px; margin: 0 auto;
-      padding: 300px 1rem 2rem; /* adjust top padding for header + banner */
+      padding: 120px 1rem 2rem;
     }
     section { margin-bottom: 4rem; }
     section h2 {
@@ -70,110 +50,177 @@
       border-bottom: 2px solid var(--accent-color);
       display: inline-block; padding-bottom: 0.25rem;
     }
+
     /* Profile Section */
     .profile-section {
-      display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;
-      margin-bottom: 4rem;
+      display: flex; flex-wrap: wrap; gap: 2rem;
+      align-items: center; margin-bottom: 4rem;
     }
-    .profile-pic {
-      flex: 0 0 200px; max-width: 200px;
-      border-radius: 50%; overflow: hidden;
+    .profile-pic { flex: 0 0 180px; max-width: 180px; border-radius: 50%; overflow: hidden; }
+    .profile-pic img { width: 100%; height: auto; display: block; }
+    .profile-info { flex: 1; }
+
+    /* Name styling */
+    .profile-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
     }
-    .profile-pic img {
-      width: 100%; height: auto; display: block;
-    }
-    .profile-info {
-      flex: 1;
+    /* Degree styling: slightly smaller */
+    .profile-degree {
+      font-size: 0.85em;
+      color: var(--degree-color);
     }
     .affiliation {
-      font-size: 1rem; color: #555; margin: 0.5rem 0;
+      font-size: 1rem; color: var(--secondary-color); margin-bottom: 1rem;
     }
+    .profile-info p:not(.profile-name):not(.affiliation) { margin-bottom: 0.75rem; }
+
     /* Responsive */
     @media (max-width: 768px) {
-      .nav-list { display: none; }
-      .nav-toggle { display: block; }
-      .mobile-nav.show { display: flex; }
-      .banner { margin-top: 60px; }
-      .content { padding-top: 300px; }
+      .content { padding-top: 100px; }
       .profile-section { flex-direction: column; text-align: center; }
+      .header-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="nav-container">
-      <h1 class="site-title">Your Name</h1>
-      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
-      <ul class="nav-list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#topics">Topics</a></li>
-        <li><a href="#keywords">Research Keywords</a></li>
-        <li><a href="#themes">Themes &amp; Key Papers</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#society">Society Activities</a></li>
-        <li><a href="#academic">Academic Affairs</a></li>
-      </ul>
-    </div>
-    <div class="mobile-nav">
-      <a href="#about">About</a>
-      <a href="#topics">Topics</a>
-      <a href="#keywords">Research Keywords</a>
-      <a href="#themes">Themes &amp; Key Papers</a>
-      <a href="#awards">Awards</a>
-      <a href="#society">Society Activities</a>
-      <a href="#academic">Academic Affairs</a>
-    </div>
-    <div class="banner">
-      <img src="https://staff.aist.go.jp/yu.satou/images/top008s.jpg" alt="Banner">
+    <div class="header-inner">
+      <a href="#top"><img src="https://satoh-yutaka.github.io/images/top008.jpg" alt="Banner" class="site-banner"></a>
+      <div class="last-updated">Last updated: 2025-04-17</div>
     </div>
   </header>
-  <main class="content">
+  <main id="top" class="content">
     <section id="about">
       <div class="profile-section">
         <div class="profile-pic">
-          <img src="path/to/your-photo.jpg" alt="Your Name">
+          <img src="https://satoh-yutaka.github.io/images/photo-face2.jpg" alt="Satoh, Yutaka">
         </div>
         <div class="profile-info">
-          <h2>About Me</h2>
-          <p class="affiliation">Affiliation / Position</p>
-          <p>Your self-introduction goes here. Write about your background, research interests, and any key info.</p>
+          <div class="profile-name">
+            佐藤 雄隆， <span class="profile-degree">博士（工学）</span><br>
+            Yutaka Satoh, Ph.D.
+          </div>
+          <div class="affiliation">
+            国立研究開発法人産業技術総合研究所<br>
+            人工知能研究センター 首席研究員<br>
+            Principal Researcher, AIRC, AIST.
+          </div>
+          <p>
+            （兼）筑波大学大学院 理工情報生命学術院<br>
+            情報理工学位プログラム 教授（連携大学院）<br>
+            Professor, University of Tsukuba.
+          </p>
+          <p>
+            E-mail: &#121;&#117;&#46;&#115;&#97;&#116;&#111;&#117;&#32;&#65;&#84;&#32;&#97;&#105;&#115;&#116;&#46;&#103;&#111;&#46;&#106;&#112;
+          </p>
         </div>
       </div>
     </section>
-    <section id="topics">
-      <h2>Topics</h2>
-      <p>List current research topics or presentations here.</p>
-    </section>
+
+    <!-- ----------------------------------------------------------------- -->
+      <section id="topics">
+        <h2>Topics</h2>
+        <p>
+          <img src="https://staff.aist.go.jp/yu.satou/images/check_mark_s.png">
+          <b><a href="./univ.htm">筑波大学連携大学院「佐藤研究室」</a>では，修士および博士課程の学生を受け入れています．</b>
+          産総研の先端的な研究環境で学びつつ<b>筑波大学の学位を取得できます</b>．
+          全国の大学・高専（専攻科）等からの受験を歓迎しています．
+          詳しくは
+          <a href="./univ.htm">
+            こちら
+          </a>
+          をご覧ください．<br><br>
+
+          まずは，&#121;&#117;&#46;&#115;&#97;&#116;&#111;&#117;&#32;&#65;&#84;&#32;&#97;&#105;&#115;&#116;&#46;&#103;&#111;&#46;&#106;&#112; （ATを@に変更して使用してください。）まで遠慮無くご相談下さい．<br>
+          <b>Admissions:</b> Cooperative Graduate School Program (master's & doctoral course), University of Tsukuba. Please see <a href="http://www.cs.tsukuba.ac.jp/english/admission.html" target="_blank"> here</a>.<br>
+
+          <br><hr width=80%>
+    <!----------------------->
+	<img src="https://staff.aist.go.jp/yu.satou/images/check_mark_s.png">
+	<b>産総研論文賞2022を受賞しました．</b><br>
+	「Pre-training without Natural Images」(IJCV論文)</b>
+	<br>
+	FY2022 AIST Best paper award<br>
+
+	<a href="https://www.aist.go.jp/aist_j/aist_award/2022/abpa.html#no3" target="_blank">
+	→産総研論文賞</a><br>
+    <br><hr width=80%>
+        
+  <!----------------------->
+	<img src="https://staff.aist.go.jp/yu.satou/images/check_mark_s.png">
+	<b>産総研論文賞2019を受賞しました．</b><br>
+	「Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet?」(CVPR2018論文)</b>
+	<br>
+	FY2019 AIST Best paper award<br>
+
+	<a href="https://www.aist.go.jp/aist_j/aist_award/2019/abpa.html#no3" target="_blank">
+	→産総研論文賞</a><br>
+	<a href="http://openaccess.thecvf.com/content_cvpr_2018/html/Hara_Can_Spatiotemporal_3D_CVPR_2018_paper.html" target="_blank">→CVPR2018 open access</a><br>
+    <br><hr width=80%>
+
+        
+    <!----------------------->
+	<img src="https://staff.aist.go.jp/yu.satou/images/check_mark_s.png">
+	<b>
+	プレス発表：「直射日光下でのパターン投影による高速形状計測に成功」
+	</b><br>
+	キネクトのようなパターン光投影型形状計測を<u>直射日光下でも</u>可能にしました．<br>
+	<a href="http://www.aist.go.jp/aist_j/press_release/pr2017/pr20170714/pr20170714.html" target="_blank">→産総研プレスリリース</a><br>
+	<a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.html" target="_blank">→CVPR2017 open access</a><br>
+	<b>Press release:</b> Please see <a href="http://www.aist.go.jp/aist_j/press_release/pr2017/pr20170714/pr20170714.html" target="_blank"> here</a> and <a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.html" target="_blank"> here</a>.<br>
+    <br><hr width=80%>
+
+  <!----------------------->
+	<img src="https://staff.aist.go.jp/yu.satou/images/check_mark_s.png">
+	<b>
+	科学技術分野の文部科学大臣表彰 
+	「若手科学者賞」</b>
+	を受賞いたしました．
+	<br>
+	<b>Minister's Prize:</b> The Young Scientists' Prize, The Commendation for Science and Technology by the Minister of Education, Culture, Sports, Science and Technology.<br>
+
+	<a href="http://www.aist.go.jp/aist_j/news/prize/itemid025-000059.html"  target="_blank">
+	→受賞</a>
+      
+        </p>
+      </section>
+
+    <!-- ----------------------------------------------------------------- -->
     <section id="keywords">
       <h2>Research Keywords</h2>
       <p>Enumerate keywords relevant to your work.</p>
     </section>
+
+    <!-- ----------------------------------------------------------------- -->
     <section id="themes">
       <h2>Themes &amp; Key Papers</h2>
       <p>Describe major themes and list key publications.</p>
+
+    <!-- ----------------------------------------------------------------- -->
     </section>
     <section id="awards">
       <h2>Awards</h2>
       <p>Detail your awards and honors.</p>
+
+    <!-- ----------------------------------------------------------------- -->
     </section>
     <section id="society">
       <h2>Society Activities</h2>
       <p>List professional society roles and memberships.</p>
+
+    <!-- ----------------------------------------------------------------- -->
     </section>
     <section id="academic">
       <h2>Academic Affairs</h2>
       <p>Outline teaching, committee work, and service.</p>
     </section>
+
+    <!-- ----------------------------------------------------------------- -->
+
   </main>
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const mobileNav = document.querySelector('.mobile-nav');
-    navToggle.addEventListener('click', () => {
-      mobileNav.classList.toggle('show');
-    });
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-      link.addEventListener('click', () => mobileNav.classList.remove('show'));
-    });
-  </script>
 </body>
 </html>
