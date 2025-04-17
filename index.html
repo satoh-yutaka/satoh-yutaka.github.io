@@ -49,10 +49,20 @@
       padding: 0.75rem 1rem; border-bottom: 1px solid #e0e0e0;
       text-decoration: none; color: var(--text-color);
     }
+    /* Banner */
+    .banner {
+      margin-top: 60px; /* header height */
+      width: 100%;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%; display: block;
+      object-fit: cover;
+    }
     /* Content */
     .content {
       max-width: 960px; margin: 0 auto;
-      padding: 120px 1rem 2rem;
+      padding: 300px 1rem 2rem; /* adjust top padding for header + banner */
     }
     section { margin-bottom: 4rem; }
     section h2 {
@@ -83,7 +93,8 @@
       .nav-list { display: none; }
       .nav-toggle { display: block; }
       .mobile-nav.show { display: flex; }
-      .content { padding-top: 120px; }
+      .banner { margin-top: 60px; }
+      .content { padding-top: 300px; }
       .profile-section { flex-direction: column; text-align: center; }
     }
   </style>
@@ -111,6 +122,9 @@
       <a href="#awards">Awards</a>
       <a href="#society">Society Activities</a>
       <a href="#academic">Academic Affairs</a>
+    </div>
+    <div class="banner">
+      <img src="https://staff.aist.go.jp/yu.satou/images/top008s.jpg" alt="Banner">
     </div>
   </header>
   <main class="content">
