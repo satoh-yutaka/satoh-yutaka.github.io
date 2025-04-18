@@ -25,7 +25,7 @@
     /* Header with Banner and Last Updated */
     header {
       position: fixed; top: 0; left: 0;
-      width: 100%; background: var(--bg-color);
+      width: 100%; background: #f8f8f8;
       border-bottom: 1px solid #e0e0e0; z-index: 1000;
     }
     .header-inner {
@@ -80,9 +80,50 @@
 
     /* Responsive */
       @media (max-width: 768px) {
+        /* Profiles stack */
         .content { padding-top: 100px; }
-        .profile-section { flex-direction: column; text-align: center; }
+        .profile-section { flex-direction: column; }
+        .profile-info { text-align: left; }
         .header-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
+        /* Themes & Key Papers: switch to column flex for stacking */
+        #themes table {
+          display: flex !important;
+          flex-direction: column !important;
+          width: 100% !important;
+        }
+        #themes table tr {
+          display: flex !important;
+          flex-direction: column !important;
+          width: 100% !important;
+        }
+        #themes table td[valign="top"],
+        #themes table td[align="right"] {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 1rem !important;
+          padding: 0 !important;
+        }
+        .content { padding-top: 100px; }
+        /* Profile section stacks with left-align text */
+        .profile-section { flex-direction: column; }
+        .profile-info { text-align: left; }
+        .header-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
+        /* Themes & Key Papers: stack list above images on narrow screens */
+        #themes table {
+          display: block !important;
+          width: 100% !important;
+        }
+        #themes table tr {
+          display: block !important;
+        }
+        #themes table td[valign="top"],
+        #themes table td[align="right"] {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 1rem !important;
+          padding: 0 !important;
+        }
+      
       }
       /* Themes & Key Papers Table Flex Layout */
       #themes table {
@@ -114,7 +155,23 @@
       #themes table td[valign="top"] ul li {
         margin-bottom: 0.2rem;
       }
-    </style>
+          /* Maintain fixed image width on mobile for Themes & Key Papers */
+      @media (max-width: 768px) {
+        #themes table td[align="right"] img {
+          width: 200px !important;
+          margin: 0 auto;
+        }
+      }
+        /* Footer styling */
+    .site-footer {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.875rem;
+      color: var(--secondary-color);
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -419,5 +476,12 @@
     <!-- ----------------------------------------------------------------- -->
 
   </main>
+  <footer class="site-footer">
+    &copy; <span id="current-year">2025</span> Yutaka Satoh. All Rights Reserved.
+  </footer>
+  <!-- Dynamic year script -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
