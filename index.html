@@ -84,8 +84,34 @@
         .profile-section { flex-direction: column; text-align: center; }
         .header-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
         /* Themes & Key Papers mobile wrap */
-        #themes table { flex-wrap: wrap; }
-        #themes table td[align="right"] { flex: 1 1 100%; width: 100%; margin-top: 1rem; }
+              /* Themes & Key Papers Table Flex Layout */
+      #themes table {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border: none;
+      }
+      #themes table tr {
+        display: flex;
+        width: 100%;
+      }
+      /* Left column: list takes approx. 60% */
+      #themes table td[valign="top"] {
+        flex: 2 1 60%;
+        padding-right: 1rem;
+      }
+      /* Right column: images take approx. 35% and shrink as needed */
+      #themes table td[align="right"] {
+        flex: 1 1 35%;
+        text-align: center;
+      }
+      /* Ensure images scale within their container */
+      #themes table td[align="right"] img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        max-width: 100%;
+      }
       }
       /* Themes & Key Papers Table Flex Layout */
       #themes table {
