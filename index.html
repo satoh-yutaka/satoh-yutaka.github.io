@@ -81,10 +81,20 @@
     /* Responsive */
       @media (max-width: 768px) {
         /* Profiles stack */
-        .content { padding-top: 100px; }
-        .profile-section { flex-direction: column; }
+        .content {
+      max-width: 960px; margin: 0 auto;
+      padding: 120px 1rem 2rem;
+    }
+        .profile-section {
+      display: flex; flex-wrap: wrap; gap: 2rem;
+      align-items: center; margin-bottom: 4rem;
+    }
         .profile-info { text-align: left; }
-        .header-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
+        .header-inner {
+      max-width: 960px; margin: 0 auto;
+      padding: 0.5rem 1rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
         /* Themes & Key Papers: switch to column flex for stacking */
         #themes table {
           display: flex !important;
@@ -322,144 +332,39 @@
       <!----------------------->
 
     	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>DNNを活用した静止画像／動画像解析（2014～）</b><br>
-    	Deep Neural Network based Image / Video Analysis
-    	<br><br>
-    	<table width=100% border=0 cellspacing=0 cellpadding=0>
-    	<tr>
-    	<td valign="top">
-              <button id="themes-toggle" class="toggle-button">Show Key Publications ▼</button>
-              <div class="themes-content collapsed">
-                <ul>
-    
-    	<li>R Yamada, K Hara, H Kataoka, K Makihara, N Inoue, R Yokota, Y Satoh, 
-    	"Formula-Supervised Visual-Geometric Pre-training", 
-    	Proceedings of the European Conference on Computer Vision (ECCV2024), 
-    	pp.57-74, 2024.
-    
-    	<li>Fumiya Matsuzawa, Yue Qiu, Yanjun Sun, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, 
-    	Subtle-Diff: A Dataset for Precise Recognition of Subtle Differences Among Visually Similar Objects, 
-    	Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS2024), 
-    	pp.5888-5894, 2024.
-    
-    	<li>Fumiya Matsuzawa, Yue Qiu, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, 
-    	"Question Generation for Uncertainty Elimination in Referring Expressions in 3D Environments", 
-    	Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2023), 
-    	pp.6146-6152, 2023.
-    
-    	<li>K Nakashima, H Kataoka, A Matsumoto, K Iwata, N Inoue, Y Satoh, 
-    	"Can vision transformers learn without natural images?", 
-    	Proceedings of the AAAI Conference on Artificial Intelligence (AAAI2022), 
-    	36 (2), pp.1990-1998, 2022.
-    
-    	<li>Kataoka Hirokatsu, Matsumoto Asato, Yamagata Eisuke, Yamada Ryosuke, Inoue Nakamasa, Akio Nakamura, Satoh Yutaka, 
-    	"Pre-training without natural images", 
-    	International Journal of Computer Vision (IJCV), 
-    	130 (4), pp.990-1007, 2022.
-    	<br><font color="#990000" size=-1 >Award: 産総研論文賞2022</font><br>
-    
-    	<li>Kensho Hara, Hirokatsu Kataoka, Masaki Inaba, Kenichi Narioka, Ryusuke Hotta, Yutaka Satoh, 
-    	"Predicting appearance of vehicles from blind spots based on pedestrian behaviors at crossroads", 
-    	IEEE transactions on intelligent transportation systems, 23 (8), 
-    	pp.11917-11929, 2021
-    
-    	<li>Yue Qiu, Shintaro Yamamoto, Kodai Nakashima, Ryota Suzuki, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, 
-    	"Describing and localizing multiple changes with transformers", 
-    	Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV2021), 
-    	pp.1971-1980, 2021.
-    
-    	<li>Hirokatsu Kataoka, Teppei Suzuki, Kodai Nakashima, Yutaka Satoh, Yoshimitsu Aoki, 
-    	"Joint pedestrian detection and risk-level prediction with motion-representation-by-detection", 
-    	Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2020), 
-    	pp.1021-1027, 2020.
-    
-    	<li>Hirokatsu Kataoka, Kazushige Okayasu, Asato Matsumoto, Eisuke Yamagata, Ryosuke Yamada, Nakamasa Inoue, Akio Nakamura, Yutaka Satoh, 
-    	Pre-training without natural images, 
-    	Proceedings of the Asian Conference on Computer Vision (ACCV2020),
-    	2020.
-    	<br><font color="#990000" size=-1 >Award: ACCV 2020 Best Paper Honorable Mention Award</font><br>
-    
-    	<li>Hirokatsu Kataoka, Yutaka Satoh, 
-    	"Unsupervised out-of-context action understanding", 
-    	Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2019), 
-    	pp.8227-8233, 2019.
-    
-    	<li>相澤宏旭,片岡裕雄,佐藤雄隆,加藤邦人, 
-    	Viewpoint-agnostic Image Rendering, 
-    	第25回画像センシングシンポジウム(SSII2019)講演論文集, 
-    	2019.
-    	<br><font color="#990000" size=-1 >Award: 画像センシングシンポジウム優秀学術賞</font><br>
-    
-    	<li>Kensho Hara, Hirokatsu Kataoka, Yutaka Satoh，
-    	<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hara_Can_Spatiotemporal_3D_CVPR_2018_paper.pdf" target="_blank">
-    	"Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet ?"，
-    	Proc. Conference on Computer Vision and Pattern Recognition (CVPR2018)</a>
-    	，pp.6546-6555，2018．
-    	*** 
-    	<a href="https://github.com/kenshohara/3D-ResNets-PyTorch" target="_blank">
-    	GitHub (4K+ stars !)
-    	</a>
-    	<br><font color="#990000" size=-1 >Award: 産総研論文賞2019</font><br>
-    
-    	<li>Tomoyuki Suzuki, Hirokatsu Kataoka, Yoshimitsu Aoki, Yutaka Satoh，
-    	<a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0494.pdf" target="_blank">
-    	"Anticipating Traffic Accidents with Adaptive Loss and Large-scale Incident DB"，
-    	Proc. Conference on Computer Vision and Pattern Recognition (CVPR2018)
-    	</a>
-    	，pp.3521-3529，2018．<br>
-    
-    	<li>Hirokatsu Kataoka, Teppei Suzuki, Shoko Oikawa, Yasuhiro Matsui, Yutaka Satoh，
-    	"Drive Video Analysis for the Detection of Traffic Near-Miss Incidents"，
-    	Proc. IEEE International Conference on Robotics and Automation (ICRA2018)，pp.3421-3428，2018.<br>
-    
-    	<li>Hirokatsu Kataoka, Yudai Miyashita Masaki Hayashi, Kenji Iwata, Yutaka Satoh，
-    	"Recognition of Transitional Action for Short-Term Action Prediction using Discriminative Temporal CNN Feature"，
-    	Proc. of British Machine Vision Conference (BMVC2016)，Online，2016．<br>
-    
-    	<li>Hirokatsu Kataoka, Yoshimitsu Aoki, Yutaka Satoh, Shoko Oikawa, Yasuhiro Matsui ，
-    	"Fine-grained Walking Activity Recognition via Driving Recorder Dataset"，
-    	Proc. of 2015 IEEE 18th International Conference on Intelligent Transportation Systems (ITSC2015)，pp.620-625，2015．<br>
-    
-    	<!--
-    	<li>Hirokatsu Kataoka, Yutaka Satoh, Yoshimitsu Aoki, Masako Oikawa, Yasuhiro Matsui，
-    	"Temporal and Fine-Grained Pedestrian Action Recognition on Driving Recorder Database"，
-    	SENSORS，Vol.18, No.2，doi: 10.3390/s18020627，2018．<br>
-    	-->
-    
-    	<li>Kensho Hara, Hirokatsu Kataoka, Yutaka Satoh，
-    	"Towards Good Practice for Action Recognition with Spatiotemporal 3D Convolutions"，
-    	Proc. International Conference on Pattern Recognition (ICPR2018)，pp.2516-2521，2018．<br>
-    
-    	<!--
-    	<li>QIU YUE, 佐藤雄隆，鈴木亮太，片岡裕雄，
-    	"多視点を前提とした三次元空間尤度投票型物体認識"，
-    	精密工学会論文誌，Vol.83, No.12，pp.1125-1130，2017．<br>
-    	-->
-    
-    	<li>賀 雲,片岡 裕雄,白壁 奏馬,佐藤 雄隆，
-    	"人を見ない人物行動認識"，
-    	ビジョン技術の実利用ワークショップ(ViEW2016)講演論文集，USB，2016．<br>
-    	<font color="#990000" size=-1 >Award: 平成28年精密工学会画像応用技術専門委員会若手奨励賞受賞</font><br>
-    
-    	<li>Kaori Abe,Teppei Suzuki,Shunya Ueta,Akio Nakamura,Yutaka Satoh,Hirokatsu Kataoka，
-    	"Dynamic Fashion Cultures"，
-    	Proc. MIRU2017，2017．<br>
-    	<font color="#990000" size=-1 >Award: MIRU学生優秀賞受賞</font><br>
-    
-    	</ul>
-              </div>
-            </td>
-    	<td width=10></td>
-    
-    	<td align=right valign=top width=175>
-    	<img src="https://satoh-yutaka.github.io/images/NIDB.png"><br>
-    	<center><font size=-1>Analysis of Dashcam Footage</font></center><br>
-    	<img src="https://satoh-yutaka.github.io/images/3Dconv.png"><br>
-    	<center><font size=-1>3D ResNets for Action Recognition</font></center>
-    	</td>
-    	</tr>
-    	</table>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+  <div style="flex: 1; min-width: 200px;">
+    <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
+    <b>DNNを活用した静止画像／動画像解析（2014～）</b><br>
+    Deep Neural Network based Image / Video Analysis
+    <br><br>
+    <button class="toggle-button">Show Key Publications ▼</button>
+    <div class="themes-content collapsed">
+      <ul>
+        <li>R Yamada, K Hara, H Kataoka, K Makihara, N Inoue, R Yokota, Y Satoh, "Formula-Supervised Visual-Geometric Pre-training", Proceedings of the European Conference on Computer Vision (ECCV2024), pp.57-74, 2024.</li>
+        <li>Fumiya Matsuzawa, Yue Qiu, Yanjun Sun, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, Subtle-Diff: A Dataset for Precise Recognition of Subtle Differences Among Visually Similar Objects, Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS2024), pp.5888-5894, 2024.</li>
+        <li>Fumiya Matsuzawa, Yue Qiu, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, "Question Generation for Uncertainty Elimination in Referring Expressions in 3D Environments", Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2023), pp.6146-6152, 2023.</li>
+        <li>K Nakashima, H Kataoka, A Matsumoto, K Iwata, N Inoue, Y Satoh, "Can vision transformers learn without natural images?", Proceedings of the AAAI Conference on Artificial Intelligence (AAAI2022), 36 (2), pp.1990-1998, 2022.</li>
+        <li>Kataoka Hirokatsu, Matsumoto Asato, Yamagata Eisuke, Yamada Ryosuke, Inoue Nakamasa, Akio Nakamura, Satoh Yutaka, "Pre-training without natural images", International Journal of Computer Vision (IJCV), 130 (4), pp.990-1007, 2022.<br><font color="#990000" size=-1 >Award: 産総研論文賞2022</font></li>
+        <li>Kensho Hara, Hirokatsu Kataoka, Masaki Inaba, Kenichi Narioka, Ryusuke Hotta, Yutaka Satoh, "Predicting appearance of vehicles from blind spots based on pedestrian behaviors at crossroads", IEEE transactions on intelligent transportation systems, 23 (8), pp.11917-11929, 2021</li>
+        <li>Yue Qiu, Shintaro Yamamoto, Kodai Nakashima, Ryota Suzuki, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, "Describing and localizing multiple changes with transformers", Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV2021), pp.1971-1980, 2021.</li>
+        <li>Hirokatsu Kataoka, Teppei Suzuki, Kodai Nakashima, Yutaka Satoh, Yoshimitsu Aoki, "Joint pedestrian detection and risk-level prediction with motion-representation-by-detection", Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2020), pp.1021-1027, 2020.</li>
+        <li>Hirokatsu Kataoka, Kazushige Okayasu, Asato Matsumoto, Eisuke Yamagata, Ryosuke Yamada, Nakamasa Inoue, Akio Nakamura, Yutaka Satoh, Pre-training without natural images, Proceedings of the Asian Conference on Computer Vision (ACCV2020), 2020.<br><font color="#990000" size=-1 >Award: ACCV 2020 Best Paper Honorable Mention Award</font></li>
+        <li>Hirokatsu Kataoka, Yutaka Satoh, "Unsupervised out-of-context action understanding", Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2019), pp.8227-8233, 2019.</li>
+        <li>相澤宏旭,片岡裕雄,佐藤雄隆,加藤邦人, Viewpoint-agnostic Image Rendering, 第25回画像センシングシンポジウム(SSII2019)講演論文集, 2019.<br><font color="#990000" size=-1 >Award: 画像センシングシンポジウム優秀学術賞</font></li>
+        <li>Kensho Hara, Hirokatsu Kataoka, Yutaka Satoh，<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hara_Can_Spatiotemporal_3D_CVPR_2018_paper.pdf" target="_blank">"Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet ?"， Proc. Conference on Computer Vision and Pattern Recognition (CVPR2018)</a>，pp.6546-6555，2018．<br><font color="#990000" size=-1 >Award: 産総研論文賞2019</font></li>
+        <li>Tomoyuki Suzuki, Hirokatsu Kataoka, Yoshimitsu Aoki, Yutaka Satoh，<a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0494.pdf" target="_blank">"Anticipating Traffic Accidents with Adaptive Loss and Large-scale Incident DB"， Proc. Conference on Computer Vision and Pattern Recognition (CVPR2018)</a>，pp.3521-3529，2018．</li>
+        <li>Hirokatsu Kataoka, Teppei Suzuki, Shoko Oikawa, Yasuhiro Matsui, Yutaka Satoh，"Drive Video Analysis for the Detection of Traffic Near-Miss Incidents"，Proc. IEEE International Conference on Robotics and Automation (ICRA2018)，pp.3421-3428，2018.</li>
+      </ul>
+    </div>
+  </div>
+  <div style="flex: 0 0 200px; text-align: center;">
+    <img src="https://satoh-yutaka.github.io/images/NIDB.png"><br>
+    <center><font size=-1>Analysis of Dashcam Footage</font></center><br>
+    <img src="https://satoh-yutaka.github.io/images/3Dconv.png"><br>
+    <center><font size=-1>3D ResNets for Action Recognition</font></center>
+  </div>
+</div>
          <!----------------------->
 
     	<br><br>
@@ -775,7 +680,7 @@
     	<td width=10></td>
     
     	<td align=right valign=top width=175>
-    	<img src="https://satoh-yutaka.github.io/images/GA.jpg"><br>
+    	<img src="https://satoh-yutaka.github.io/images/GA.jpg" style="width:100%; height:auto;"><br>
     	<img src="https://satoh-yutaka.github.io/images/GA.gif" style="width:50%; height:auto;"><br>
     	<center><font size=-1>Genetic Generation of Image Processing Pipeline from Input to Goal<br><br></font></center>
     	</td>
@@ -835,182 +740,15 @@
     <section id="society">
       <h2>Professional Activities</h2>
       <p>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2025）, 組織委員, ステアリングコミッティ, 2024-2025.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2024), プログラム委員, 2024.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2024）, 組織委員, ステアリングコミッティ, 2023-2024.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2023), プログラム委員, 2023.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2023）, 組織委員, ステアリングコミッティ, 2022-2023.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2022), プログラム委員, 2022.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2022）, 組織委員, ステアリングコミッティ, 2021-2022.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2021), プログラム委員, 2021.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2021）, 組織委員, ステアリングコミッティ, 2020-2021.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2020), 実行委員, 2020.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2020）, 組織委員, ステアリングコミッティ, 2019-2020.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2019), 実行委員, 2019.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2019）, 実行委員長, 2018-2019.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2018), 実行委員, 2018.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2018）, 実行委員長, 2017-2018.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2017), 実行委員, 2017.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2017）, 運営委員長, 2016-2017.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 動的画像処理実利用化ワークショップ (DIA2017), プログラム委員, 2016-2017.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2016), 実行委員, 2016.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 動的画像処理実利用化ワークショップ (DIA2016), プログラム委員, 2015-2016.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2016）, プログラム委員長, 2015-2016.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 JEITA 認識形入力方式標準化専門委員会 委員長, 2016-2021<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 動的画像処理実利用化ワークショップ (DIA2015), プログラム副委員長, 2014-2015.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2015), 実行委員, 2015.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2015）, 表彰小委員会委員, 2014-2015.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 電子情報通信学会 情報・システムソサイエティ学会誌編集連絡委員／会誌編集委員 2015-2016.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像応用技術専門委員会　委員 2015-.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2014), 実行委員, 2014.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2014）, オーガナイズドセッション部会長, 2013-2014.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 20th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2014), Program Committee, 2013-2014.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 2013 International Symposium on Optomechatronic Technologies (ISOT2013), Program Committee, 2012-2013.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2013), 実行委員, 2013.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2013）, 表彰小委員会副委員長, 2012-2013.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 19th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2013), Scientific Committee, 2012-2013.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2012), 実行委員, 2012.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2012）, プログラム委員長, 2011-2012.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 18th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2012), Scientific Committee, 2011-2012.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2011), 実行委員, 2011.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 電子情報通信学会英文論文誌MVA特集号, 論文編集委員幹事, 2011.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 IAPR Conference on Machine Vision Applications (MVA2011), Secretary to Program Chair, 2010-2011.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2011）, 表彰小委員会副委員長, 2010-.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 17th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2011), 組織委員, 2011.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 JEITA 認識形入力方式標準化専門委員会 委員, 2010-2015<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2010), 実行委員, 2010.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 16th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2010), 組織委員, 2010.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 電気学会「スマートビジョン協同研究委員会」, 協同研究委員, 2009-.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2009), 実行委員幹事, 2009.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 15th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2009), 組織委員, 2009.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2008), 実行委員幹事, 2008.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII08）, 実行委員, 2008.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 14th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2008), 組織委員, 2008.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 電気学会「ビジョンのシステム制御技術への適用協同研究委員会」, 協同研究委員, 2007-2009.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 動的画像処理実利用化ワークショップ（DIA2008）, プログラム委員, 2007-2008.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2007), 実行委員幹事補佐, 2007.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII07）, 実行委員, 2007.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 電気学会「多次元センシング情報の産業利用に関する調査専門委員会」, 調査専門委員, 2007-.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 13th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2007), 組織委員, 2007.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 動的画像処理実利用化ワークショップ (DIA2007), 実行委員, 2006.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2006), 実行委員, 2006.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 12th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2006), 組織委員, 2006.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 電気学会「画像監視および画像認識のシステム制御技術への適用調査専門委員会」, 調査専門委員, 2005-2007.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII06）, プログラム委員, 2005.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 電子情報通信学会英文論文誌MVA特集号, 論文編集委員, 2005.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 SPIE International Symposium on Optomechatronic Technologies 2005 (ISOT2005), 実行委員, 2005.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2005), 実行委員, 2005.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 11th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2005), 組織委員, 2005.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2004), 実行委員, 2004.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 IAPR Conference on Machine Vision Applications (MVA2005), 実行委員, 2004-2005.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 動的画像処理実利用化ワークショップ (DIA2004), 実行委員, 2004.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 10th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2004), 組織委員, 2004.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 ビジョン技術の実利用ワークショップ (ViEW2003), 実行委員, 2003.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 9th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2003), 組織委員, 2003.<br>
-	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 The 8th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2002), 組織委員, 2002.<br>
-    
+
+        Test
       </p>
 
     <!-- ----------------------------------------------------------------- -->
     </section>
     <section id="academic">
       <h2>Academic Appointments</h2>
-      <p>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	筑波大学大学院 教授（連携大学院）(2008-2017 准教授，2017-教授)<br>
-	Professor (Cooperative Graduate School Program), University of Tsukuba<br>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	筑波大学非常勤講師 (2008-)「情報学特別講義」<br>
-	Part-time instructor, University of Tsukuba<br>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	東京工業大学 非常勤講師（2015-2021）「ロボット技術」<br>
-	Part-time instructor, Tokyo Institute of Technology<br>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	筑波大学非常勤講師 (2011-2015)「先端情報技術」<br>
-	Part-time instructor, University of Tsukuba<br>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	電気通信大学 非常勤講師 (2009-2015)「情報システム学特別講義 I」<br>
-	Part-time instructor, University of Electro-Communications<br>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	東京大学 非常勤講師（2007）「学際理数情報学特論」<br>
-	Part-time instructor, University of Tokyo<br>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	北海道工業大学 非常勤講師（1998-2000）「静力学・動力学の応用」<br>
-	Part-time instructor, Hokkaido Institute of Technology<br>
-      </p>
+      <p>Test</p>
     </section>
 
     <!-- ----------------------------------------------------------------- -->
