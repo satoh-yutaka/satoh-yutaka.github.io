@@ -176,13 +176,14 @@
       #themes-toggle { display: none !important; }
       .themes-content { display: block !important; }
     }
+      .themes-content.collapsed { display: none !important; }
   </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
       <a href="#top"><img src="https://satoh-yutaka.github.io/images/top008.jpg" alt="Banner" class="site-banner"></a>
-      <div class="last-updated">Last updated: 2025-04-17</div>
+      
     </div>
   </header>
   <main id="top" class="content">
@@ -283,7 +284,7 @@
 
     <!-- ----------------------------------------------------------------- -->
     <section id="keywords">
-      <h2>Research Keywords</h2>
+      <h2>Areas of Interest</h2>
       <p>
         <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">	
     	コンピュータビジョン - computer vision systems<br>
@@ -314,7 +315,7 @@
 
     <!-- ----------------------------------------------------------------- -->
     <section id="themes">
-      <h2>Themes &amp; Key Papers</h2>
+      <h2>Research Themes &amp; Key Publications</h2>
       <p>
     	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
     	<b><u>全文献リストは<a href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ" target="_blank">こちら</a>，Paper list is <a href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ" target="_blank">here</a>.</u></b>
@@ -328,7 +329,7 @@
     	<table width=100% border=0 cellspacing=0 cellpadding=0>
     	<tr>
     	<td valign="top">
-              <button id="themes-toggle" class="toggle-button">Show Key Papers ▼</button>
+              <button id="themes-toggle" class="toggle-button">Show Key Publications ▼</button>
               <div class="themes-content collapsed">
                 <ul>
     
@@ -465,19 +466,19 @@
     <!-- ----------------------------------------------------------------- -->
     </section>
     <section id="awards">
-      <h2>Awards</h2>
+      <h2>Awards &amp; Honors</h2>
       <p>Detail your awards and honors.</p>
 
     <!-- ----------------------------------------------------------------- -->
     </section>
     <section id="society">
-      <h2>Society Activities</h2>
+      <h2>Professional Activities</h2>
       <p>List professional society roles and memberships.</p>
 
     <!-- ----------------------------------------------------------------- -->
     </section>
     <section id="academic">
-      <h2>Academic Affairs</h2>
+      <h2>Academic Appointments</h2>
       <p>Outline teaching, committee work, and service.</p>
     </section>
 
@@ -485,10 +486,20 @@
 
   </main>
   <footer class="site-footer">
+    <div class="last-updated">Last updated: <span id="last-updated-date"></span></div>
     &copy; <span id="current-year">2025</span> Yutaka Satoh. All Rights Reserved.
   </footer>
   <!-- Dynamic year script -->
   <script>
+    // Insert current date in YY-MM-DD format for last updated
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    document.getElementById('last-updated-date').textContent = `${yyyy}-${mm}-${dd}`;
+
+    // Update copyright year
+
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
   <script>
@@ -509,7 +520,7 @@
       document.getElementById('themes-toggle').addEventListener('click', function() {
         const content = document.querySelector('.themes-content');
         content.classList.toggle('collapsed');
-        this.textContent = content.classList.contains('collapsed') ? 'Show Key Papers ▼' : 'Hide Key Papers ▲';
+        this.textContent = content.classList.contains('collapsed') ? 'Show Key Papers ▼' : 'Hide Key Publications ▲';
       });
     });
   </script>
