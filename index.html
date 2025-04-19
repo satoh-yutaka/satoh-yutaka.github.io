@@ -171,6 +171,11 @@
       color: var(--secondary-color);
       margin-top: 2rem;
     }
+      /* Desktop: hide toggle, always show Themes content */
+    @media (min-width: 769px) {
+      #themes-toggle { display: none !important; }
+      .themes-content { display: block !important; }
+    }
   </style>
 </head>
 <body>
@@ -323,7 +328,9 @@
     	<table width=100% border=0 cellspacing=0 cellpadding=0>
     	<tr>
     	<td valign="top">
-    	<ul>
+              <button id="themes-toggle" class="toggle-button">Show Key Papers ▼</button>
+              <div class="themes-content collapsed">
+                <ul>
     
     	<li>R Yamada, K Hara, H Kataoka, K Makihara, N Inoue, R Yokota, Y Satoh, 
     	"Formula-Supervised Visual-Geometric Pre-training", 
@@ -440,7 +447,8 @@
     	<font color="#990000" size=-1 >Award: MIRU学生優秀賞受賞</font><br>
     
     	</ul>
-    	</td>
+              </div>
+            </td>
     	<td width=10></td>
     
     	<td align=right valign=top width=175>
@@ -482,6 +490,28 @@
   <!-- Dynamic year script -->
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    function initThemesToggle() {
+      const btn = document.getElementById('themes-toggle');
+      const content = document.querySelector('.themes-content');
+      if (window.innerWidth <= 768) {
+        content.classList.add('collapsed');
+        btn.style.display = 'inline-block';
+      } else {
+        content.classList.remove('collapsed');
+        btn.style.display = 'none';
+      }
+    }
+    window.addEventListener('resize', initThemesToggle);
+    document.addEventListener('DOMContentLoaded', function() {
+      initThemesToggle();
+      document.getElementById('themes-toggle').addEventListener('click', function() {
+        const content = document.querySelector('.themes-content');
+        content.classList.toggle('collapsed');
+        this.textContent = content.classList.contains('collapsed') ? 'Show Key Papers ▼' : 'Hide Key Papers ▲';
+      });
+    });
   </script>
 </body>
 </html>
