@@ -909,7 +909,7 @@ Only applicants who pass the entrance exam for the master’s or doctoral progra
 
   </main>
   <footer class="site-footer">
-    <div class="last-updated">Last updated: <span id="last-updated-date"></span></div>
+    <div class="last-updated">Last updated: 2025-04-20</div>
     &copy; <span id="current-year">2025</span> Yutaka Satoh. All Rights Reserved.
   </footer>
   <!-- Dynamic year script -->
@@ -920,12 +920,9 @@ Only applicants who pass the entrance exam for the master’s or doctoral progra
     const yyyy = today.getFullYear();
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const dd = String(today.getDate()).padStart(2, '0');
-    -->
-    const yyyy = 1999;
-    const mm = 99;
-    const dd = 99;
     document.getElementById('last-updated-date').textContent = `${yyyy}-${mm}-${dd}`;
-
+    -->
+	    
     // Update copyright year
 
     document.getElementById('current-year').textContent = new Date().getFullYear();
