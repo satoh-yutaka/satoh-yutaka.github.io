@@ -211,17 +211,27 @@
     z-index: 999;
 }
 
+.main-nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0.95), transparent);
+    pointer-events: none;
+}
+	  
   .main-nav ul {
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    padding: 0.5rem 1rem;
-    margin: 0 auto;
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin; /* Firefox */
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; /* prevent scrollbar overlap */
   }
 .main-nav li {
   margin: 0 1rem;
