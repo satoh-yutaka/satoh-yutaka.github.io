@@ -207,14 +207,18 @@
     z-index: 999;
 }
 
-.main-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0.5rem 1rem;
-  margin: 0 auto;
-  max-width: 960px;
-}
+  .main-nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
 .main-nav li {
   margin: 0 1rem;
 }
