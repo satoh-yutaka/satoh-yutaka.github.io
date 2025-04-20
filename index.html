@@ -200,13 +200,13 @@
       .themes-content { display: block !important; }
     }
       .themes-content.collapsed { display: none !important; }
-  .main-nav {
-  position: sticky;
-  top: 85px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid #ddd;
-  z-index: 999;
+.main-nav {
+    position: sticky;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
 }
+
 .main-nav ul {
   display: flex;
   justify-content: center;
@@ -226,6 +226,16 @@
 }
 .main-nav a:hover {
   color: var(--accent-color);
+}
+@media screen and (min-width: 769px) {
+  .main-nav {
+    top: 85px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-nav {
+    top: 50px;
+  }
 }
   </style>
 </head>
