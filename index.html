@@ -200,6 +200,33 @@
       .themes-content { display: block !important; }
     }
       .themes-content.collapsed { display: none !important; }
+  .main-nav {
+  position: sticky;
+  top: 85px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  max-width: 960px;
+}
+.main-nav li {
+  margin: 0 1rem;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.main-nav a:hover {
+  color: var(--accent-color);
+}
   </style>
 </head>
 <body>
@@ -209,6 +236,17 @@
       
     </div>
   </header>
+<nav class="main-nav">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#topics">Topics</a></li>
+    <li><a href="#keywords">Areas of Interest</a></li>
+    <li><a href="#themes">Research Themes</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#society">Activities</a></li>
+    <li><a href="#academic">Appointments</a></li>
+  </ul>
+</nav>
   <main id="top" class="content">
     <section id="about">
       <div class="profile-section">
