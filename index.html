@@ -915,10 +915,15 @@ Only applicants who pass the entrance exam for the master’s or doctoral progra
   <!-- Dynamic year script -->
   <script>
     // Insert current date in YY-MM-DD format for last updated
+    <!--
     const today = new Date();
     const yyyy = today.getFullYear();
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const dd = String(today.getDate()).padStart(2, '0');
+    -->
+    const yyyy = "1999";
+    const mm = "99";
+    const dd = "99";
     document.getElementById('last-updated-date').textContent = `${yyyy}-${mm}-${dd}`;
 
     // Update copyright year
