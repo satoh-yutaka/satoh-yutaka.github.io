@@ -28,6 +28,13 @@
         background: var(--bg-color);
         min-height: 100vh;
       }
+
+      @media (max-width: 768px) {
+        body {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
       /* Header with Banner and Last Updated */
       header {
         position: fixed;
@@ -118,7 +125,7 @@
         .content {
           max-width: 960px;
           margin: 0 auto;
-          padding: 200px 1rem 2rem;
+          padding: 100px 1rem 2rem;
         }
         .profile-section {
           display: flex;
@@ -222,6 +229,16 @@
           top: 50px;
         }
       }
+      .lab-info {
+        color: #404040;
+        font-size: 25px;
+      }
+
+      @media (max-width: 768px) {
+        .lab-info {
+          font-size: 18px; /* スマホ用に適度に縮小 */
+        }
+      }
     </style>
   </head>
 
@@ -250,14 +267,14 @@
     <main id="top" class="content">
       <section id="about">
         <img src="./images/univ_banner_horiz2.jpg" />
-        <p style="color: #404040; font-size: 25px">
+        <p class="lab-info">
           <b>
             筑波大学大学院 システム情報工学研究群<br />
             情報理工学位プログラム<br />
             ヒューマンセンタードビジョン研究室<br />
             （佐藤研究室）<br /><br />
-            教授（連携大学院）佐藤 雄隆<br
-          /></b>
+            教授（連携大学院）佐藤 雄隆<br />
+          </b>
         </p>
       </section>
 
