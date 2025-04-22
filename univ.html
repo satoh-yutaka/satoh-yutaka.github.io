@@ -239,6 +239,20 @@
           font-size: 16px; /* スマホ用に適度に縮小 */
         }
       }
+
+      .affiliation-block {
+        border-left: 3px solid var(--accent-color2);
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        color: #404040;
+        font-size: 25px;
+      }
+
+      @media (max-width: 768px) {
+        .affiliation-block {
+          font-size: 16px; /* スマホ用に適度に縮小 */
+        }
+      }
     </style>
   </head>
 
@@ -269,14 +283,16 @@
         <img src="./images/univ_banner_horiz2.jpg" />
         <p class="lab-info">
           <b>
-            筑波大学 理工情報生命学術院<br />
-            システム情報工学研究群<br />
-            情報理工学位プログラム<br />
-            ヒューマンセンタードビジョン研究室<br />
-            （佐藤研究室）<br /><br />
+            筑波大学 理工情報生命学術院 システム情報工学研究群<br />
+            情報理工学位プログラム </b
+          ><br /><br />
+        </p>
+        <div class="affiliation-block">
+          <b>
+            ヒューマンセンタードビジョン研究室 （佐藤研究室）<br />
             教授（連携大学院）佐藤 雄隆<br />
           </b>
-        </p>
+        </div>
       </section>
 
       <!-- ----------------------------------------------------------------- -->
