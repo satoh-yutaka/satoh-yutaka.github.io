@@ -1,128 +1,179 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>佐藤 雄隆 博士（工学）（Yutaka Satoh, Ph.D.）</title>
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #222222;
-      --accent-color: #007acc;
-      --accent-color2: #ff9900;
-      --secondary-color: #555555;
-      --degree-color: #444444;
-      --transition-speed: 0.3s;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>佐藤 雄隆 博士（工学）（Yutaka Satoh, Ph.D.）</title>
+    <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #222222;
+        --accent-color: #007acc;
+        --accent-color2: #ff9900;
+        --secondary-color: #555555;
+        --degree-color: #444444;
+        --transition-speed: 0.3s;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
         padding-left: 2rem;
         padding-right: 2rem;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      color: var(--text-color);
-      background: var(--bg-color);
-      min-height: 100vh;
-    }
-    /* Header with Banner and Last Updated */
-  header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 85px;
-  background-color: #f7f7f7;
-  background-image: url('https://satoh-yutaka.github.io/images/header.png');
-  background-size: cover;
-  background-position: left center;
-  background-repeat: no-repeat;
-  border-bottom: 1px solid #e0e0e0;
-  z-index: 1000;
-}
-    .header-inner {
-      max-width: 960px; margin: 0 auto;
-      padding: 0.5rem 1rem;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .site-banner {
-  display: none;
-}
-    .last-updated {
-      font-size: 0.875rem;
-      color: var(--secondary-color);
-    }
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        color: var(--text-color);
+        background: var(--bg-color);
+        min-height: 100vh;
+      }
+      /* Header with Banner and Last Updated */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 85px;
+        background-color: #f7f7f7;
+        background-image: url("./images/header.png");
+        background-size: cover;
+        background-position: left center;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+      }
+      .header-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-    /* Content (padding for header only) */
-    .content {
-  max-width: 960px; margin: 0 auto;
-  padding: 150px 1rem 2rem;
-    }
-	section {
- 	 scroll-margin-top: 125px;  /* ナビゲーションでジャンプしたときの縦マージン（ナビゲーションバーにコンテンツの先頭が隠れるのを防止） */
- 	 margin-bottom: 4rem;
-        }
+      .icon-check {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-image: url("./images/check_mark_s.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 0.3em;
+        vertical-align: middle;
+      }
 
-    section h2 {
-      font-size: 1.75rem; margin-bottom: 1rem;
-      border-bottom: 2px solid var(--accent-color);
-      display: inline-block; padding-bottom: 0.25rem;
-    }
-	  
-  .affiliation-block {
-    border-left: 3px solid var(--accent-color);
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-  }
-  .affiliation-block2 {
-    border-left: 3px solid var(--accent-color2);
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-  }
-    /* Profile Section */
-    .profile-section {
-      display: flex; flex-wrap: wrap; gap: 2rem;
-      align-items: center; margin-bottom: 4rem;
-    }
-    .profile-pic { flex: 0 0 180px; max-width: 180px; border-radius: 50%; overflow: hidden; }
-    .profile-pic img { width: 100%; height: auto; display: block; }
-    .profile-info { flex: 1; }
+      .site-banner {
+        display: none;
+      }
+      .last-updated {
+        font-size: 0.875rem;
+        color: var(--secondary-color);
+      }
 
-    /* Name styling */
-    .profile-name {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--text-color);
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    /* Degree styling: slightly smaller */
-    .profile-degree {
-      font-size: 0.85em;
-      color: var(--degree-color);
-    }
-    .affiliation {
-      font-size: 1rem; color: var(--secondary-color); margin-bottom: 1rem;
-    }
-    .profile-info p:not(.profile-name):not(.affiliation) { margin-bottom: 0.75rem; }
+      /* Content (padding for header only) */
+      .content {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 150px 1rem 2rem;
+      }
+      section {
+        scroll-margin-top: 125px; /* ナビゲーションでジャンプしたときの縦マージン（ナビゲーションバーにコンテンツの先頭が隠れるのを防止） */
+        margin-bottom: 4rem;
+      }
 
-    /* Responsive */
+      section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid var(--accent-color);
+        display: inline-block;
+        padding-bottom: 0.25rem;
+      }
+
+      .affiliation-block {
+        border-left: 3px solid var(--accent-color);
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+      .affiliation-block2 {
+        border-left: 3px solid var(--accent-color2);
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+      /* Profile Section */
+      .profile-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+      .profile-pic {
+        flex: 0 0 180px;
+        max-width: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .profile-pic img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .profile-info {
+        flex: 1;
+      }
+
+      /* Name styling */
+      .profile-name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+      }
+      /* Degree styling: slightly smaller */
+      .profile-degree {
+        font-size: 0.85em;
+        color: var(--degree-color);
+      }
+      .affiliation {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+      .profile-info p:not(.profile-name):not(.affiliation) {
+        margin-bottom: 0.75rem;
+      }
+
+      /*-----------------------------------------------------------*/
+      /* Responsive */
       @media (max-width: 768px) {
-  header {
-    height: 50px;
-  }
+        header {
+          height: 50px;
+        }
         .content {
-      max-width: 960px; margin: 0 auto;
-      padding: 200px 1rem 2rem;
-    }
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 200px 1rem 2rem;
+        }
         .profile-section {
-      display: flex; flex-wrap: wrap; gap: 2rem;
-      align-items: center; margin-bottom: 4rem;
-    }
-        .profile-info { text-align: left; }
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          align-items: center;
+          margin-bottom: 4rem;
+        }
+        .profile-info {
+          text-align: left;
+        }
         .header-inner {
-      max-width: 960px; margin: 0 auto;
-      padding: 0.5rem 1rem;
-      display: flex; align-items: center; justify-content: space-between;
-    }
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
         /* Themes & Key Papers: switch to column flex for stacking */
         #themes table {
           display: flex !important;
@@ -141,11 +192,21 @@
           margin-bottom: 1rem !important;
           padding: 0 !important;
         }
-        .content { padding-top: 100px; }
+        .content {
+          padding-top: 100px;
+        }
         /* Profile section stacks with left-align text */
-        .profile-section { flex-direction: column; }
-        .profile-info { text-align: left; }
-        .header-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
+        .profile-section {
+          flex-direction: column;
+        }
+        .profile-info {
+          text-align: left;
+        }
+        .header-inner {
+          flex-direction: column;
+          text-align: center;
+          gap: 0.5rem;
+        }
         /* Themes & Key Papers: stack list above images on narrow screens */
         #themes table {
           display: block !important;
@@ -161,7 +222,6 @@
           margin-bottom: 1rem !important;
           padding: 0 !important;
         }
-      
       }
       /* Themes & Key Papers Table Flex Layout */
       #themes table {
@@ -170,7 +230,10 @@
         width: 100%;
         border: none;
       }
-      #themes table tr { display: flex; width: 100%; }
+      #themes table tr {
+        display: flex;
+        width: 100%;
+      }
       #themes table td[valign="top"] {
         flex: 1;
         padding-right: 1rem;
@@ -189,795 +252,1357 @@
         width: 100%;
         border-radius: 0.5rem;
       }
-          /* Add spacing between Themes list items */
+      /* Add spacing between Themes list items */
       #themes table td[valign="top"] ul li {
         margin-bottom: 0.2rem;
       }
-          /* Maintain fixed image width on mobile for Themes & Key Papers */
+      /* Maintain fixed image width on mobile for Themes & Key Papers */
       @media (max-width: 768px) {
         #themes table td[align="right"] img {
           width: 200px !important;
           margin: 0 auto;
         }
       }
-        /* Footer styling */
-    .site-footer {
-      background: #f8f8f8;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.875rem;
-      color: var(--secondary-color);
-      margin-top: 2rem;
-    }
+      /* Footer styling */
+      .site-footer {
+        background: #f8f8f8;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.875rem;
+        color: var(--secondary-color);
+        margin-top: 2rem;
+      }
       /* Desktop: hide toggle, always show Themes content */
-    @media (min-width: 769px) {
-      #themes-toggle { display: none !important; }
-      .themes-content { display: block !important; }
-    }
-      .themes-content.collapsed { display: none !important; }
-.main-nav {
-    position: sticky;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid #ddd;
-    z-index: 999;
-}
+      @media (min-width: 769px) {
+        #themes-toggle {
+          display: none !important;
+        }
+        .themes-content {
+          display: block !important;
+        }
+      }
+      .themes-content.collapsed {
+        display: none !important;
+      }
+      .main-nav {
+        position: sticky;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid #ddd;
+        z-index: 999;
+      }
 
-.main-nav::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2rem;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255,255,255,0.95), transparent);
-    pointer-events: none;
-}
-	  
-  .main-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: thin; /* Firefox */
-  position: relative;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; /* prevent scrollbar overlap */
-  }
-.main-nav li {
-  margin: 0 1rem;
-}
-.main-nav a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.main-nav a:hover {
-  color: var(--accent-color);
-}
-@media screen and (min-width: 769px) {
-  .main-nav {
-    top: 85px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .main-nav {
-    top: 50px;
-  }
-}
-  </style>
-</head>
+      .main-nav::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2rem;
+        height: 100%;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0.95),
+          transparent
+        );
+        pointer-events: none;
+      }
 
-<!-- ----------------------------------------------------------------- -->
-	
-<body>
-  <header>
-    <div class="header-inner">
-      <a href="#top"><img src="https://satoh-yutaka.github.io/images/header.png" alt="Banner" class="site-banner"></a>
-      
-    </div>
-  </header>
-<nav class="main-nav">
-  <ul>
-    <li><a href="#about">Home</a></li>
-    <li>Lab@Univ.Tsukuba</li>
-    <li><a href="#topics">Topics</a></li>
-    <!--<li><a href="#keywords">Areas of Interest</a></li>-->
-    <li><a href="#themes">Publications</a></li>
-    <li><a href="#awards">Awards</a></li>
-    <!--<li><a href="#society">Activities</a></li>-->
-    <!--<li><a href="#academic">Appointments</a></li>-->
-  </ul>
-</nav>
-  <main id="top" class="content">
-    <section id="about">
-      <div class="profile-section">
-        <div class="profile-pic">
-          <img src="https://satoh-yutaka.github.io/images/photo-face2.jpg" alt="Satoh, Yutaka">
-        </div>
-        <div class="profile-info">
-          <div class="profile-name">
-            佐藤 雄隆， <span class="profile-degree">博士（工学）</span><br>
-            Yutaka Satoh, Ph.D.
-          </div>
-	    <div class="affiliation-block">
-	      <div class="affiliation">
-          国立研究開発法人 産業技術総合研究所<br>
-          情報・人間工学領域 人工知能研究センター<br>
-          首席研究員<br>
-          Principal Researcher, AIRC, AIST
-	      </div>
-	    </div>
-	    <p>
-	    <div class="affiliation-block2">
-	      <div class="affiliation">
-          筑波大学 理工情報生命学術院<br>
-          情報理工学位プログラム<br>
-          教授（連携大学院）<br>
-          Professor, University of Tsukuba
-	      </div>
-	    </div>
-	    </p>
-          <p>
-            E-mail: &#121;&#117;&#46;&#115;&#97;&#116;&#111;&#117;&#32;&#91;&#97;&#116;&#93;&#32;&#97;&#105;&#115;&#116;&#46;&#103;&#111;&#46;&#106;&#112;<br>
-	　　(Please replace "[at]" with "@".)
-          </p>
-        </div>
+      .main-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin; /* Firefox */
+        position: relative;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem; /* prevent scrollbar overlap */
+      }
+      .main-nav li {
+        margin: 0 1rem;
+      }
+      .main-nav a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .main-nav a:hover {
+        color: var(--accent-color);
+      }
+      @media screen and (min-width: 769px) {
+        .main-nav {
+          top: 85px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .main-nav {
+          top: 50px;
+        }
+      }
+    </style>
+  </head>
+
+  <!-- ----------------------------------------------------------------- -->
+
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="#top"
+          ><img src="./images/header.png" alt="Banner" class="site-banner"
+        /></a>
       </div>
-    </section>
+    </header>
 
-	<!-- ----------------------------------------------------------------- -->
+    <!--ナビゲーションの飛び先-->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#about">Home</a></li>
+        <li><a href="./univ.html">Lab@Univ.Tsukuba</a></li>
+        <li><a href="#topics">Topics</a></li>
+        <!--<li><a href="#keywords">Areas of Interest</a></li>-->
+        <li><a href="#themes">Publications</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <!--<li><a href="#society">Activities</a></li>-->
+        <!--<li><a href="#academic">Appointments</a></li>-->
+      </ul>
+    </nav>
+
+    <main id="top" class="content">
+      <section id="about">
+        <div class="profile-section">
+          <div class="profile-pic">
+            <img src="./images/photo-face2.jpg" alt="Satoh, Yutaka" />
+          </div>
+          <div class="profile-info">
+            <div class="profile-name">
+              佐藤 雄隆， <span class="profile-degree">博士（工学）</span><br />
+              Yutaka Satoh, Ph.D.
+            </div>
+            <div class="affiliation-block">
+              <div class="affiliation">
+                国立研究開発法人 産業技術総合研究所<br />
+                情報・人間工学領域 人工知能研究センター<br />
+                首席研究員<br />
+                Principal Researcher, AIRC, AIST
+              </div>
+            </div>
+
+            <div class="affiliation-block2">
+              <div class="affiliation">
+                筑波大学 理工情報生命学術院<br />
+                情報理工学位プログラム<br />
+                教授（連携大学院）<br />
+                Professor, University of Tsukuba
+              </div>
+            </div>
+
+            <p>
+              E-mail:
+              &#121;&#117;&#46;&#115;&#97;&#116;&#111;&#117;&#32;&#91;&#97;&#116;&#93;&#32;&#97;&#105;&#115;&#116;&#46;&#103;&#111;&#46;&#106;&#112;<br />
+              (Please replace "[at]" with "@".)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------- -->
       <section id="Univ">
         <h2>大学院生募集（筑波大）</h2>
         <p>
-          <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-          <b><a href="./univ.htm">筑波大学連携大学院「佐藤研究室」</a>では，修士および博士課程の学生を受け入れています．</b>
+          <span class="icon-check"></span>
+          <b>
+            <a href="./univ.html">筑波大学連携大学院「佐藤研究室」</a>
+            では，修士および博士課程の学生を受け入れています．
+          </b>
           産総研の先端的な研究環境で学びつつ<b>筑波大学の学位を取得できます</b>．
-          全国の大学・高専（専攻科）等からの受験を歓迎しています．
-          詳しくは
-          <a href="./univ.htm">
-            こちら
+          全国の大学・高専（専攻科）等からの受験を歓迎しています． 詳しくは
+          <a href="./univ.html"> こちら </a>
+          をご覧ください．<br /><br />
+
+          まずは，&#121;&#117;&#46;&#115;&#97;&#116;&#111;&#117;&#32;&#91;&#97;&#116;&#93;&#32;&#97;&#105;&#115;&#116;&#46;&#103;&#111;&#46;&#106;&#112;（[at]を@に変更して使用してください。）まで遠慮無くご相談下さい．<br /><br />
+          <b>Admissions:</b> Cooperative Graduate School Program (master's &
+          doctoral course), University of Tsukuba. More information is available
+          <a
+            href="http://www.cs.tsukuba.ac.jp/english/admission.html"
+            target="_blank"
+          >
+            here
           </a>
-          をご覧ください．<br><br>
+          .
+          <br /><br />
 
-          まずは，&#121;&#117;&#46;&#115;&#97;&#116;&#111;&#117;&#32;&#91;&#97;&#116;&#93;&#32;&#97;&#105;&#115;&#116;&#46;&#103;&#111;&#46;&#106;&#112;（[at]を@に変更して使用してください。）まで遠慮無くご相談下さい．<br><br>
-          <b>Admissions:</b> Cooperative Graduate School Program (master's & doctoral course), University of Tsukuba. More information is available <a href="http://www.cs.tsukuba.ac.jp/english/admission.html" target="_blank"> here</a>.<br><br>
-
-	<font size=-1 color="#202020"><b>※「研究生」受け入れに関しまして: </b>
-	「研究生」としての受入を希望されるお問い合わせを特に海外の方々から多数いただいております． しかしながら，当研究室は「連携大学院」であり， 筑波大学の規定により 「研究生」を受け入れることが出来ません（受入可能なのは修士・博士課程の入試に合格された学生さんに限られます）．<br>
-	<b>Notice on Research Student (non-degree seeking) Applications: </b> We receive many inquiries about joining our lab as a Research Student (non-degree seeking). However, as part of a Cooperative Graduate School with the University of Tsukuba, <b>we are NOT permitted to accept non-degree students</b> under university regulations.
-Only applicants who pass the entrance exam for the master’s or doctoral programs are eligible to join. Thank you for your understanding.</font>
+          <p style="color: #404040; font-size: 13px">
+            <b>※「研究生」受け入れに関しまして: </b>
+            「研究生」としての受入を希望されるお問い合わせを特に海外の方々から多数いただいております．
+            しかしながら，当研究室は「連携大学院」であり， 筑波大学の規定により入試を受けていない
+            「研究生」を受け入れることが出来ません（受入可能なのは修士・博士課程の入試に合格された学生さんに限られます）．<br />
+            <b
+              >Notice on Research Student (non-degree seeking) Applications:
+            </b>
+            We receive many inquiries about joining our lab as a Research
+            Student (non-degree seeking). However, as part of a Cooperative
+            Graduate School with the University of Tsukuba,
+            <b>we are NOT permitted to accept non-degree students</b> under
+            university regulations. Only applicants who pass the entrance exam
+            for the master’s or doctoral programs are eligible to join. Thank
+            you for your understanding.
+          </p>
         </p>
       </section>
-	  
-    <!-- ----------------------------------------------------------------- -->
+
+      <!-- ----------------------------------------------------------------- -->
       <section id="topics">
         <h2>Topics</h2>
         <p>
-    <!----------------------->
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	<b>産総研論文賞2022を受賞しました．</b><br>
-	「Pre-training without Natural Images」(IJCV論文)</b>
-	<br>
-	Received the FY2022 AIST Best Paper Award.<br>
+          <!----------------------->
+          <span class="icon-check"></span>
+          <b>産総研論文賞2022を受賞しました．</b><br />
+          「Pre-training without Natural Images」(IJCV論文)
+          <br />
+          Received the FY2022 AIST Best Paper Award.<br />
 
-	<a href="https://www.aist.go.jp/aist_j/aist_award/2022/abpa.html#no3" target="_blank">
-	→産総研論文賞</a><br>
-    <br><hr width=80%>
-        
-  <!----------------------->
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	<b>産総研論文賞2019を受賞しました．</b><br>
-	「Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet?」(CVPR2018論文)</b>
-	<br>
-	Received the FY2019 AIST Best Paper Award.<br>
+          <a
+            href="https://www.aist.go.jp/aist_j/aist_award/2022/abpa.html#no3"
+            target="_blank"
+          >
+            →産総研論文賞
+          </a>
+          <br />
+          <br />
+        </p>
 
-	<a href="https://www.aist.go.jp/aist_j/aist_award/2019/abpa.html#no3" target="_blank">
-	→産総研論文賞</a><br>
-	<a href="http://openaccess.thecvf.com/content_cvpr_2018/html/Hara_Can_Spatiotemporal_3D_CVPR_2018_paper.html" target="_blank">→CVPR2018 open access</a><br>
-    <br><hr width=80%>
+        <hr width="80%" />
 
-        
-    <!----------------------->
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	<b>
-	プレス発表：「直射日光下でのパターン投影による高速形状計測に成功」
-	</b><br>
-	キネクトのようなパターン光投影型形状計測を<u>直射日光下でも</u>可能にしました．<br>
-	<a href="http://www.aist.go.jp/aist_j/press_release/pr2017/pr20170714/pr20170714.html" target="_blank">→産総研プレスリリース</a><br>
-	<a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.html" target="_blank">→CVPR2017 open access</a><br>
-	<b>Press release:</b> Please see <a href="http://www.aist.go.jp/aist_j/press_release/pr2017/pr20170714/pr20170714.html" target="_blank"> here</a> and <a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.html" target="_blank"> here</a>.<br>
-    <br><hr width=80%>
+        <!----------------------->
+        <span class="icon-check"></span>
+        <b>産総研論文賞2019を受賞しました．</b><br />
+        「Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and
+        ImageNet?」(CVPR2018論文)
+        <br />
+        Received the FY2019 AIST Best Paper Award.<br />
 
-  <!----------------------->
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	<b>
-	科学技術分野の文部科学大臣表彰 
-	「若手科学者賞」</b>
-	を受賞いたしました．
-	<br>
-	Received the Minister’s Prize (The Young Scientists' Prize), Commendation for Science and Technology by the Minister of MEXT, Japan (2021).<br>
+        <a
+          href="https://www.aist.go.jp/aist_j/aist_award/2019/abpa.html#no3"
+          target="_blank"
+        >
+          →産総研論文賞</a
+        ><br />
+        <a
+          href="http://openaccess.thecvf.com/content_cvpr_2018/html/Hara_Can_Spatiotemporal_3D_CVPR_2018_paper.html"
+          target="_blank"
+          >→CVPR2018 open access</a
+        ><br />
+        <br />
+        <hr width="80%" />
 
-	<a href="http://www.aist.go.jp/aist_j/news/prize/itemid025-000059.html"  target="_blank">
-	→受賞</a>
-      
+        <!----------------------->
+        <span class="icon-check"></span>
+        <b>
+          プレス発表：「直射日光下でのパターン投影による高速形状計測に成功」 </b
+        ><br />
+        キネクトのようなパターン光投影型形状計測を<u>直射日光下でも</u>可能にしました．<br />
+        <a
+          href="http://www.aist.go.jp/aist_j/press_release/pr2017/pr20170714/pr20170714.html"
+          target="_blank"
+          >→産総研プレスリリース</a
+        ><br />
+        <a
+          href="http://openaccess.thecvf.com/content_cvpr_2017/html/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.html"
+          target="_blank"
+          >→CVPR2017 open access</a
+        ><br />
+        <b>Press release:</b> Please see
+        <a
+          href="http://www.aist.go.jp/aist_j/press_release/pr2017/pr20170714/pr20170714.html"
+          target="_blank"
+        >
+          here</a
+        >
+        and
+        <a
+          href="http://openaccess.thecvf.com/content_cvpr_2017/html/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.html"
+          target="_blank"
+        >
+          here</a
+        >.<br />
+        <br />
+        <hr width="80%" />
+
+        <!----------------------->
+        <span class="icon-check"></span>
+        <b> 科学技術分野の文部科学大臣表彰 「若手科学者賞」</b>
+        を受賞いたしました．
+        <br />
+        Received the Minister’s Prize (The Young Scientists' Prize),
+        Commendation for Science and Technology by the Minister of MEXT, Japan
+        (2021).<br />
+
+        <a>
+          href="http://www.aist.go.jp/aist_j/news/prize/itemid025-000059.html"
+          target="_blank" > →受賞
+        </a>
+      </section>
+
+      <!-- ----------------------------------------------------------------- -->
+      <section id="keywords">
+        <h2>Areas of Interest</h2>
+        <p>
+          <span class="icon-check"></span>
+          コンピュータビジョン - computer vision systems<br />
+          <span class="icon-check"></span>
+          画像認識・理解 - image recognition and understanding<br />
+          <span class="icon-check"></span>
+          動画像認識 - video recognition<br />
+          <span class="icon-check"></span>
+          パターン認識 - pattern recognition<br />
+          <span class="icon-check"></span>
+          機械学習 - machine learning<br />
+          <span class="icon-check"></span>
+          ディープラーニング - Deep Learning<br />
+          <span class="icon-check"></span>
+          画像特徴抽出 - image feature extraction<br />
+          <span class="icon-check"></span>
+          ロバスト画像処理 - robust image processing<br />
+          <span class="icon-check"></span>
+          三次元画像取得・処理 - 3D imaging<br />
+          <span class="icon-check"></span>
+          全方向ステレオカメラ - stereo omni-directional camera system<br />
+          <span class="icon-check"></span>
+          ロボットビジョン - robot vision systems<br />
+          <span class="icon-check"></span>
+          VR/MR/AR - Virtual Reality systems<br />
         </p>
       </section>
 
-    <!-- ----------------------------------------------------------------- -->
-    <section id="keywords">
-      <h2>Areas of Interest</h2>
-      <p>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">	
-    	コンピュータビジョン - computer vision systems<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	画像認識・理解 - image recognition and understanding<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	動画像認識 - video recognition<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	パターン認識 - pattern recognition<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	機械学習 - machine learning<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	ディープラーニング - Deep Learning<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	画像特徴抽出 - image feature extraction<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	ロバスト画像処理 - robust image processing<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	三次元画像取得・処理 - 3D imaging<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	全方向ステレオカメラ - stereo omni-directional camera system<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	ロボットビジョン - robot vision systems<br>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">        
-    	VR/MR/AR - Virtual Reality systems<br>
-      </p>
-    </section>
+      <!-- ----------------------------------------------------------------- -->
+      <section id="themes">
+        <h2>Research Themes &amp; Key Publications</h2>
+        <p>
+          <span class="icon-check"></span>
+          <b>
+            <u
+              >全文献リストは<a
+                href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ"
+                target="_blank"
+                >こちら</a
+              >，Full publication list is available
+              <a
+                href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ"
+                target="_blank"
+              >
+                here
+              </a>
+              .
+            </u>
+          </b>
+          <!----------------------->
 
-    <!-- ----------------------------------------------------------------- -->
-    <section id="themes">
-      <h2>Research Themes &amp; Key Publications</h2>
-      <p>
-    	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b><u>全文献リストは<a href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ" target="_blank">こちら</a>，Full publication list is available <a href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ" target="_blank">here</a>.</u></b>
-      <!----------------------->
+          <br /><br />
+        </p>
 
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-        <div style="flex: 1; min-width: 200px;">
-          <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-          <b>DNNを活用した静止画像／動画像解析（2014～）</b><br>
-          Deep Neural Network based Image / Video Analysis
-          <br><br>
-          <button class="toggle-button">Show Key Publications ▼</button>
-          <div class="themes-content collapsed">
-            <ul>
-              <li>R Yamada, K Hara, H Kataoka, K Makihara, N Inoue, R Yokota, Y Satoh, "Formula-Supervised Visual-Geometric Pre-training", Proceedings of the European Conference on Computer Vision (ECCV2024), pp.57-74, 2024.</li>
-              <li>Fumiya Matsuzawa, Yue Qiu, Yanjun Sun, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, Subtle-Diff: A Dataset for Precise Recognition of Subtle Differences Among Visually Similar Objects, Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS2024), pp.5888-5894, 2024.</li>
-              <li>Fumiya Matsuzawa, Yue Qiu, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, "Question Generation for Uncertainty Elimination in Referring Expressions in 3D Environments", Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2023), pp.6146-6152, 2023.</li>
-              <li>K Nakashima, H Kataoka, A Matsumoto, K Iwata, N Inoue, Y Satoh, "Can vision transformers learn without natural images?", Proceedings of the AAAI Conference on Artificial Intelligence (AAAI2022), 36 (2), pp.1990-1998, 2022.</li>
-              <li>Kataoka Hirokatsu, Matsumoto Asato, Yamagata Eisuke, Yamada Ryosuke, Inoue Nakamasa, Akio Nakamura, Satoh Yutaka, "Pre-training without natural images", International Journal of Computer Vision (IJCV), 130 (4), pp.990-1007, 2022.<br><font color="#990000" size=-1 >Award: 産総研論文賞2022</font></li>
-              <li>Kensho Hara, Hirokatsu Kataoka, Masaki Inaba, Kenichi Narioka, Ryusuke Hotta, Yutaka Satoh, "Predicting appearance of vehicles from blind spots based on pedestrian behaviors at crossroads", IEEE transactions on intelligent transportation systems, 23 (8), pp.11917-11929, 2021</li>
-              <li>Yue Qiu, Shintaro Yamamoto, Kodai Nakashima, Ryota Suzuki, Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, "Describing and localizing multiple changes with transformers", Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV2021), pp.1971-1980, 2021.</li>
-              <li>Hirokatsu Kataoka, Teppei Suzuki, Kodai Nakashima, Yutaka Satoh, Yoshimitsu Aoki, "Joint pedestrian detection and risk-level prediction with motion-representation-by-detection", Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2020), pp.1021-1027, 2020.</li>
-              <li>Hirokatsu Kataoka, Kazushige Okayasu, Asato Matsumoto, Eisuke Yamagata, Ryosuke Yamada, Nakamasa Inoue, Akio Nakamura, Yutaka Satoh, Pre-training without natural images, Proceedings of the Asian Conference on Computer Vision (ACCV2020), 2020.<br><font color="#990000" size=-1 >Award: ACCV 2020 Best Paper Honorable Mention Award</font></li>
-              <li>Hirokatsu Kataoka, Yutaka Satoh, "Unsupervised out-of-context action understanding", Proceedings of the IEEE International Conference on Robotics and Automation (ICRA2019), pp.8227-8233, 2019.</li>
-              <li>相澤宏旭,片岡裕雄,佐藤雄隆,加藤邦人, Viewpoint-agnostic Image Rendering, 第25回画像センシングシンポジウム(SSII2019)講演論文集, 2019.<br><font color="#990000" size=-1 >Award: 画像センシングシンポジウム優秀学術賞</font></li>
-              <li>Kensho Hara, Hirokatsu Kataoka, Yutaka Satoh，<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hara_Can_Spatiotemporal_3D_CVPR_2018_paper.pdf" target="_blank">"Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet ?"， Proc. Conference on Computer Vision and Pattern Recognition (CVPR2018)</a>，pp.6546-6555，2018．<br><font color="#990000" size=-1 >Award: 産総研論文賞2019</font></li>
-              <li>Tomoyuki Suzuki, Hirokatsu Kataoka, Yoshimitsu Aoki, Yutaka Satoh，<a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0494.pdf" target="_blank">"Anticipating Traffic Accidents with Adaptive Loss and Large-scale Incident DB"， Proc. Conference on Computer Vision and Pattern Recognition (CVPR2018)</a>，pp.3521-3529，2018．</li>
-              <li>Hirokatsu Kataoka, Teppei Suzuki, Shoko Oikawa, Yasuhiro Matsui, Yutaka Satoh，"Drive Video Analysis for the Detection of Traffic Near-Miss Incidents"，Proc. IEEE International Conference on Robotics and Automation (ICRA2018)，pp.3421-3428，2018.</li>
-            </ul>
-          </div>
-        </div>
-        <div style="flex: 0 0 200px; text-align: center;">
-          <img src="https://satoh-yutaka.github.io/images/NIDB.png"><br>
-          <center><font size=-1>Analysis of Dashcam Footage</font></center><br>
-          <img src="https://satoh-yutaka.github.io/images/3Dconv.png"><br>
-          <center><font size=-1>3D ResNets for Action Recognition</font></center>
-        </div>
-      </div>
-         <!----------------------->
-
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>RGB-Dカメラ，Light Fieldカメラ，ハイパースペクトルカメラ（2012～）</b><br>
-    	RGB-D, Light-field, Hyperspectral Imaging
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
+            <span class="icon-check"></span>
+            <b>DNNを活用した静止画像／動画像解析（2014～）</b><br />
+            Deep Neural Network based Image / Video Analysis
+            <br /><br />
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li>Ryusuke Sagawa, Yutaka Satoh，<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.pdf" target="_blank">"Illuminant-Camera Communication to Observe Moving Objects under Strong External Light by Spread Spectrum Modulation"，Proc. Conference on Computer Vision and Pattern Recognition (CVPR2017)</a>，pp. 5097-5105，2017．</li>
-                <li>Hirokatsu Kataoka Ohki Shuhei, Kenji Iwata, Yutaka Satoh，"Occlusion Handling Human Detection with Refocused Images"，Proc. International Conference on Pattern Recognition (ICPR2018)，accepted，2018．</li>
-                <li>小篠裕子, 岩田健司, 榎並直子, 佐藤雄隆，"ハイパースペクトルデータのMKL SVMによる物体知覚色分析"，信学論(D)，Vol.J100-D, No.6，pp. 639-648，2017．</li>
-                <li>白壁 奏馬,片岡 裕雄,岩田 健司,佐藤 雄隆，"カメラアレイおよびディープラーニングに基づく半遮蔽環境におけるロバスト人物検出"，精密工学会論文誌，Vol.82, No.12，pp.1067-1071，2016．</li>
-                <li>白壁 奏馬,片岡 裕雄,岩田 健司,佐藤 雄隆，"カメラアレイとディープラーニングを用いた半遮蔽環境下における人物検出"，ViEW2015ビジョン技術の実利用ワークショップ講演論文集，CD-ROM，2015．<br><font color="#990000" size=-1 >Award: 平成27年精密工学会画像応用技術専門委員会若手奨励賞受賞</font></li>
-                <li>西 卓郎 他，"ビンピッキング用ハンドアイシステムの開発　ーバラ積み物体位置姿勢推定アルゴリズムの評価手法ー"，日本ロボット学会誌，Vol.33, No.7, pp.538-547，2015．</li>
-                <li>佐藤雄隆，岩田健司，永見武司，竹内啓五，"RGB-Dカメラから得られるDepthデータの歪み補正"，ビジョン技術の実利用ワークショップ (ViEW2013)講演論文集，CD-ROM，2013．<br><font color="#990000" size=-1 >Award: 平成25年小田原論文賞受賞</font></li>
+              <ul style="padding-left: 15px">
+                <li>
+                  R Yamada, K Hara, H Kataoka, K Makihara, N Inoue, R Yokota, Y
+                  Satoh, "Formula-Supervised Visual-Geometric Pre-training",
+                  Proceedings of the European Conference on Computer Vision
+                  (ECCV2024), pp.57-74, 2024.
+                </li>
+                <li>
+                  Fumiya Matsuzawa, Yue Qiu, Yanjun Sun, Kenji Iwata, Hirokatsu
+                  Kataoka, Yutaka Satoh, Subtle-Diff: A Dataset for Precise
+                  Recognition of Subtle Differences Among Visually Similar
+                  Objects, Proceedings of the IEEE/RSJ International Conference
+                  on Intelligent Robots and Systems (IROS2024), pp.5888-5894,
+                  2024.
+                </li>
+                <li>
+                  Fumiya Matsuzawa, Yue Qiu, Kenji Iwata, Hirokatsu Kataoka,
+                  Yutaka Satoh, "Question Generation for Uncertainty Elimination
+                  in Referring Expressions in 3D Environments", Proceedings of
+                  the IEEE International Conference on Robotics and Automation
+                  (ICRA2023), pp.6146-6152, 2023.
+                </li>
+                <li>
+                  K Nakashima, H Kataoka, A Matsumoto, K Iwata, N Inoue, Y
+                  Satoh, "Can vision transformers learn without natural
+                  images?", Proceedings of the AAAI Conference on Artificial
+                  Intelligence (AAAI2022), 36 (2), pp.1990-1998, 2022.
+                </li>
+                <li>
+                  Kataoka Hirokatsu, Matsumoto Asato, Yamagata Eisuke, Yamada
+                  Ryosuke, Inoue Nakamasa, Akio Nakamura, Satoh Yutaka,
+                  "Pre-training without natural images", International Journal
+                  of Computer Vision (IJCV), 130 (4), pp.990-1007, 2022.<br /><font
+                    color="#990000"
+                    size="-1"
+                    >Award: 産総研論文賞2022</font
+                  >
+                </li>
+                <li>
+                  Kensho Hara, Hirokatsu Kataoka, Masaki Inaba, Kenichi Narioka,
+                  Ryusuke Hotta, Yutaka Satoh, "Predicting appearance of
+                  vehicles from blind spots based on pedestrian behaviors at
+                  crossroads", IEEE transactions on intelligent transportation
+                  systems, 23 (8), pp.11917-11929, 2021
+                </li>
+                <li>
+                  Yue Qiu, Shintaro Yamamoto, Kodai Nakashima, Ryota Suzuki,
+                  Kenji Iwata, Hirokatsu Kataoka, Yutaka Satoh, "Describing and
+                  localizing multiple changes with transformers", Proceedings of
+                  the IEEE/CVF International Conference on Computer Vision
+                  (ICCV2021), pp.1971-1980, 2021.
+                </li>
+                <li>
+                  Hirokatsu Kataoka, Teppei Suzuki, Kodai Nakashima, Yutaka
+                  Satoh, Yoshimitsu Aoki, "Joint pedestrian detection and
+                  risk-level prediction with
+                  motion-representation-by-detection", Proceedings of the IEEE
+                  International Conference on Robotics and Automation
+                  (ICRA2020), pp.1021-1027, 2020.
+                </li>
+                <li>
+                  Hirokatsu Kataoka, Kazushige Okayasu, Asato Matsumoto, Eisuke
+                  Yamagata, Ryosuke Yamada, Nakamasa Inoue, Akio Nakamura,
+                  Yutaka Satoh, Pre-training without natural images, Proceedings
+                  of the Asian Conference on Computer Vision (ACCV2020),
+                  2020.<br /><font color="#990000" size="-1"
+                    >Award: ACCV 2020 Best Paper Honorable Mention Award</font
+                  >
+                </li>
+                <li>
+                  Hirokatsu Kataoka, Yutaka Satoh, "Unsupervised out-of-context
+                  action understanding", Proceedings of the IEEE International
+                  Conference on Robotics and Automation (ICRA2019),
+                  pp.8227-8233, 2019.
+                </li>
+                <li>
+                  相澤宏旭,片岡裕雄,佐藤雄隆,加藤邦人, Viewpoint-agnostic Image
+                  Rendering,
+                  第25回画像センシングシンポジウム(SSII2019)講演論文集, 2019.<br /><font
+                    color="#990000"
+                    size="-1"
+                    >Award: 画像センシングシンポジウム優秀学術賞</font
+                  >
+                </li>
+                <li>
+                  Kensho Hara, Hirokatsu Kataoka, Yutaka Satoh，<a
+                    href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hara_Can_Spatiotemporal_3D_CVPR_2018_paper.pdf"
+                    target="_blank"
+                    >"Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs
+                    and ImageNet ?"， Proc. Conference on Computer Vision and
+                    Pattern Recognition (CVPR2018)</a
+                  >，pp.6546-6555，2018．<br /><font color="#990000" size="-1"
+                    >Award: 産総研論文賞2019</font
+                  >
+                </li>
+                <li>
+                  Tomoyuki Suzuki, Hirokatsu Kataoka, Yoshimitsu Aoki, Yutaka
+                  Satoh，<a
+                    href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0494.pdf"
+                    target="_blank"
+                    >"Anticipating Traffic Accidents with Adaptive Loss and
+                    Large-scale Incident DB"， Proc. Conference on Computer
+                    Vision and Pattern Recognition (CVPR2018)</a
+                  >，pp.3521-3529，2018．
+                </li>
+                <li>
+                  Hirokatsu Kataoka, Teppei Suzuki, Shoko Oikawa, Yasuhiro
+                  Matsui, Yutaka Satoh，"Drive Video Analysis for the Detection
+                  of Traffic Near-Miss Incidents"，Proc. IEEE International
+                  Conference on Robotics and Automation
+                  (ICRA2018)，pp.3421-3428，2018.
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/structured_light.gif"><br>
-            <center><font size=-1>One-Shot 3D Measurement under Sunlight</font></center><br>
-            <img src="https://satoh-yutaka.github.io/images/LF_Array.png"><br>
-            <img src="https://satoh-yutaka.github.io/images/LF_example.gif"><br>
-            <center><font size=-1>Observing a Person through a Bamboo Blind Using a Camera Array</font></center><br>
-            <img src="https://satoh-yutaka.github.io/images/MultiXtion.png"><br>
-            <img src="https://satoh-yutaka.github.io/images/Multi_cloud.gif"><br>
-            <center><font size=-1>Omnidirectional RGB-D Camera</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img src="https://satoh-yutaka.github.io/images/NIDB.png" /><br />
+            <center><font size="-1">Analysis of Dashcam Footage</font></center>
+            <br />
+            <img src="https://satoh-yutaka.github.io/images/3Dconv.png" /><br />
+            <center>
+              <font size="-1">3D ResNets for Action Recognition</font>
+            </center>
           </div>
         </div>
-      <!----------------------->
+        <!----------------------->
 
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>統計的リーチ特徴法（SRF,GAP,CP3）（2008～）</b><br>
-    	Statistical Reach Feature (SRF,GAP,CP3) for robust pattern matching
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>RGB-Dカメラ，Light Fieldカメラ，ハイパースペクトルカメラ（2012～）</b
+        ><br />
+        RGB-D, Light-field, Hyperspectral Imaging
+        <br /><br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li>岩田健司，佐藤雄隆，尾崎竜史，坂上勝彦，"統計的リーチ特徴法に基づくロバスト背景差分 "，信学論(D)，Vol.J92-D, No.8，pp.1251-1259, 2009．</li>
-                <li>Zhao Xinyue, Yutaka Satoh, Hidenori Takauji, Syun'ichi Kaneko, Kenji Iwata, Ryushi Ozaki，"Object Detection based on a Robust and Accurate Statistical Multi-point-pair Model "，Pattern Recognition，Vol.44, Issue 6, pp.1296-1311，2011．</li>
-                <li>Zhao, Xinyue, Zaixing He, Shuyou Zhang, Syun'ichi Kaneko, Yutaka Satoh，"Robust face recognition using the GAP feature"，Pattern Recognition，Vol.46, Issue 10，pp.2647-2657，2013．</li>
-                <li>Wenjun Zhou, Shun’ichi Kaneko, Manabu Hashimoto, Yutaka Satoh, Dong Liang，"A Co-occurrence Background Model with Hypothesis on Degradation Modification for Object Detection in Strong Background Changes"，Proc. International Conference on Pattern Recognition (ICPR2018)，accepted，2018．</li>
-                <li>Dong Liang, Shun'ichi Kaneko, Manabu Hashimoto, Kenji Iwata, Xinyue Zhao, Yutaka Satoh，"Robust Object Detection in Severe Imaging Conditions using Co-occurrence Background Model"，International Journal of Optomechatronics，Vol.8, Issue 1，pp.14-29，2014．</li>
-                <li>尾崎竜史，佐藤雄隆，岩田健司，坂上勝彦，"統計的リーチ特徴法に基づくロバスト画像照合"，電気学会論文誌Ｃ，Vol.132, No.4，pp.570-583，2012．</li>
-                <li>尾崎竜史，佐藤雄隆，岩田健司，坂上勝彦，"統計的リーチ特徴法に基づくサンプル学習型画像照合 "，電気学会論文誌Ｃ，Vol.130, No.9，pp.1622-1629，2010．</li>
+              <ul style="padding-left: 15px">
+                <li>
+                  Ryusuke Sagawa, Yutaka Satoh，<a
+                    href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.pdf"
+                    target="_blank"
+                    >"Illuminant-Camera Communication to Observe Moving Objects
+                    under Strong External Light by Spread Spectrum
+                    Modulation"，Proc. Conference on Computer Vision and Pattern
+                    Recognition (CVPR2017)</a
+                  >，pp. 5097-5105，2017．
+                </li>
+                <li>
+                  Hirokatsu Kataoka Ohki Shuhei, Kenji Iwata, Yutaka
+                  Satoh，"Occlusion Handling Human Detection with Refocused
+                  Images"，Proc. International Conference on Pattern Recognition
+                  (ICPR2018)，accepted，2018．
+                </li>
+                <li>
+                  小篠裕子, 岩田健司, 榎並直子,
+                  佐藤雄隆，"ハイパースペクトルデータのMKL
+                  SVMによる物体知覚色分析"，信学論(D)，Vol.J100-D, No.6，pp.
+                  639-648，2017．
+                </li>
+                <li>
+                  白壁 奏馬,片岡 裕雄,岩田 健司,佐藤
+                  雄隆，"カメラアレイおよびディープラーニングに基づく半遮蔽環境におけるロバスト人物検出"，精密工学会論文誌，Vol.82,
+                  No.12，pp.1067-1071，2016．
+                </li>
+                <li>
+                  白壁 奏馬,片岡 裕雄,岩田 健司,佐藤
+                  雄隆，"カメラアレイとディープラーニングを用いた半遮蔽環境下における人物検出"，ViEW2015ビジョン技術の実利用ワークショップ講演論文集，CD-ROM，2015．<br /><font
+                    color="#990000"
+                    size="-1"
+                    >Award:
+                    平成27年精密工学会画像応用技術専門委員会若手奨励賞受賞</font
+                  >
+                </li>
+                <li>
+                  西 卓郎
+                  他，"ビンピッキング用ハンドアイシステムの開発　ーバラ積み物体位置姿勢推定アルゴリズムの評価手法ー"，日本ロボット学会誌，Vol.33,
+                  No.7, pp.538-547，2015．
+                </li>
+                <li>
+                  佐藤雄隆，岩田健司，永見武司，竹内啓五，"RGB-Dカメラから得られるDepthデータの歪み補正"，ビジョン技術の実利用ワークショップ
+                  (ViEW2013)講演論文集，CD-ROM，2013．<br /><font
+                    color="#990000"
+                    size="-1"
+                    >Award: 平成25年小田原論文賞受賞</font
+                  >
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/srf_entrance.gif"><br>
-            <center><font size=-1>Application to Background Subtraction.<br>Robust Even to Extreme Lighting Changes.</font></center><br>
-            <img src="https://satoh-yutaka.github.io/images/srf_template.gif"><br>
-            <center><font size=-1>Application to Template Matching.<br>Stable Operation Even under Poor Lighting (Left).</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img
+              src="https://satoh-yutaka.github.io/images/structured_light.gif"
+            /><br />
+            <center>
+              <font size="-1">One-Shot 3D Measurement under Sunlight</font>
+            </center>
+            <br />
+            <img
+              src="https://satoh-yutaka.github.io/images/LF_Array.png"
+            /><br />
+            <img
+              src="https://satoh-yutaka.github.io/images/LF_example.gif"
+            /><br />
+            <center>
+              <font size="-1"
+                >Observing a Person through a Bamboo Blind Using a Camera
+                Array</font
+              >
+            </center>
+            <br />
+            <img
+              src="https://satoh-yutaka.github.io/images/MultiXtion.png"
+            /><br />
+            <img
+              src="https://satoh-yutaka.github.io/images/Multi_cloud.gif"
+            /><br />
+            <center><font size="-1">Omnidirectional RGB-D Camera</font></center>
           </div>
         </div>
-    
-      </p>
+        <!----------------------->
 
-               <!----------------------->
-
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>CHLACによる異常動作の自動検知（2005～）</b><br>
-    	Detection of unusual motions by CHLAC
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>統計的リーチ特徴法（SRF,GAP,CP3）（2008～）</b><br />
+        Statistical Reach Feature (SRF,GAP,CP3) for robust pattern matching
+        <br /><br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li><a href="http://www.aist.go.jp/aist_j/press_release/pr2007/pr20071016/pr20071016.html" target="_blank">2007.10.16 産総研プレスリリース<br>「カメラ映像から異常動作をリアルタイムで自動検出するソフトを開発」</a></li>
-                <li>岩田健司,佐藤雄隆,小林 匠,依田育士,坂上勝彦,大津展之，"CHLACによる映像サーベイランスのためのビジュアルフレームワーク"，第13回画像センシングシンポジウム（SSII07）論文集，LD1-04, pp.1-7，2007．<br><font color="#990000" size=-1 >Award: 第13回画像センシングシンポジウム オーディエンス賞受賞</font></li>
-                <li>K.Iwata, Y.Satoh, T.Kobayashi, I.Yoda and N.Otsu，"Application of the Unusual Motion Detection Using CHLAC to the Video Surveillance"，Proc. of the 14th International Conference on Neural Information Processing (ICONIP2007), Lecture Notes in Computer Science, Springer，LNCS4985, pp.628-636，2007．</li>
+              <ul style="padding-left: 15px">
+                <li>
+                  岩田健司，佐藤雄隆，尾崎竜史，坂上勝彦，"統計的リーチ特徴法に基づくロバスト背景差分
+                  "，信学論(D)，Vol.J92-D, No.8，pp.1251-1259, 2009．
+                </li>
+                <li>
+                  Zhao Xinyue, Yutaka Satoh, Hidenori Takauji, Syun'ichi Kaneko,
+                  Kenji Iwata, Ryushi Ozaki，"Object Detection based on a Robust
+                  and Accurate Statistical Multi-point-pair Model "，Pattern
+                  Recognition，Vol.44, Issue 6, pp.1296-1311，2011．
+                </li>
+                <li>
+                  Zhao, Xinyue, Zaixing He, Shuyou Zhang, Syun'ichi Kaneko,
+                  Yutaka Satoh，"Robust face recognition using the GAP
+                  feature"，Pattern Recognition，Vol.46, Issue
+                  10，pp.2647-2657，2013．
+                </li>
+                <li>
+                  Wenjun Zhou, Shun’ichi Kaneko, Manabu Hashimoto, Yutaka Satoh,
+                  Dong Liang，"A Co-occurrence Background Model with Hypothesis
+                  on Degradation Modification for Object Detection in Strong
+                  Background Changes"，Proc. International Conference on Pattern
+                  Recognition (ICPR2018)，accepted，2018．
+                </li>
+                <li>
+                  Dong Liang, Shun'ichi Kaneko, Manabu Hashimoto, Kenji Iwata,
+                  Xinyue Zhao, Yutaka Satoh，"Robust Object Detection in Severe
+                  Imaging Conditions using Co-occurrence Background
+                  Model"，International Journal of Optomechatronics，Vol.8,
+                  Issue 1，pp.14-29，2014．
+                </li>
+                <li>
+                  尾崎竜史，佐藤雄隆，岩田健司，坂上勝彦，"統計的リーチ特徴法に基づくロバスト画像照合"，電気学会論文誌Ｃ，Vol.132,
+                  No.4，pp.570-583，2012．
+                </li>
+                <li>
+                  尾崎竜史，佐藤雄隆，岩田健司，坂上勝彦，"統計的リーチ特徴法に基づくサンプル学習型画像照合
+                  "，電気学会論文誌Ｃ，Vol.130, No.9，pp.1622-1629，2010．
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/chlac_appletree.gif"><br>
-            <center><font size=-1>Automatic Detection of Motions Deviating from Learned Normal Patterns</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img
+              src="https://satoh-yutaka.github.io/images/srf_entrance.gif"
+            /><br />
+            <center>
+              <font size="-1"
+                >Application to Background Subtraction.<br />Robust Even to
+                Extreme Lighting Changes.</font
+              >
+            </center>
+            <br />
+            <img
+              src="https://satoh-yutaka.github.io/images/srf_template.gif"
+            /><br />
+            <center>
+              <font size="-1"
+                >Application to Template Matching.<br />Stable Operation Even
+                under Poor Lighting (Left).</font
+              >
+            </center>
           </div>
         </div>
-         <!----------------------->
 
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>インテリジェント電動車いす（2004～）</b><br>
-    	Smart Wheel Chair Project
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <!----------------------->
+
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>CHLACによる異常動作の自動検知（2005～）</b><br />
+        Detection of unusual motions by CHLAC
+        <br /><br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li><a href="https://jivp-eurasipjournals.springeropen.com/articles/10.1155/2007/87646" target="_blank">Yutaka Satoh and Katsuhiko Sakaue，"An Omni-directional Stereo Vision-based Smart Wheelchair"，EURASIP Journal on Image and Video Processing，Vol.2007，Article ID 87646, 11 pages，2007．</a></li>
-                <li><a href="https://www.aist.go.jp/pdf/aist_j/synthesiology/vol02_02/vol02_02_p113_p126.pdf" target="_blank">佐藤雄隆，坂上勝彦，"安全安心な次世代モビリティ－を目指して-全方向ステレオカメラを搭載したインテリジェント電動車いす"，Synthesiology，Vol.2, No.2，pp.113-126，2009．</a></li>
-                <li><a href="http://www.aist.go.jp/aist_j/press_release/pr2006/pr20060920/pr20060920.html" target="_blank">2006.9.20 産総研プレスリリース<br>「全方向ステレオカメラを搭載したインテリジェント電動車いす」</a><br>
-                  <font color="#990000" size=-1 >Award: 平成18年上半期 産総研MIP(Most Impressive Presentation)賞 大賞受賞</font></li>
-                <li><a href="https://www.aist.go.jp/Portals/0/resource_images/aist_j/aistinfo/aist_today/vol07_01/vol07_01_full.pdf" target="_blank">佐藤雄隆，"進化するインテリジェント電動車いす"，産総研Today 2007年1月号，pp.26-27，2007．</a></li>
-                <li><a href="https://www.aist.go.jp/Portals/0/resource_images/aist_j/aistinfo/aist_today/vol08_01/vol08_01_p24_p25.pdf" target="_blank">佐藤雄隆，"障害者や高齢者の支援のための本格研究 - 全方向ステレオカメラを搭載した電動車いすの開発"，産総研Today 2008年1月号，pp.24-25，2008．</a></li>
-                <li>佐藤雄隆，坂上勝彦，"全方向ステレオシステム（SOS）を搭載したインテリジェント電動車いすの開発"，ビジョン技術の実利用ワークショップ(ViEW2006)論文集，pp.231-236，2006．<br>
-                  <font color="#990000" size=-1 >Award: 平成18年小田原論文賞受賞</font></li>
+              <ul style="padding-left: 15px">
+                <li>
+                  <a
+                    href="http://www.aist.go.jp/aist_j/press_release/pr2007/pr20071016/pr20071016.html"
+                    target="_blank"
+                    >2007.10.16 産総研プレスリリース<br />「カメラ映像から異常動作をリアルタイムで自動検出するソフトを開発」</a
+                  >
+                </li>
+                <li>
+                  岩田健司,佐藤雄隆,小林
+                  匠,依田育士,坂上勝彦,大津展之，"CHLACによる映像サーベイランスのためのビジュアルフレームワーク"，第13回画像センシングシンポジウム（SSII07）論文集，LD1-04,
+                  pp.1-7，2007．<br /><font color="#990000" size="-1"
+                    >Award: 第13回画像センシングシンポジウム
+                    オーディエンス賞受賞</font
+                  >
+                </li>
+                <li>
+                  K.Iwata, Y.Satoh, T.Kobayashi, I.Yoda and N.Otsu，"Application
+                  of the Unusual Motion Detection Using CHLAC to the Video
+                  Surveillance"，Proc. of the 14th International Conference on
+                  Neural Information Processing (ICONIP2007), Lecture Notes in
+                  Computer Science, Springer，LNCS4985, pp.628-636，2007．
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/SOS_Wheelchair2.jpg"><br>
-            <center><font size=-1>Smart Wheelchair Equipped with a Stereo Omni-directional System (SOS)</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img
+              src="https://satoh-yutaka.github.io/images/chlac_appletree.gif"
+            /><br />
+            <center>
+              <font size="-1"
+                >Automatic Detection of Motions Deviating from Learned Normal
+                Patterns</font
+              >
+            </center>
           </div>
         </div>
-         <!----------------------->
+        <!----------------------->
 
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>全方向ステレオシステム（2001～）</b><br>
-    	Stereo Omni-directional System (SOS)
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>インテリジェント電動車いす（2004～）</b><br />
+        Smart Wheel Chair Project
+        <br /><br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li>Y. Satoh and K. Sakaue，"Stereo omni-directional system (SOS) and its applications"，Chapter in Intelligent Environments: Methods, Algorithms and Applications, D. Monekosso, P. Remagnino and Y. Kuno (eds)，Springer，pp.127-142，2008．</li>
-                <li>佐藤雄隆, 山本和彦, 桑島茂純, 棚橋英樹, 王彩華, 丹羽義典, “移動体ビジョンを指向した小型全方向ステレオシステム(miniSOS)の開発”, 画像センシングシンポジウム(SSII03) 講演論文集, pp.311-316 (2003).<br><font color="#990000" size=-1 >Award: 第9回画像センシングシンポジウム優秀論文賞受賞</font></li>
-                <li>王彩華, 棚橋英樹, 佐藤雄隆, 平湯秀和, 丹羽義典, 山本和彦, “全周囲エッジヒストグラムを用いたセンサの位置・姿勢推定”, 信学論(D-II), No.10, pp.1400-1410 (2003).</li>
-                <li>S. Shimizu, K. Yamamoto, C. Wang, Y. Satoh, H. Tanahashi and Y. Niwa, "Moving Object Detection by Mobile Stereo Omni-directional System (SOS) using Spherical Depth Image"，Pattern Analysis & Applications，Vol.9, Issue 2，pp.113-126，2006．</li>
+              <ul style="padding-left: 15px">
+                <li>
+                  <a
+                    href="https://jivp-eurasipjournals.springeropen.com/articles/10.1155/2007/87646"
+                    target="_blank"
+                    >Yutaka Satoh and Katsuhiko Sakaue，"An Omni-directional
+                    Stereo Vision-based Smart Wheelchair"，EURASIP Journal on
+                    Image and Video Processing，Vol.2007，Article ID 87646, 11
+                    pages，2007．</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.aist.go.jp/pdf/aist_j/synthesiology/vol02_02/vol02_02_p113_p126.pdf"
+                    target="_blank"
+                    >佐藤雄隆，坂上勝彦，"安全安心な次世代モビリティ－を目指して-全方向ステレオカメラを搭載したインテリジェント電動車いす"，Synthesiology，Vol.2,
+                    No.2，pp.113-126，2009．</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.aist.go.jp/aist_j/press_release/pr2006/pr20060920/pr20060920.html"
+                    target="_blank"
+                    >2006.9.20 産総研プレスリリース<br />「全方向ステレオカメラを搭載したインテリジェント電動車いす」</a
+                  ><br />
+                  <font color="#990000" size="-1"
+                    >Award: 平成18年上半期 産総研MIP(Most Impressive
+                    Presentation)賞 大賞受賞</font
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.aist.go.jp/Portals/0/resource_images/aist_j/aistinfo/aist_today/vol07_01/vol07_01_full.pdf"
+                    target="_blank"
+                    >佐藤雄隆，"進化するインテリジェント電動車いす"，産総研Today
+                    2007年1月号，pp.26-27，2007．</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.aist.go.jp/Portals/0/resource_images/aist_j/aistinfo/aist_today/vol08_01/vol08_01_p24_p25.pdf"
+                    target="_blank"
+                    >佐藤雄隆，"障害者や高齢者の支援のための本格研究 -
+                    全方向ステレオカメラを搭載した電動車いすの開発"，産総研Today
+                    2008年1月号，pp.24-25，2008．</a
+                  >
+                </li>
+                <li>
+                  佐藤雄隆，坂上勝彦，"全方向ステレオシステム（SOS）を搭載したインテリジェント電動車いすの開発"，ビジョン技術の実利用ワークショップ(ViEW2006)論文集，pp.231-236，2006．<br />
+                  <font color="#990000" size="-1"
+                    >Award: 平成18年小田原論文賞受賞</font
+                  >
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/astro.jpg"><br>
-            <center><font size=-1>Stereo Omni-directional System (SOS) Series</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img
+              src="https://satoh-yutaka.github.io/images/SOS_Wheelchair2.jpg"
+            /><br />
+            <center>
+              <font size="-1"
+                >Smart Wheelchair Equipped with a Stereo Omni-directional System
+                (SOS)</font
+              >
+            </center>
           </div>
         </div>
-         <!----------------------->
+        <!----------------------->
 
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>ロバスト背景差分法（2000～）</b><br>
-    	Robust Background Subtraction (PISC, RRF, RRC)
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>全方向ステレオシステム（2001～）</b><br />
+        Stereo Omni-directional System (SOS)
+        <br /><br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li>佐藤雄隆, 金子俊一, 丹羽義典, 山本 和彦, “Radial Reach Filter (RRF) によるロバストな物体検出”, 信学論(D-II), vol.J86-D-II, no.5, pp.616-624 (2003).</li>
-                <li>佐藤雄隆, 金子俊一, 五十嵐悟, “周辺増分符号相関画像に基づくロバスト物体検出及び分離”, 信学論(D-II), Vol.J84-D-II,  No.12,  pp.2585-2594 (2001).</li>
-                <li>Y. Satoh, H. Tanahashi, C. Wang, S. Kaneko, S. Igarashi, Y. Niwa and K. Yamamoto, “Robust Event Detection by Radial Reach Filter (RRF)”, Proc. of the 16th IAPR International Conference on Pattern Recognition (ICPR2002), Vol.II, pp.623-626 (2002).</li>
-                <li>Y. Satoh, C. Wang, H. Tanahashi, Y. Niwa, K. Yamamoto, “Robust Object Detection for Intelligent Surveillance Systems based on Radial Reach Correlation (RRC)”, Proc. of IEEE International Conference on Intelligent Robots and Systems (IROS2003) (2003).</li>
+              <ul style="padding-left: 15px">
+                <li>
+                  Y. Satoh and K. Sakaue，"Stereo omni-directional system (SOS)
+                  and its applications"，Chapter in Intelligent Environments:
+                  Methods, Algorithms and Applications, D. Monekosso, P.
+                  Remagnino and Y. Kuno (eds)，Springer，pp.127-142，2008．
+                </li>
+                <li>
+                  佐藤雄隆, 山本和彦, 桑島茂純, 棚橋英樹, 王彩華, 丹羽義典,
+                  “移動体ビジョンを指向した小型全方向ステレオシステム(miniSOS)の開発”,
+                  画像センシングシンポジウム(SSII03) 講演論文集, pp.311-316
+                  (2003).<br /><font color="#990000" size="-1"
+                    >Award: 第9回画像センシングシンポジウム優秀論文賞受賞</font
+                  >
+                </li>
+                <li>
+                  王彩華, 棚橋英樹, 佐藤雄隆, 平湯秀和, 丹羽義典, 山本和彦,
+                  “全周囲エッジヒストグラムを用いたセンサの位置・姿勢推定”,
+                  信学論(D-II), No.10, pp.1400-1410 (2003).
+                </li>
+                <li>
+                  S. Shimizu, K. Yamamoto, C. Wang, Y. Satoh, H. Tanahashi and
+                  Y. Niwa, "Moving Object Detection by Mobile Stereo
+                  Omni-directional System (SOS) using Spherical Depth
+                  Image"，Pattern Analysis & Applications，Vol.9, Issue
+                  2，pp.113-126，2006．
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/RRC.jpg"><br>
-            <img src="https://satoh-yutaka.github.io/images/RRF.gif"><br>
-            <center><font size=-1>Robust Person Detection Unaffected by Background, Clothing Variations, or Shadows．</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img src="https://satoh-yutaka.github.io/images/astro.jpg" /><br />
+            <center>
+              <font size="-1">Stereo Omni-directional System (SOS) Series</font>
+            </center>
           </div>
         </div>
-         <!----------------------->
+        <!----------------------->
 
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>ロバスト画像照合（1999～）</b><br>
-    	Robust Image Registration (SCC)<br>
-    	<br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>ロバスト背景差分法（2000～）</b><br />
+        Robust Background Subtraction (PISC, RRF, RRC)
+        <br /><br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li>S. Kaneko, Y. Satoh, S. Igarashi, “Using Selective Correlation Coefficient for Robust Image Registration”, Pattern Recognition, vol.36, no.5, pp.1165-1173 (2003).</li>
-                <li>佐藤雄隆, 金子俊一, 五十嵐悟, “選択的正規化相関によるロバスト画像照合”, 電気学会論文誌Ｃ, Vol.121-C, No.4, pp.800-807 (2001).</li>
+              <ul style="padding-left: 15px">
+                <li>
+                  佐藤雄隆, 金子俊一, 丹羽義典, 山本 和彦, “Radial Reach Filter
+                  (RRF) によるロバストな物体検出”, 信学論(D-II), vol.J86-D-II,
+                  no.5, pp.616-624 (2003).
+                </li>
+                <li>
+                  佐藤雄隆, 金子俊一, 五十嵐悟,
+                  “周辺増分符号相関画像に基づくロバスト物体検出及び分離”,
+                  信学論(D-II), Vol.J84-D-II, No.12, pp.2585-2594 (2001).
+                </li>
+                <li>
+                  Y. Satoh, H. Tanahashi, C. Wang, S. Kaneko, S. Igarashi, Y.
+                  Niwa and K. Yamamoto, “Robust Event Detection by Radial Reach
+                  Filter (RRF)”, Proc. of the 16th IAPR International Conference
+                  on Pattern Recognition (ICPR2002), Vol.II, pp.623-626 (2002).
+                </li>
+                <li>
+                  Y. Satoh, C. Wang, H. Tanahashi, Y. Niwa, K. Yamamoto, “Robust
+                  Object Detection for Intelligent Surveillance Systems based on
+                  Radial Reach Correlation (RRC)”, Proc. of IEEE International
+                  Conference on Intelligent Robots and Systems (IROS2003)
+                  (2003).
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/SCC.png"><br>
-            <center><font size=-1>Image Matching with Automatic Gloss Removal</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img src="https://satoh-yutaka.github.io/images/RRC.jpg" /><br />
+            <img src="https://satoh-yutaka.github.io/images/RRF.gif" /><br />
+            <center>
+              <font size="-1"
+                >Robust Person Detection Unaffected by Background, Clothing
+                Variations, or Shadows．</font
+              >
+            </center>
           </div>
         </div>
-         <!----------------------->
+        <!----------------------->
 
-    	<br><br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	<b>画像処理エキスパートシステム（1995～）</b><br>
-    	Image Processing Expert System
-    	<br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-          <div style="flex: 1; min-width: 200px;">
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>ロバスト画像照合（1999～）</b><br />
+        Robust Image Registration (SCC)<br />
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul>
-                <li>佐藤雄隆, 金子俊一, 五十嵐悟, “遺伝的アルゴリズムによる画像セグメンテーションの最適化”, 精密工学会論文誌, Vol.66, No.6, pp.939-943 (2000).</li>
-                <li>Y. Satoh, S. Kaneko, and S. Igarashi, “Procedure Optimization for Picture Segmentation by Genetic Algorithms with morphogenic intersection”, Proc. of the 4th International Conference on Quality Control by Artificial Vision (QCAV'98), pp.305-312 (1998).</li>
+              <ul style="padding-left: 15px">
+                <li>
+                  S. Kaneko, Y. Satoh, S. Igarashi, “Using Selective Correlation
+                  Coefficient for Robust Image Registration”, Pattern
+                  Recognition, vol.36, no.5, pp.1165-1173 (2003).
+                </li>
+                <li>
+                  佐藤雄隆, 金子俊一, 五十嵐悟,
+                  “選択的正規化相関によるロバスト画像照合”, 電気学会論文誌Ｃ,
+                  Vol.121-C, No.4, pp.800-807 (2001).
+                </li>
               </ul>
             </div>
           </div>
-          <div style="flex: 0 0 200px; text-align: center;">
-            <img src="https://satoh-yutaka.github.io/images/GA.jpg" style="width:100%; height:auto;"><br>
-            <img src="https://satoh-yutaka.github.io/images/GA.gif" style="width:50%; height:auto;"><br>
-            <center><font size=-1>Genetic Generation of Image Processing Pipeline from Input to Goal</font></center>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img src="https://satoh-yutaka.github.io/images/SCC.png" /><br />
+            <center>
+              <font size="-1">Image Matching with Automatic Gloss Removal</font>
+            </center>
           </div>
         </div>
-        
-    <!-- ----------------------------------------------------------------- -->
-    </section>
-    <section id="awards">
-      <h2>Awards &amp; Honors</h2>
-      <p>
+        <!----------------------->
 
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	産総研論文賞(2022)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	ACCV 2020 Best Paper Honorable Mention Award.（2020）<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	画像センシングシンポジウム優秀学術賞（2019）<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	産総研論文賞(2019)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成25年小田原論文賞 (2013)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成23年度科学技術分野の文部科学大臣表彰 若手科学者賞 (2011)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成19年画像センシングシンポジウムオーディエンス賞 (2007)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成18年上半期産総研MIP賞大賞 (2006)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成18年小田原論文賞 (2006)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成15年画像センシングシンポジウム優秀論文賞 (2003)<br><br>
-    
-    	（以下，指導学生による受賞）
-    
-    	<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	筑波大学システム情報工学研究群(博士後期課程)研究群長表彰(2024年度)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	DIA2025研究奨励賞(2025)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	筑波大学システム情報工学研究科(博士後期課程)研究科長表彰(2021年度)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	精密工学会画像応用技術専門委員会若手奨励賞(2019)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成29年MIRU学生優秀賞受賞 (2017)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成28年精密工学会画像応用技術専門委員会若手奨励賞(2016)<br>
-        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-    	平成27年精密工学会画像応用技術専門委員会若手奨励賞(2015)<br>
+        <br /><br />
+        <span class="icon-check"></span>
+        <b>画像処理エキスパートシステム（1995～）</b><br />
+        Image Processing Expert System
+        <br /><br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+          "
+        >
+          <div style="flex: 1; min-width: 200px">
+            <button class="toggle-button">Show Key Publications ▼</button>
+            <div class="themes-content collapsed">
+              <ul style="padding-left: 15px">
+                <li>
+                  佐藤雄隆, 金子俊一, 五十嵐悟,
+                  “遺伝的アルゴリズムによる画像セグメンテーションの最適化”,
+                  精密工学会論文誌, Vol.66, No.6, pp.939-943 (2000).
+                </li>
+                <li>
+                  Y. Satoh, S. Kaneko, and S. Igarashi, “Procedure Optimization
+                  for Picture Segmentation by Genetic Algorithms with
+                  morphogenic intersection”, Proc. of the 4th International
+                  Conference on Quality Control by Artificial Vision (QCAV'98),
+                  pp.305-312 (1998).
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div style="flex: 0 0 200px; text-align: center">
+            <img
+              src="https://satoh-yutaka.github.io/images/GA.jpg"
+              style="width: 100%; height: auto"
+            /><br />
+            <img
+              src="https://satoh-yutaka.github.io/images/GA.gif"
+              style="width: 50%; height: auto"
+            /><br />
+            <center>
+              <font size="-1"
+                >Genetic Generation of Image Processing Pipeline from Input to
+                Goal</font
+              >
+            </center>
+          </div>
+        </div>
+      </section>
 
-      </p>
+      <!-- ----------------------------------------------------------------- -->
+      <section id="awards">
+        <h2>Awards &amp; Honors</h2>
+        <p>
+          <span class="icon-check"></span>
+          産総研論文賞(2022)<br />
+          <span class="icon-check"></span>
+          ACCV 2020 Best Paper Honorable Mention Award.（2020）<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム優秀学術賞（2019）<br />
+          <span class="icon-check"></span>
+          産総研論文賞(2019)<br />
+          <span class="icon-check"></span>
+          平成25年小田原論文賞 (2013)<br />
+          <span class="icon-check"></span>
+          平成23年度科学技術分野の文部科学大臣表彰 若手科学者賞 (2011)<br />
+          <span class="icon-check"></span>
+          平成19年画像センシングシンポジウムオーディエンス賞 (2007)<br />
+          <span class="icon-check"></span>
+          平成18年上半期産総研MIP賞大賞 (2006)<br />
+          <span class="icon-check"></span>
+          平成18年小田原論文賞 (2006)<br />
+          <span class="icon-check"></span>
+          平成15年画像センシングシンポジウム優秀論文賞 (2003)<br /><br />
 
-    <!-- ----------------------------------------------------------------- -->
-    </section>
-    <section id="society">
-      <h2>Professional Activities</h2>
-      <p>
-		<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-		 画像センシングシンポジウム（SSII2025）, 組織委員, ステアリングコミッティ, 2024-2025.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2024), プログラム委員, 2024.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2024）, 組織委員, ステアリングコミッティ, 2023-2024.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2023), プログラム委員, 2023.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2023）, 組織委員, ステアリングコミッティ, 2022-2023.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2022), プログラム委員, 2022.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2022）, 組織委員, ステアリングコミッティ, 2021-2022.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2021), プログラム委員, 2021.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2021）, 組織委員, ステアリングコミッティ, 2020-2021.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2020), 実行委員, 2020.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2020）, 組織委員, ステアリングコミッティ, 2019-2020.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2019), 実行委員, 2019.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2019）, 実行委員長, 2018-2019.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2018), 実行委員, 2018.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2018）, 実行委員長, 2017-2018.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2017), 実行委員, 2017.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2017）, 運営委員長, 2016-2017.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 動的画像処理実利用化ワークショップ (DIA2017), プログラム委員, 2016-2017.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2016), 実行委員, 2016.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 動的画像処理実利用化ワークショップ (DIA2016), プログラム委員, 2015-2016.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2016）, プログラム委員長, 2015-2016.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 JEITA 認識形入力方式標準化専門委員会 委員長, 2016-2021<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 動的画像処理実利用化ワークショップ (DIA2015), プログラム副委員長, 2014-2015.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2015), 実行委員, 2015.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2015）, 表彰小委員会委員, 2014-2015.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 電子情報通信学会 情報・システムソサイエティ学会誌編集連絡委員／会誌編集委員 2015-2016.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像応用技術専門委員会　委員 2015-.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2014), 実行委員, 2014.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2014）, オーガナイズドセッション部会長, 2013-2014.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 20th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2014), Program Committee, 2013-2014.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 2013 International Symposium on Optomechatronic Technologies (ISOT2013), Program Committee, 2012-2013.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2013), 実行委員, 2013.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2013）, 表彰小委員会副委員長, 2012-2013.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 19th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2013), Scientific Committee, 2012-2013.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2012), 実行委員, 2012.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2012）, プログラム委員長, 2011-2012.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 18th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2012), Scientific Committee, 2011-2012.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2011), 実行委員, 2011.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 電子情報通信学会英文論文誌MVA特集号, 論文編集委員幹事, 2011.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 IAPR Conference on Machine Vision Applications (MVA2011), Secretary to Program Chair, 2010-2011.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII2011）, 表彰小委員会副委員長, 2010-.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 17th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2011), 組織委員, 2011.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 JEITA 認識形入力方式標準化専門委員会 委員, 2010-2015<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2010), 実行委員, 2010.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 16th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2010), 組織委員, 2010.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 電気学会「スマートビジョン協同研究委員会」, 協同研究委員, 2009-.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2009), 実行委員幹事, 2009.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 15th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2009), 組織委員, 2009.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2008), 実行委員幹事, 2008.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII08）, 実行委員, 2008.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 14th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2008), 組織委員, 2008.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 電気学会「ビジョンのシステム制御技術への適用協同研究委員会」, 協同研究委員, 2007-2009.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 動的画像処理実利用化ワークショップ（DIA2008）, プログラム委員, 2007-2008.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2007), 実行委員幹事補佐, 2007.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII07）, 実行委員, 2007.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 電気学会「多次元センシング情報の産業利用に関する調査専門委員会」, 調査専門委員, 2007-.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 13th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2007), 組織委員, 2007.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 動的画像処理実利用化ワークショップ (DIA2007), 実行委員, 2006.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2006), 実行委員, 2006.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 12th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2006), 組織委員, 2006.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 電気学会「画像監視および画像認識のシステム制御技術への適用調査専門委員会」, 調査専門委員, 2005-2007.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 画像センシングシンポジウム（SSII06）, プログラム委員, 2005.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 電子情報通信学会英文論文誌MVA特集号, 論文編集委員, 2005.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 SPIE International Symposium on Optomechatronic Technologies 2005 (ISOT2005), 実行委員, 2005.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2005), 実行委員, 2005.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 11th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2005), 組織委員, 2005.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2004), 実行委員, 2004.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 IAPR Conference on Machine Vision Applications (MVA2005), 実行委員, 2004-2005.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 動的画像処理実利用化ワークショップ (DIA2004), 実行委員, 2004.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 10th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2004), 組織委員, 2004.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 ビジョン技術の実利用ワークショップ (ViEW2003), 実行委員, 2003.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 9th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2003), 組織委員, 2003.<br>
- 	        <img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 		 The 8th Korea-Japan Joint Workshop Frontiers of Computer Vision (FCV2002), 組織委員, 2002.<br>
-       </p>
+          （以下，指導学生による受賞）
 
-    <!-- ----------------------------------------------------------------- -->
-    </section>
-    <section id="academic">
-      <h2>Academic Appointments</h2>
-      <p>
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
-	筑波大学大学院 教授（連携大学院）(2008-2017 准教授，2017-教授)<br>
-	Professor (Cooperative Graduate School Program), University of Tsukuba<br>
+          <br />
+          <span class="icon-check"></span>
+          筑波大学システム情報工学研究群(博士後期課程)研究群長表彰(2024年度)<br />
+          <span class="icon-check"></span>
+          DIA2025研究奨励賞(2025)<br />
+          <span class="icon-check"></span>
+          筑波大学システム情報工学研究科(博士後期課程)研究科長表彰(2021年度)<br />
+          <span class="icon-check"></span>
+          精密工学会画像応用技術専門委員会若手奨励賞(2019)<br />
+          <span class="icon-check"></span>
+          平成29年MIRU学生優秀賞受賞 (2017)<br />
+          <span class="icon-check"></span>
+          平成28年精密工学会画像応用技術専門委員会若手奨励賞(2016)<br />
+          <span class="icon-check"></span>
+          平成27年精密工学会画像応用技術専門委員会若手奨励賞(2015)<br />
+        </p>
+      </section>
 
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 	筑波大学非常勤講師 (2008-)「情報学特別講義」<br>
- 	Part-time instructor, University of Tsukuba<br>
- 
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 	東京工業大学 非常勤講師（2015-2021）「ロボット技術」<br>
- 	Part-time instructor, Tokyo Institute of Technology<br>
- 
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 	筑波大学非常勤講師 (2011-2015)「先端情報技術」<br>
- 	Part-time instructor, University of Tsukuba<br>
- 
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 	電気通信大学 非常勤講師 (2009-2015)「情報システム学特別講義 I」<br>
- 	Part-time instructor, University of Electro-Communications<br>
- 
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 	東京大学 非常勤講師（2007）「学際理数情報学特論」<br>
- 	Part-time instructor, University of Tokyo<br>
- 
-	<img src="https://satoh-yutaka.github.io/images/check_mark_s.png">
- 	北海道工業大学 非常勤講師（1998-2000）「静力学・動力学の応用」<br>
- 	Part-time instructor, Hokkaido Institute of Technology<br>
-       </p>
-    </section>
+      <!-- ----------------------------------------------------------------- -->
+      <section id="society">
+        <h2>Professional Activities</h2>
+        <p>
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2025）, 組織委員,
+          ステアリングコミッティ, 2024-2025.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2024), プログラム委員,
+          2024.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2024）, 組織委員,
+          ステアリングコミッティ, 2023-2024.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2023), プログラム委員,
+          2023.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2023）, 組織委員,
+          ステアリングコミッティ, 2022-2023.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2022), プログラム委員,
+          2022.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2022）, 組織委員,
+          ステアリングコミッティ, 2021-2022.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2021), プログラム委員,
+          2021.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2021）, 組織委員,
+          ステアリングコミッティ, 2020-2021.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2020), 実行委員, 2020.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2020）, 組織委員,
+          ステアリングコミッティ, 2019-2020.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2019), 実行委員, 2019.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2019）, 実行委員長, 2018-2019.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2018), 実行委員, 2018.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2018）, 実行委員長, 2017-2018.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2017), 実行委員, 2017.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2017）, 運営委員長, 2016-2017.<br />
+          <span class="icon-check"></span>
+          動的画像処理実利用化ワークショップ (DIA2017), プログラム委員,
+          2016-2017.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2016), 実行委員, 2016.<br />
+          <span class="icon-check"></span>
+          動的画像処理実利用化ワークショップ (DIA2016), プログラム委員,
+          2015-2016.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2016）, プログラム委員長,
+          2015-2016.<br />
+          <span class="icon-check"></span>
+          JEITA 認識形入力方式標準化専門委員会 委員長, 2016-2021<br />
+          <span class="icon-check"></span>
+          動的画像処理実利用化ワークショップ (DIA2015), プログラム副委員長,
+          2014-2015.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2015), 実行委員, 2015.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2015）, 表彰小委員会委員,
+          2014-2015.<br />
+          <span class="icon-check"></span>
+          電子情報通信学会
+          情報・システムソサイエティ学会誌編集連絡委員／会誌編集委員
+          2015-2016.<br />
+          <span class="icon-check"></span>
+          画像応用技術専門委員会　委員 2015-.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2014), 実行委員, 2014.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2014）,
+          オーガナイズドセッション部会長, 2013-2014.<br />
+          <span class="icon-check"></span>
+          The 20th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2014), Program Committee, 2013-2014.<br />
+          <span class="icon-check"></span>
+          2013 International Symposium on Optomechatronic Technologies
+          (ISOT2013), Program Committee, 2012-2013.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2013), 実行委員, 2013.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2013）, 表彰小委員会副委員長,
+          2012-2013.<br />
+          <span class="icon-check"></span>
+          The 19th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2013), Scientific Committee, 2012-2013.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2012), 実行委員, 2012.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2012）, プログラム委員長,
+          2011-2012.<br />
+          <span class="icon-check"></span>
+          The 18th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2012), Scientific Committee, 2011-2012.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2011), 実行委員, 2011.<br />
+          <span class="icon-check"></span>
+          電子情報通信学会英文論文誌MVA特集号, 論文編集委員幹事, 2011.<br />
+          <span class="icon-check"></span>
+          IAPR Conference on Machine Vision Applications (MVA2011), Secretary to
+          Program Chair, 2010-2011.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII2011）, 表彰小委員会副委員長,
+          2010-.<br />
+          <span class="icon-check"></span>
+          The 17th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2011), 組織委員, 2011.<br />
+          <span class="icon-check"></span>
+          JEITA 認識形入力方式標準化専門委員会 委員, 2010-2015<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2010), 実行委員, 2010.<br />
+          <span class="icon-check"></span>
+          The 16th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2010), 組織委員, 2010.<br />
+          <span class="icon-check"></span>
+          電気学会「スマートビジョン協同研究委員会」, 協同研究委員, 2009-.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2009), 実行委員幹事, 2009.<br />
+          <span class="icon-check"></span>
+          The 15th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2009), 組織委員, 2009.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2008), 実行委員幹事, 2008.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII08）, 実行委員, 2008.<br />
+          <span class="icon-check"></span>
+          The 14th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2008), 組織委員, 2008.<br />
+          <span class="icon-check"></span>
+          電気学会「ビジョンのシステム制御技術への適用協同研究委員会」,
+          協同研究委員, 2007-2009.<br />
+          <span class="icon-check"></span>
+          動的画像処理実利用化ワークショップ（DIA2008）, プログラム委員,
+          2007-2008.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2007), 実行委員幹事補佐,
+          2007.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII07）, 実行委員, 2007.<br />
+          <span class="icon-check"></span>
+          電気学会「多次元センシング情報の産業利用に関する調査専門委員会」,
+          調査専門委員, 2007-.<br />
+          <span class="icon-check"></span>
+          The 13th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2007), 組織委員, 2007.<br />
+          <span class="icon-check"></span>
+          動的画像処理実利用化ワークショップ (DIA2007), 実行委員, 2006.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2006), 実行委員, 2006.<br />
+          <span class="icon-check"></span>
+          The 12th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2006), 組織委員, 2006.<br />
+          <span class="icon-check"></span>
+          電気学会「画像監視および画像認識のシステム制御技術への適用調査専門委員会」,
+          調査専門委員, 2005-2007.<br />
+          <span class="icon-check"></span>
+          画像センシングシンポジウム（SSII06）, プログラム委員, 2005.<br />
+          <span class="icon-check"></span>
+          電子情報通信学会英文論文誌MVA特集号, 論文編集委員, 2005.<br />
+          <span class="icon-check"></span>
+          SPIE International Symposium on Optomechatronic Technologies 2005
+          (ISOT2005), 実行委員, 2005.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2005), 実行委員, 2005.<br />
+          <span class="icon-check"></span>
+          The 11th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2005), 組織委員, 2005.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2004), 実行委員, 2004.<br />
+          <span class="icon-check"></span>
+          IAPR Conference on Machine Vision Applications (MVA2005), 実行委員,
+          2004-2005.<br />
+          <span class="icon-check"></span>
+          動的画像処理実利用化ワークショップ (DIA2004), 実行委員, 2004.<br />
+          <span class="icon-check"></span>
+          The 10th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2004), 組織委員, 2004.<br />
+          <span class="icon-check"></span>
+          ビジョン技術の実利用ワークショップ (ViEW2003), 実行委員, 2003.<br />
+          <span class="icon-check"></span>
+          The 9th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2003), 組織委員, 2003.<br />
+          <span class="icon-check"></span>
+          The 8th Korea-Japan Joint Workshop Frontiers of Computer Vision
+          (FCV2002), 組織委員, 2002.<br />
+        </p>
+      </section>
 
-    <!-- ----------------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      <section id="academic">
+        <h2>Academic Appointments</h2>
+        <p>
+          <span class="icon-check"></span>
+          筑波大学大学院 教授（連携大学院）(2008-2017 准教授，2017-教授)<br />
+          Professor (Cooperative Graduate School Program), University of
+          Tsukuba<br />
 
-  </main>
-  <footer class="site-footer">
-    <div class="last-updated">Last updated: 2025-04-20</div>
-    &copy; <span id="current-year">2025</span> Yutaka Satoh. All Rights Reserved.
-  </footer>
-  <!-- Dynamic year script -->
-  <script>
-    // Insert current date in YY-MM-DD format for last updated
-    <!--
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const dd = String(today.getDate()).padStart(2, '0');
-    document.getElementById('last-updated-date').textContent = `${yyyy}-${mm}-${dd}`;
-    -->
-	    
-    // Update copyright year
+          <span class="icon-check"></span>
+          筑波大学非常勤講師 (2008-)「情報学特別講義」<br />
+          Part-time instructor, University of Tsukuba<br />
 
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggles = document.querySelectorAll('.toggle-button');
+          <span class="icon-check"></span>
+          東京工業大学 非常勤講師（2015-2021）「ロボット技術」<br />
+          Part-time instructor, Tokyo Institute of Technology<br />
 
-    toggles.forEach((btn, index) => {
-      const content = btn.nextElementSibling;
+          <span class="icon-check"></span>
+          筑波大学非常勤講師 (2011-2015)「先端情報技術」<br />
+          Part-time instructor, University of Tsukuba<br />
 
-      // 初期状態：モバイルでは折りたたむ、PCでは表示
-      function setInitialState() {
-        if (window.innerWidth <= 768) {
-          content.classList.add('collapsed');
-          btn.style.display = 'inline-block';
-          btn.textContent = 'Show Key Publications ▼';
-        } else {
-          content.classList.remove('collapsed');
-          btn.style.display = 'none';
-        }
-      }
+          <span class="icon-check"></span>
+          電気通信大学 非常勤講師 (2009-2015)「情報システム学特別講義 I」<br />
+          Part-time instructor, University of Electro-Communications<br />
 
-      // 初期状態の設定とリサイズ時の対応
-      setInitialState();
-      window.addEventListener('resize', setInitialState);
+          <span class="icon-check"></span>
+          東京大学 非常勤講師（2007）「学際理数情報学特論」<br />
+          Part-time instructor, University of Tokyo<br />
 
-      // ボタンのクリックで展開・折りたたみ
-      btn.addEventListener('click', function () {
-        content.classList.toggle('collapsed');
-        this.textContent = content.classList.contains('collapsed')
-          ? 'Show Key Publications ▼'
-          : 'Hide Key Publications ▲';
+          <span class="icon-check"></span>
+          北海道工業大学 非常勤講師（1998-2000）「静力学・動力学の応用」<br />
+          Part-time instructor, Hokkaido Institute of Technology<br />
+        </p>
+      </section>
+
+      <!-- ----------------------------------------------------------------- -->
+    </main>
+    <footer class="site-footer">
+      <div class="last-updated">Last updated: 2025-04-21</div>
+      &copy; <span id="current-year">2025</span> Yutaka Satoh. All Rights
+      Reserved.
+    </footer>
+    <!-- Dynamic year script -->
+    <script>
+      // Insert current date in YY-MM-DD format for last updated
+      <!--
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, "0");
+      const dd = String(today.getDate()).padStart(2, "0");
+      document.getElementById(
+        "last-updated-date"
+      ).textContent = `${yyyy}-${mm}-${dd}`;
+      -->
+
+      // Update copyright year
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".toggle-button");
+
+        toggles.forEach((btn, index) => {
+          const content = btn.nextElementSibling;
+
+          // 初期状態：モバイルでは折りたたむ、PCでは表示
+          function setInitialState() {
+            if (window.innerWidth <= 768) {
+              content.classList.add("collapsed");
+              btn.style.display = "inline-block";
+              btn.textContent = "Show Key Publications ▼";
+            } else {
+              content.classList.remove("collapsed");
+              btn.style.display = "none";
+            }
+          }
+
+          // 初期状態の設定とリサイズ時の対応
+          setInitialState();
+          window.addEventListener("resize", setInitialState);
+
+          // ボタンのクリックで展開・折りたたみ
+          btn.addEventListener("click", function () {
+            content.classList.toggle("collapsed");
+            this.textContent = content.classList.contains("collapsed")
+              ? "Show Key Publications ▼"
+              : "Hide Key Publications ▲";
+          });
+        });
       });
-    });
-  });
-</script>
-</body>
+    </script>
+  </body>
 </html>
