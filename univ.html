@@ -116,6 +116,31 @@
         overflow: hidden;
       }
 
+      /* 画像クリックで拡大表示するモーダル */
+      .img-zoomable {
+        max-width: 100%;
+        height: auto;
+        cursor: zoom-in;
+      }
+
+      #img-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      #img-modal img {
+        display: block;
+        max-width: 90%;
+        max-height: 90%;
+        margin: 5% auto;
+        box-shadow: 0 0 10px #000;
+      }
       /*-----------------------------------------------------------*/
       /* Responsive */
       @media (max-width: 768px) {
@@ -262,10 +287,7 @@
     <header>
       <div class="header-inner">
         <a href="#top"
-          ><img
-            src="https://satoh-yutaka.github.io/images/header.png"
-            alt="Banner"
-            class="site-banner"
+          ><img src="./images/header.png" alt="Banner" class="site-banner"
         /></a>
       </div>
     </header>
@@ -280,7 +302,11 @@
     </nav>
     <main id="top" class="content">
       <section id="about">
-        <img src="./images/univ_banner_horiz2.jpg" />
+        <img
+          src="./images/univ_banner_horiz2.jpg"
+          style="max-width: 100%; height: auto; display: block"
+          alt="バナー"
+        />
         <p class="lab-info">
           <b>
             筑波大学 理工情報生命学術院 システム情報工学研究群<br />
@@ -411,13 +437,21 @@
         <b>研究テーマの例</b><br />
         <img
           src="./images/research_themes.jpg"
-          width="700"
+          class="img-zoomable"
           alt="research_themes"
-        /><br />
+          onclick="openModal(this.src)"
+        />
+        <br />
 
         <span class="icon-check"></span>
         <b>研究室で保有する実環境センサーの例</b><br />
-        <img src="./images/sensors.jpg" width="700" alt="sensors" /><br /><br />
+        <img
+          src="./images/sensors.jpg"
+          class="img-zoomable"
+          alt="sensors"
+          onclick="openModal(this.src)"
+        />
+        <br /><br />
 
         <span class="icon-check"></span>
         <b>これまでの学位論文タイトルの例</b>
@@ -496,6 +530,19 @@
       &copy; <span id="current-year">2025</span> Yutaka Satoh. All Rights
       Reserved.
     </footer>
+
+    <!-- モーダル表示用 -->
+    <div id="img-modal" onclick="this.style.display='none'">
+      <img src="" alt="拡大画像" id="modal-img" />
+    </div>
+
+    <script>
+      function openModal(src) {
+        document.getElementById("modal-img").src = src;
+        document.getElementById("img-modal").style.display = "block";
+      }
+    </script>
+
     <!-- Dynamic year script -->
     <script>
       // Insert current date in YY-MM-DD format for last updated
