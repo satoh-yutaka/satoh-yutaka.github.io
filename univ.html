@@ -256,6 +256,13 @@
       .main-nav a:hover {
         color: var(--accent-color);
       }
+
+      .thesis-list {
+        padding-left: 15px; /* リスト全体の左側に15pxのスペース */
+      }
+      .thesis-list li:not(:last-child) {
+        margin-bottom: 4px; /* 各リスト項目の下に8pxの間隔（最後は除く） */
+      }
     </style>
   </head>
 
@@ -469,7 +476,7 @@
           <span class="icon-check"></span>
           <b>これまでの学位論文タイトルの例</b>
         </p>
-        <ul style="padding-left: 15px">
+        <ul class="thesis-list">
           <li>
             数式に基づく3Dデータを用いた事前学習による物体認識の性能改善に関する研究（博士論文）
           </li>
