@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>佐藤 雄隆 博士（工学）（Yutaka Satoh, Ph.D.）</title>
     <style>
+      /* 色やスタイルの基本変数 */
       :root {
         --bg-color: #ffffff;
         --text-color: #222222;
@@ -14,11 +15,14 @@
         --degree-color: #444444;
         --transition-speed: 0.3s;
       }
+
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
+
+      /* 本文全体スタイル */
       body {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -35,7 +39,7 @@
         }
       }
 
-      /* Header with Banner and Last Updated */
+      /* ヘッダー */
       header {
         position: fixed;
         top: 0;
@@ -50,6 +54,12 @@
         border-bottom: 1px solid #e0e0e0;
         z-index: 1000;
       }
+      @media (max-width: 768px) {
+        header {
+          height: 50px;
+        }
+      }
+
       .header-inner {
         max-width: 960px;
         margin: 0 auto;
@@ -58,7 +68,15 @@
         align-items: center;
         justify-content: space-between;
       }
+      @media (max-width: 768px) {
+        .header-inner {
+          flex-direction: column;
+          text-align: center;
+          gap: 0.5rem;
+        }
+      }
 
+      /* チェックアイコン */
       .icon-check {
         display: inline-block;
         width: 10px;
@@ -73,19 +91,28 @@
       .site-banner {
         display: none;
       }
+
+      /* 最終更新日時 */
       .last-updated {
         font-size: 0.875rem;
         color: var(--secondary-color);
       }
 
-      /* Content (padding for header only) */
+      /* コンテンツ領域 */
       .content {
         max-width: 960px;
         margin: 0 auto;
         padding: 150px 1rem 2rem;
       }
+      @media (max-width: 768px) {
+        .content {
+          padding: 200px 1rem 2rem;
+        }
+      }
+
+      /* セクション */
       section {
-        scroll-margin-top: 125px; /* ナビゲーションでジャンプしたときの縦マージン（ナビゲーションバーにコンテンツの先頭が隠れるのを防止） */
+        scroll-margin-top: 125px;
         margin-bottom: 4rem;
       }
 
@@ -97,17 +124,20 @@
         padding-bottom: 0.25rem;
       }
 
+      /* 所属情報ブロック */
       .affiliation-block {
         border-left: 3px solid var(--accent-color);
         padding-left: 1rem;
         margin-bottom: 1rem;
       }
+
       .affiliation-block2 {
         border-left: 3px solid var(--accent-color2);
         padding-left: 1rem;
         margin-bottom: 1rem;
       }
-      /* Profile Section */
+
+      /* プロフィールセクション */
       .profile-section {
         display: flex;
         flex-wrap: wrap;
@@ -115,22 +145,36 @@
         align-items: center;
         margin-bottom: 4rem;
       }
+      @media (max-width: 768px) {
+        .profile-section {
+          flex-direction: column;
+        }
+      }
+
+      /* プロフィール画像 */
       .profile-pic {
         flex: 0 0 180px;
         max-width: 180px;
         border-radius: 50%;
         overflow: hidden;
       }
+
       .profile-pic img {
         width: 100%;
         height: auto;
         display: block;
       }
+
       .profile-info {
         flex: 1;
       }
+      @media (max-width: 768px) {
+        .profile-info {
+          text-align: left;
+        }
+      }
 
-      /* Name styling */
+      /* 名前スタイル */
       .profile-name {
         font-size: 1.4rem;
         font-weight: 600;
@@ -138,139 +182,84 @@
         margin-bottom: 0.5rem;
         line-height: 1.2;
       }
-      /* Degree styling: slightly smaller */
+
+      /* 学位スタイル */
       .profile-degree {
         font-size: 0.85em;
         color: var(--degree-color);
       }
+
       .affiliation {
         font-size: 1rem;
         color: var(--secondary-color);
         margin-bottom: 1rem;
       }
+
       .profile-info p:not(.profile-name):not(.affiliation) {
         margin-bottom: 0.75rem;
       }
 
-      /*-----------------------------------------------------------*/
-      /* Responsive */
-      @media (max-width: 768px) {
-        header {
-          height: 50px;
-        }
-        .content {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 200px 1rem 2rem;
-        }
-        .profile-section {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 2rem;
-          align-items: center;
-          margin-bottom: 4rem;
-        }
-        .profile-info {
-          text-align: left;
-        }
-        .header-inner {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 0.5rem 1rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        /* Themes & Key Papers: switch to column flex for stacking */
-        #themes table {
-          display: flex !important;
-          flex-direction: column !important;
-          width: 100% !important;
-        }
-        #themes table tr {
-          display: flex !important;
-          flex-direction: column !important;
-          width: 100% !important;
-        }
-        #themes table td[valign="top"],
-        #themes table td[align="right"] {
-          display: block !important;
-          width: 100% !important;
-          margin-bottom: 1rem !important;
-          padding: 0 !important;
-        }
-        .content {
-          padding-top: 100px;
-        }
-        /* Profile section stacks with left-align text */
-        .profile-section {
-          flex-direction: column;
-        }
-        .profile-info {
-          text-align: left;
-        }
-        .header-inner {
-          flex-direction: column;
-          text-align: center;
-          gap: 0.5rem;
-        }
-        /* Themes & Key Papers: stack list above images on narrow screens */
-        #themes table {
-          display: block !important;
-          width: 100% !important;
-        }
-        #themes table tr {
-          display: block !important;
-        }
-        #themes table td[valign="top"],
-        #themes table td[align="right"] {
-          display: block !important;
-          width: 100% !important;
-          margin-bottom: 1rem !important;
-          padding: 0 !important;
-        }
-      }
-      /* Themes & Key Papers Table Flex Layout */
+      /* テーマとキーペーパーのテーブルスタイル */
       #themes table {
         display: flex;
         justify-content: space-between;
         width: 100%;
         border: none;
       }
+
       #themes table tr {
         display: flex;
         width: 100%;
       }
+
       #themes table td[valign="top"] {
         flex: 1;
         padding-right: 1rem;
       }
+
       #themes table td[valign="top"] ul {
         margin-left: 1.5rem;
         list-style-type: disc;
         list-style-position: outside;
         padding-left: 0;
       }
+
       #themes table td[align="right"] {
         flex: 0 0 200px;
         text-align: center;
       }
+
       #themes table td[align="right"] img {
         width: 100%;
         border-radius: 0.5rem;
       }
-      /* Add spacing between Themes list items */
+
       #themes table td[valign="top"] ul li {
         margin-bottom: 0.2rem;
       }
-      /* Maintain fixed image width on mobile for Themes & Key Papers */
+
       @media (max-width: 768px) {
+        #themes table,
+        #themes table tr {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        #themes table td[valign="top"],
+        #themes table td[align="right"] {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 1rem !important;
+          padding: 0 !important;
+        }
+
         #themes table td[align="right"] img {
           width: 200px !important;
           margin: 0 auto;
         }
       }
-      /* Footer styling */
+
+      /* フッター */
       .site-footer {
         background: #f8f8f8;
         text-align: center;
@@ -279,23 +268,36 @@
         color: var(--secondary-color);
         margin-top: 2rem;
       }
-      /* Desktop: hide toggle, always show Themes content */
-      @media (min-width: 769px) {
-        #themes-toggle {
-          display: none !important;
-        }
-        .themes-content {
-          display: block !important;
-        }
+
+      /* デスクトップではテーマ切り替えを非表示 */
+      #themes-toggle {
+        display: none !important;
+      }
+      .themes-content {
+        display: block !important;
       }
       .themes-content.collapsed {
         display: none !important;
       }
+
+      /* メインナビゲーション */
       .main-nav {
         position: sticky;
         background-color: rgba(255, 255, 255, 0.95);
         border-bottom: 1px solid #ddd;
         z-index: 999;
+      }
+
+      @media (min-width: 769px) {
+        .main-nav {
+          top: 85px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .main-nav {
+          top: 50px;
+        }
       }
 
       .main-nav::after {
@@ -319,32 +321,25 @@
         justify-content: flex-start;
         overflow-x: auto;
         white-space: nowrap;
-        scrollbar-width: thin; /* Firefox */
+        scrollbar-width: thin;
         position: relative;
         padding-top: 0.5rem;
-        padding-bottom: 0.5rem; /* prevent scrollbar overlap */
+        padding-bottom: 0.5rem;
       }
+
       .main-nav li {
         margin: 0 1rem;
       }
+
       .main-nav a {
         text-decoration: none;
         color: var(--text-color);
         font-weight: 500;
         transition: color 0.3s ease;
       }
+
       .main-nav a:hover {
         color: var(--accent-color);
-      }
-      @media screen and (min-width: 769px) {
-        .main-nav {
-          top: 85px;
-        }
-      }
-      @media screen and (max-width: 768px) {
-        .main-nav {
-          top: 50px;
-        }
       }
     </style>
   </head>
