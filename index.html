@@ -341,6 +341,23 @@
       .main-nav a:hover {
         color: var(--accent-color);
       }
+
+      .paper-list {
+        padding-left: 15px; /* リスト全体の左側に15pxのスペース */
+      }
+      .paper-list li:not(:last-child) {
+        margin-bottom: 8px; /* 各リスト項目の下に8pxの間隔（最後は除く） */
+      }
+
+      /* 注目トピックのハイライト背景 */
+      .topics-highlight {
+        background-color: rgba(255, 220, 160, 0.2);
+        padding: 1rem;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-left: -15px;
+        font-size: 18px;
+      }
     </style>
   </head>
 
@@ -358,7 +375,7 @@
     <!--ナビゲーションの飛び先-->
     <nav class="main-nav">
       <ul>
-        <li><a href="#about">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./univ.html">Lab@Univ.Tsukuba</a></li>
         <li><a href="#topics">Topics</a></li>
         <!--<li><a href="#keywords">Areas of Interest</a></li>-->
@@ -588,15 +605,18 @@
       <!-- ----------------------------------------------------------------- -->
       <section id="themes">
         <h2>Research Themes &amp; Key Publications</h2>
-        <p>
+        <p class="topics-highlight">
           <span class="icon-check"></span>
           <b>
-            <u
-              >全文献リストは<a
+            <u>
+              全文献リストは
+              <a
                 href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ"
                 target="_blank"
-                >こちら</a
-              >，Full publication list is available
+              >
+                こちら
+              </a>
+              ，Full publication list is available
               <a
                 href="https://scholar.google.co.jp/citations?user=Ti3ctdAAAAAJ"
                 target="_blank"
@@ -606,10 +626,10 @@
               .
             </u>
           </b>
-          <!----------------------->
-
-          <br /><br />
         </p>
+
+        <br /><br />
+        <!----------------------->
 
         <div
           style="
@@ -626,7 +646,7 @@
             <br /><br />
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   R Yamada, K Hara, H Kataoka, K Makihara, N Inoue, R Yokota, Y
                   Satoh, "Formula-Supervised Visual-Geometric Pre-training",
@@ -658,11 +678,10 @@
                   Kataoka Hirokatsu, Matsumoto Asato, Yamagata Eisuke, Yamada
                   Ryosuke, Inoue Nakamasa, Akio Nakamura, Satoh Yutaka,
                   "Pre-training without natural images", International Journal
-                  of Computer Vision (IJCV), 130 (4), pp.990-1007, 2022.<br /><font
-                    color="#990000"
-                    size="-1"
-                    >Award: 産総研論文賞2022</font
-                  >
+                  of Computer Vision (IJCV), 130 (4), pp.990-1007, 2022.
+                  <p style="color: #990000; font-size: 15px">
+                    Award: 産総研論文賞2022
+                  </p>
                 </li>
                 <li>
                   Kensho Hara, Hirokatsu Kataoka, Masaki Inaba, Kenichi Narioka,
@@ -690,11 +709,10 @@
                   Hirokatsu Kataoka, Kazushige Okayasu, Asato Matsumoto, Eisuke
                   Yamagata, Ryosuke Yamada, Nakamasa Inoue, Akio Nakamura,
                   Yutaka Satoh, Pre-training without natural images, Proceedings
-                  of the Asian Conference on Computer Vision (ACCV2020),
-                  2020.<br />
-                  <font color="#990000" size="-1">
+                  of the Asian Conference on Computer Vision (ACCV2020), 2020.
+                  <p style="color: #990000; font-size: 15px">
                     Award: ACCV 2020 Best Paper Honorable Mention Award
-                  </font>
+                  </p>
                 </li>
                 <li>
                   Hirokatsu Kataoka, Yutaka Satoh, "Unsupervised out-of-context
@@ -705,10 +723,10 @@
                 <li>
                   相澤宏旭,片岡裕雄,佐藤雄隆,加藤邦人, Viewpoint-agnostic Image
                   Rendering,
-                  第25回画像センシングシンポジウム(SSII2019)講演論文集, 2019.<br />
-                  <font color="#990000" size="-1">
+                  第25回画像センシングシンポジウム(SSII2019)講演論文集, 2019.
+                  <p style="color: #990000; font-size: 15px">
                     Award: 画像センシングシンポジウム優秀学術賞
-                  </font>
+                  </p>
                 </li>
                 <li>
                   Kensho Hara, Hirokatsu Kataoka, Yutaka Satoh，
@@ -727,18 +745,21 @@
                   >
                     GitHub (4K+ stars !)
                   </a>
-                  <br />
-                  <font color="#990000" size="-1">Award: 産総研論文賞2019</font>
+                  <p style="color: #990000; font-size: 15px">
+                    Award: 産総研論文賞2019
+                  </p>
                 </li>
                 <li>
                   Tomoyuki Suzuki, Hirokatsu Kataoka, Yoshimitsu Aoki, Yutaka
-                  Satoh，<a
+                  Satoh,
+                  <a
                     href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0494.pdf"
                     target="_blank"
                     >"Anticipating Traffic Accidents with Adaptive Loss and
                     Large-scale Incident DB"， Proc. Conference on Computer
-                    Vision and Pattern Recognition (CVPR2018)</a
-                  >，pp.3521-3529，2018．
+                    Vision and Pattern Recognition (CVPR2018)
+                  </a>
+                  ，pp.3521-3529，2018．
                 </li>
                 <li>
                   Hirokatsu Kataoka, Teppei Suzuki, Shoko Oikawa, Yasuhiro
@@ -790,16 +811,18 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
-                  Ryusuke Sagawa, Yutaka Satoh，<a
+                  Ryusuke Sagawa, Yutaka Satoh，
+                  <a
                     href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Sagawa_Illuminant-Camera_Communication_to_CVPR_2017_paper.pdf"
                     target="_blank"
                     >"Illuminant-Camera Communication to Observe Moving Objects
                     under Strong External Light by Spread Spectrum
                     Modulation"，Proc. Conference on Computer Vision and Pattern
-                    Recognition (CVPR2017)</a
-                  >，pp. 5097-5105，2017．
+                    Recognition (CVPR2017)
+                  </a>
+                  ，pp. 5097-5105，2017．
                 </li>
                 <li>
                   Hirokatsu Kataoka Ohki Shuhei, Kenji Iwata, Yutaka
@@ -814,31 +837,32 @@
                   639-648，2017．
                 </li>
                 <li>
-                  白壁 奏馬,片岡 裕雄,岩田 健司,佐藤
-                  雄隆，"カメラアレイおよびディープラーニングに基づく半遮蔽環境におけるロバスト人物検出"，精密工学会論文誌，Vol.82,
-                  No.12，pp.1067-1071，2016．
+                  白壁 奏馬,片岡 裕雄,岩田 健司,佐藤 雄隆，
+                  "カメラアレイおよびディープラーニングに基づく半遮蔽環境におけるロバスト人物検出"，
+                  精密工学会論文誌，Vol.82, No.12，pp.1067-1071，2016．
                 </li>
                 <li>
-                  白壁 奏馬,片岡 裕雄,岩田 健司,佐藤
-                  雄隆，"カメラアレイとディープラーニングを用いた半遮蔽環境下における人物検出"，ViEW2015ビジョン技術の実利用ワークショップ講演論文集，CD-ROM，2015．<br /><font
-                    color="#990000"
-                    size="-1"
-                    >Award:
-                    平成27年精密工学会画像応用技術専門委員会若手奨励賞受賞</font
-                  >
+                  白壁 奏馬,片岡 裕雄,岩田 健司,佐藤 雄隆，
+                  "カメラアレイとディープラーニングを用いた半遮蔽環境下における人物検出"，
+                  ViEW2015ビジョン技術の実利用ワークショップ講演論文集，CD-ROM，2015．
+                  <p style="color: #990000; font-size: 15px">
+                    Award:
+                    平成27年精密工学会画像応用技術専門委員会若手奨励賞受賞
+                  </p>
                 </li>
                 <li>
-                  西 卓郎
-                  他，"ビンピッキング用ハンドアイシステムの開発　ーバラ積み物体位置姿勢推定アルゴリズムの評価手法ー"，日本ロボット学会誌，Vol.33,
-                  No.7, pp.538-547，2015．
+                  西 卓郎 他，
+                  "ビンピッキング用ハンドアイシステムの開発　ーバラ積み物体位置姿勢推定アルゴリズムの評価手法ー"，
+                  日本ロボット学会誌，Vol.33, No.7, pp.538-547，2015．
                 </li>
                 <li>
-                  佐藤雄隆，岩田健司，永見武司，竹内啓五，"RGB-Dカメラから得られるDepthデータの歪み補正"，ビジョン技術の実利用ワークショップ
-                  (ViEW2013)講演論文集，CD-ROM，2013．<br /><font
-                    color="#990000"
-                    size="-1"
-                    >Award: 平成25年小田原論文賞受賞</font
-                  >
+                  佐藤雄隆，岩田健司，永見武司，竹内啓五，
+                  "RGB-Dカメラから得られるDepthデータの歪み補正"，
+                  ビジョン技術の実利用ワークショップ
+                  (ViEW2013)講演論文集，CD-ROM，2013．
+                  <p style="color: #990000; font-size: 15px">
+                    Award: 平成25年小田原論文賞受賞
+                  </p>
                 </li>
               </ul>
             </div>
@@ -892,7 +916,7 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   岩田健司，佐藤雄隆，尾崎竜史，坂上勝彦，"統計的リーチ特徴法に基づくロバスト背景差分
                   "，信学論(D)，Vol.J92-D, No.8，pp.1251-1259, 2009．
@@ -969,7 +993,7 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   <a
                     href="http://www.aist.go.jp/aist_j/press_release/pr2007/pr20071016/pr20071016.html"
@@ -978,12 +1002,13 @@
                   >
                 </li>
                 <li>
-                  岩田健司,佐藤雄隆,小林
-                  匠,依田育士,坂上勝彦,大津展之，"CHLACによる映像サーベイランスのためのビジュアルフレームワーク"，第13回画像センシングシンポジウム（SSII07）論文集，LD1-04,
-                  pp.1-7，2007．<br /><font color="#990000" size="-1"
-                    >Award: 第13回画像センシングシンポジウム
-                    オーディエンス賞受賞</font
-                  >
+                  岩田健司,佐藤雄隆,小林 匠,依田育士,坂上勝彦,大津展之，
+                  "CHLACによる映像サーベイランスのためのビジュアルフレームワーク"，
+                  第13回画像センシングシンポジウム（SSII07）論文集，LD1-04,
+                  pp.1-7，2007．
+                  <p style="color: #990000; font-size: 15px">
+                    Award: 第13回画像センシングシンポジウム オーディエンス賞受賞
+                  </p>
                 </li>
                 <li>
                   K.Iwata, Y.Satoh, T.Kobayashi, I.Yoda and N.Otsu，"Application
@@ -1020,43 +1045,49 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   <a
                     href="https://jivp-eurasipjournals.springeropen.com/articles/10.1155/2007/87646"
                     target="_blank"
-                    >Yutaka Satoh and Katsuhiko Sakaue，"An Omni-directional
+                  >
+                    Yutaka Satoh and Katsuhiko Sakaue，"An Omni-directional
                     Stereo Vision-based Smart Wheelchair"，EURASIP Journal on
                     Image and Video Processing，Vol.2007，Article ID 87646, 11
-                    pages，2007．</a
-                  >
+                    pages，2007．
+                  </a>
                 </li>
                 <li>
                   <a
                     href="https://www.aist.go.jp/pdf/aist_j/synthesiology/vol02_02/vol02_02_p113_p126.pdf"
                     target="_blank"
-                    >佐藤雄隆，坂上勝彦，"安全安心な次世代モビリティ－を目指して-全方向ステレオカメラを搭載したインテリジェント電動車いす"，Synthesiology，Vol.2,
-                    No.2，pp.113-126，2009．</a
                   >
+                    佐藤雄隆，坂上勝彦，
+                    "安全安心な次世代モビリティ－を目指して-全方向ステレオカメラを搭載したインテリジェント電動車いす"，
+                    Synthesiology，Vol.2, No.2，pp.113-126，2009．
+                  </a>
                 </li>
                 <li>
                   <a
                     href="http://www.aist.go.jp/aist_j/press_release/pr2006/pr20060920/pr20060920.html"
                     target="_blank"
-                    >2006.9.20 産総研プレスリリース<br />「全方向ステレオカメラを搭載したインテリジェント電動車いす」</a
-                  ><br />
-                  <font color="#990000" size="-1"
-                    >Award: 平成18年上半期 産総研MIP(Most Impressive
-                    Presentation)賞 大賞受賞</font
                   >
+                    2006.9.20 産総研プレスリリース<br />
+                    「全方向ステレオカメラを搭載したインテリジェント電動車いす」
+                  </a>
+                  <br />
+                  <p style="color: #990000; font-size: 15px">
+                    Award: 平成18年上半期 産総研MIP(Most Impressive
+                    Presentation)賞 大賞受賞
+                  </p>
                 </li>
                 <li>
                   <a
                     href="https://www.aist.go.jp/Portals/0/resource_images/aist_j/aistinfo/aist_today/vol07_01/vol07_01_full.pdf"
                     target="_blank"
                     >佐藤雄隆，"進化するインテリジェント電動車いす"，産総研Today
-                    2007年1月号，pp.26-27，2007．</a
-                  >
+                    2007年1月号，pp.26-27，2007．
+                  </a>
                 </li>
                 <li>
                   <a
@@ -1064,14 +1095,16 @@
                     target="_blank"
                     >佐藤雄隆，"障害者や高齢者の支援のための本格研究 -
                     全方向ステレオカメラを搭載した電動車いすの開発"，産総研Today
-                    2008年1月号，pp.24-25，2008．</a
-                  >
+                    2008年1月号，pp.24-25，2008．
+                  </a>
                 </li>
                 <li>
-                  佐藤雄隆，坂上勝彦，"全方向ステレオシステム（SOS）を搭載したインテリジェント電動車いすの開発"，ビジョン技術の実利用ワークショップ(ViEW2006)論文集，pp.231-236，2006．<br />
-                  <font color="#990000" size="-1"
-                    >Award: 平成18年小田原論文賞受賞</font
-                  >
+                  佐藤雄隆，坂上勝彦，
+                  "全方向ステレオシステム（SOS）を搭載したインテリジェント電動車いすの開発"，
+                  ビジョン技術の実利用ワークショップ(ViEW2006)論文集，pp.231-236，2006．
+                  <p style="color: #990000; font-size: 15px">
+                    Award: 平成18年小田原論文賞受賞
+                  </p>
                 </li>
               </ul>
             </div>
@@ -1101,7 +1134,7 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   Y. Satoh and K. Sakaue，"Stereo omni-directional system (SOS)
                   and its applications"，Chapter in Intelligent Environments:
@@ -1112,9 +1145,10 @@
                   佐藤雄隆, 山本和彦, 桑島茂純, 棚橋英樹, 王彩華, 丹羽義典,
                   “移動体ビジョンを指向した小型全方向ステレオシステム(miniSOS)の開発”,
                   画像センシングシンポジウム(SSII03) 講演論文集, pp.311-316
-                  (2003).<br /><font color="#990000" size="-1"
-                    >Award: 第9回画像センシングシンポジウム優秀論文賞受賞</font
-                  >
+                  (2003).
+                  <p style="color: #990000; font-size: 15px">
+                    Award: 第9回画像センシングシンポジウム優秀論文賞受賞
+                  </p>
                 </li>
                 <li>
                   王彩華, 棚橋英樹, 佐藤雄隆, 平湯秀和, 丹羽義典, 山本和彦,
@@ -1156,7 +1190,7 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   佐藤雄隆, 金子俊一, 丹羽義典, 山本 和彦, “Radial Reach Filter
                   (RRF) によるロバストな物体検出”, 信学論(D-II), vol.J86-D-II,
@@ -1209,7 +1243,7 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   S. Kaneko, Y. Satoh, S. Igarashi, “Using Selective Correlation
                   Coefficient for Robust Image Registration”, Pattern
@@ -1249,7 +1283,7 @@
           <div style="flex: 1; min-width: 200px">
             <button class="toggle-button">Show Key Publications ▼</button>
             <div class="themes-content collapsed">
-              <ul style="padding-left: 15px">
+              <ul class="paper-list">
                 <li>
                   佐藤雄隆, 金子俊一, 五十嵐悟,
                   “遺伝的アルゴリズムによる画像セグメンテーションの最適化”,
