@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>佐藤 雄隆 博士（工学）（Yutaka Satoh, Ph.D.）</title>
     <style>
+      /* 色やスタイルの基本変数 */
       :root {
         --bg-color: #ffffff;
         --text-color: #222222;
@@ -14,11 +15,13 @@
         --degree-color: #444444;
         --transition-speed: 0.3s;
       }
+
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
+
       body {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -28,14 +31,15 @@
         background: var(--bg-color);
         min-height: 100vh;
       }
-
+      /* スマホ時は左右の余白をなくす */
       @media (max-width: 768px) {
         body {
           padding-left: 0;
           padding-right: 0;
         }
       }
-      /* Header with Banner and Last Updated */
+
+      /* ヘッダー */
       header {
         position: fixed;
         top: 0;
@@ -50,6 +54,13 @@
         border-bottom: 1px solid #e0e0e0;
         z-index: 1000;
       }
+      @media (max-width: 768px) {
+        header {
+          height: 50px;
+        }
+      }
+
+      /* ヘッダー内要素 */
       .header-inner {
         max-width: 960px;
         margin: 0 auto;
@@ -59,6 +70,7 @@
         justify-content: space-between;
       }
 
+      /* チェックアイコン */
       .icon-check {
         display: inline-block;
         width: 10px;
@@ -73,22 +85,32 @@
       .site-banner {
         display: none;
       }
+
+      /* 最終更新日時 */
       .last-updated {
         font-size: 0.875rem;
         color: var(--secondary-color);
       }
 
-      /* Content (padding for header only) */
+      /* コンテンツ領域 */
       .content {
         max-width: 960px;
         margin: 0 auto;
         padding: 90px 1rem 2rem;
       }
+      @media (max-width: 768px) {
+        .content {
+          padding: 55px 1rem 2rem;
+        }
+      }
+
+      /* セクション間の余白、ナビジャンプ時の縦マージン（ナビゲーションバーにコンテンツの先頭が隠れるのを防止） */
       section {
-        scroll-margin-top: 125px; /* ナビゲーションでジャンプしたときの縦マージン（ナビゲーションバーにコンテンツの先頭が隠れるのを防止） */
+        scroll-margin-top: 125px;
         margin-bottom: 4rem;
       }
 
+      /* セクションタイトル */
       section h2 {
         font-size: 1.75rem;
         margin-bottom: 1rem;
@@ -97,6 +119,7 @@
         padding-bottom: 0.25rem;
       }
 
+      /* カスタムリスト */
       ul.custom-list li {
         margin-bottom: 10px;
       }
@@ -104,19 +127,15 @@
         margin-bottom: 0;
       }
 
+      /* 注目トピックのハイライト背景 */
       .topics-highlight {
-        background-color: rgba(
-          255,
-          220,
-          160,
-          0.2
-        ); /* アクセントに合った柔らかい暖色 */
+        background-color: rgba(255, 220, 160, 0.2);
         padding: 1rem;
         border-radius: 6px;
         overflow: hidden;
       }
 
-      /* 画像クリックで拡大表示するモーダル */
+      /* 画像をクリックで拡大表示（モーダル） */
       .img-zoomable {
         max-width: 100%;
         height: auto;
@@ -141,44 +160,34 @@
         margin: 5% auto;
         box-shadow: 0 0 10px #000;
       }
-      /*-----------------------------------------------------------*/
-      /* Responsive */
+
+      /* 研究室情報 */
+      .lab-info {
+        color: #404040;
+        font-size: 25px;
+        margin-top: 1rem;
+      }
       @media (max-width: 768px) {
-        header {
-          height: 50px;
-        }
-        .content {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 55px 1rem 2rem;
-        }
-        .profile-section {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 2rem;
-          align-items: center;
-          margin-bottom: 4rem;
-        }
-        .profile-info {
-          text-align: left;
-        }
-        .header-inner {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 0.5rem 1rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+        .lab-info {
+          font-size: 19px;
         }
       }
-      /* Maintain fixed image width on mobile for Themes & Key Papers */
+
+      /* 所属情報ブロック */
+      .affiliation-block {
+        border-left: 3px solid var(--accent-color2);
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        color: #404040;
+        font-size: 25px;
+      }
       @media (max-width: 768px) {
-        #themes table td[align="right"] img {
-          width: 200px !important;
-          margin: 0 auto;
+        .affiliation-block {
+          font-size: 19px;
         }
       }
-      /* Footer styling */
+
+      /* フッター */
       .site-footer {
         background: #f8f8f8;
         text-align: center;
@@ -187,23 +196,23 @@
         color: var(--secondary-color);
         margin-top: 2rem;
       }
-      /* Desktop: hide toggle, always show Themes content */
-      @media (min-width: 769px) {
-        #themes-toggle {
-          display: none !important;
-        }
-        .themes-content {
-          display: block !important;
-        }
-      }
-      .themes-content.collapsed {
-        display: none !important;
-      }
+
+      /* メインナビゲーション */
       .main-nav {
         position: sticky;
         background-color: rgba(255, 255, 255, 0.95);
         border-bottom: 1px solid #ddd;
         z-index: 999;
+      }
+      @media (min-width: 769px) {
+        .main-nav {
+          top: 85px;
+        }
+      }
+      @media (max-width: 768px) {
+        .main-nav {
+          top: 50px;
+        }
       }
 
       .main-nav::after {
@@ -227,57 +236,25 @@
         justify-content: flex-start;
         overflow-x: auto;
         white-space: nowrap;
-        scrollbar-width: thin; /* Firefox */
+        scrollbar-width: thin;
         position: relative;
         padding-top: 0.5rem;
-        padding-bottom: 0.5rem; /* prevent scrollbar overlap */
+        padding-bottom: 0.5rem;
       }
+
       .main-nav li {
         margin: 0 1rem;
       }
+
       .main-nav a {
         text-decoration: none;
         color: var(--text-color);
         font-weight: 500;
         transition: color 0.3s ease;
       }
+
       .main-nav a:hover {
         color: var(--accent-color);
-      }
-      @media screen and (min-width: 769px) {
-        .main-nav {
-          top: 85px;
-        }
-      }
-      @media screen and (max-width: 768px) {
-        .main-nav {
-          top: 50px;
-        }
-      }
-      .lab-info {
-        color: #404040;
-        font-size: 25px;
-        margin-top: 1rem;
-      }
-
-      @media (max-width: 768px) {
-        .lab-info {
-          font-size: 19px; /* スマホ用に適度に縮小 */
-        }
-      }
-
-      .affiliation-block {
-        border-left: 3px solid var(--accent-color2);
-        padding-left: 1rem;
-        margin-bottom: 1rem;
-        color: #404040;
-        font-size: 25px;
-      }
-
-      @media (max-width: 768px) {
-        .affiliation-block {
-          font-size: 19px; /* スマホ用に適度に縮小 */
-        }
       }
     </style>
   </head>
@@ -334,7 +311,7 @@
         </div>
         <div style="margin-bottom: 6px">
           <span class="icon-check"></span>
-          筑波大以外の大学からの受験も，もちろんOKです．過去の卒業生の大半は他大学出身です。
+          筑波大以外の大学からの受験も、もちろんOKです．過去の卒業生の大半は他大学出身です。
         </div>
         <div style="margin-bottom: 6px">
           <span class="icon-check"></span>
@@ -346,7 +323,7 @@
         </div>
         <div style="margin-bottom: 6px">
           <span class="icon-check"></span>
-          研究室は産総研・人工知能研究センター・コンピュータビジョン研究チーム内にあり，
+          研究室は産総研・人工知能研究センター・コンピュータビジョン研究チーム内にあり、
           世界第一線で活躍する経験豊富な研究者が、
           メンターとして学生の皆さんの研究活動を支援しています．
         </div>
@@ -368,7 +345,7 @@
         <p style="color: #404040; font-size: 12px">
           <b>※「研究生」受け入れに関しまして: </b>
           「研究生」としての受入を希望されるお問い合わせを特に海外の方々から多数いただいております．
-          しかしながら，当研究室は「連携大学院」であり，
+          しかしながら、当研究室は「連携大学院」であり、
           筑波大学の規定により入試を受けていない
           「研究生」を受け入れることが出来ません（受入可能なのは修士・博士課程の入試に合格された学生さんに限られます）．<br />
           <b>Notice on Research Student (non-degree seeking) Applications: </b>
@@ -415,17 +392,41 @@
         <h2>Overview</h2>
         <br />
 
-        　本研究室では、“視る”力と“理解する”力をコンピュータに与えることを目指し、カメラなどのセンサーを通じて得られた視覚情報を高度に理解・活用する「コンピュータビジョン」の研究に取り組んでいます。これにより、産業、福祉、生活の安全といった多様な分野において、高度な視覚技術による革新的な社会実装を推進することを目指しています。<br /><br />
+        　本研究室では、“視る”力と“理解する”力をコンピュータに与えることを目指し、
+        カメラなどのセンサーを通じて得られた視覚情報を高度に理解・活用する
+        「コンピュータビジョン」の研究に取り組んでいます。
+        これにより、産業、福祉、生活の安全といった多様な分野において、
+        高度な視覚技術による革新的な社会実装を推進することを目指しています。<br /><br />
 
-        近年、深層学習をはじめとした画像AIの進歩により、コンピュータの視覚能力は飛躍的に高まっています。しかしその多くは、インターネット上の画像といったサイバー空間のデータを対象としたものにとどまっており、実世界で自在に使えるAIにはまだ多くの課題が残されています。<br /><br />
+        近年、深層学習をはじめとした画像AIの進歩により、
+        コンピュータの視覚能力は飛躍的に高まっています。
+        しかしその多くは、インターネット上の画像といったサイバー空間のデータを対象としたものにとどまっており、
+        実世界で自在に使えるAIにはまだ多くの課題が残されています。<br /><br />
 
-        本研究室では、人間と同等、あるいはそれを超える“視る”能力を持ち、家庭内をはじめ、工場や物流拠点、建設現場などの複雑な環境にも対応できるロボットや、人間の意図を理解して私たちの生活や産業を支援するAIエージェントの実現を目指しています。<br /><br />
+        本研究室では、人間と同等、あるいはそれを超える“視る”能力を持ち、
+        家庭内をはじめ、工場や物流拠点、建設現場などの複雑な環境にも対応できるロボットや、
+        人間の意図を理解して私たちの生活や産業を支援するAIエージェントの実現を目指しています。<br /><br />
 
-        そのために本研究室では、深層学習をはじめとするパターン認識・生成技術といったソフトウェア的なアプローチの高度化に加え、現実世界をより正確に捉えるためのセンサーそのものの見直しやデザインといった、ハードウェア的なアプローチにも積極的に取り組んでいます。AIの進化をソフトとハードの両面から総合的に探究できる点は、本研究室の大きな強みであり、皆さんの関心や志向に応じて、多様な研究テーマに柔軟に取り組める環境が整っています。<br /><br />
+        そのために本研究室では、
+        深層学習をはじめとするパターン認識・生成技術といったソフトウェア的なアプローチの高度化に加え、
+        現実世界をより正確に捉えるためのセンサーそのものの見直しやデザインといった、
+        ハードウェア的なアプローチにも積極的に取り組んでいます。
+        AIの進化をソフトとハードの両面から総合的に探究できる点は、
+        本研究室の大きな強みであり、皆さんの関心や志向に応じて、
+        多様な研究テーマに柔軟に取り組める環境が整っています。<br /><br />
 
-        研究室は産業技術総合研究所（産総研）内にあり、同所に所属し世界第一線で活躍する経験豊富な研究者が、メンターとして学生の皆さんの研究活動を支援しています。また、最先端の研究設備も充実しており、皆さんが自身のスキルを高め、将来につながる研究成果を生み出していくための理想的な環境が整っています。<br /><br />
+        研究室は産業技術総合研究所（産総研）内にあり、
+        同所に所属し世界第一線で活躍する経験豊富な研究者が、
+        メンターとして学生の皆さんの研究活動を支援しています。
+        また、最先端の研究設備も充実しており、皆さんが自身のスキルを高め、
+        将来につながる研究成果を生み出していくための理想的な環境が整っています。<br /><br />
 
-        筑波大学の学生として在籍しながら、産業技術総合研究所という日本屈指の研究機関の中で最先端の研究に取り組めるという、本研究室ならではの特長があります。もちろん、卒業時には筑波大学の学位を取得できますし、就職活動なども筑波大学と同じ条件で進められます。恵まれた環境の中で、知的好奇心を思いきり広げながら、自らの可能性に挑戦してみませんか。
+        筑波大学の学生として在籍しながら、
+        産業技術総合研究所という日本屈指の研究機関の中で最先端の研究に取り組めるという、
+        本研究室ならではの特長があります。
+        もちろん、卒業時には筑波大学の学位を取得できますし、
+        就職活動なども筑波大学と同じ条件で進められます。
+        恵まれた環境の中で、知的好奇心を思いきり広げながら、自らの可能性に挑戦してみませんか。
       </section>
 
       <!-- ----------------------------------------------------------------- -->
