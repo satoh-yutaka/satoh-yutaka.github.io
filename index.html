@@ -269,7 +269,7 @@
         margin-top: 2rem;
       }
 
-      /* デスクトップではテーマ切り替えを非表示 */
+      /* デスクトップでは論文リストの開閉ボタンを非表示 */
       #themes-toggle {
         display: none !important;
       }
@@ -357,6 +357,29 @@
         overflow: hidden;
         margin-left: -15px;
         font-size: 18px;
+      }
+
+      .custom-list {
+        list-style-type: none; /* デフォルトのポツを消す */
+        padding-left: 0px; /* リスト全体の左スペース */
+      }
+
+      .custom-list li {
+        position: relative; /* 疑似要素を配置するため */
+        padding-left: 20px; /* 画像の分だけテキストを右にずらす */
+        margin-bottom: 6px; /* 項目間のスペース */
+      }
+
+      .custom-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.4em;
+        width: 10px; /* 画像サイズ */
+        height: 10px; /* 画像サイズ */
+        background-image: url("./images/check_mark_s.png");
+        background-size: cover; /* 画像を縮尺なしでぴったり表示 */
+        background-repeat: no-repeat;
       }
     </style>
   </head>
@@ -574,32 +597,21 @@
       <!-- ----------------------------------------------------------------- -->
       <section id="keywords">
         <h2>Areas of Interest</h2>
-        <p>
-          <span class="icon-check"></span>
-          コンピュータビジョン - computer vision systems<br />
-          <span class="icon-check"></span>
-          画像認識・理解 - image recognition and understanding<br />
-          <span class="icon-check"></span>
-          動画像認識 - video recognition<br />
-          <span class="icon-check"></span>
-          パターン認識 - pattern recognition<br />
-          <span class="icon-check"></span>
-          機械学習 - machine learning<br />
-          <span class="icon-check"></span>
-          ディープラーニング - Deep Learning<br />
-          <span class="icon-check"></span>
-          画像特徴抽出 - image feature extraction<br />
-          <span class="icon-check"></span>
-          ロバスト画像処理 - robust image processing<br />
-          <span class="icon-check"></span>
-          三次元画像取得・処理 - 3D imaging<br />
-          <span class="icon-check"></span>
-          全方向ステレオカメラ - stereo omni-directional camera system<br />
-          <span class="icon-check"></span>
-          ロボットビジョン - robot vision systems<br />
-          <span class="icon-check"></span>
-          VR/MR/AR - Virtual Reality systems<br />
-        </p>
+
+        <ul class="custom-list">
+          <li>コンピュータビジョン - computer vision systems</li>
+          <li>画像認識・理解 - image recognition and understanding</li>
+          <li>動画像認識 - video recognition</li>
+          <li>パターン認識 - pattern recognition</li>
+          <li>機械学習 - machine learning</li>
+          <li>ディープラーニング - Deep Learning</li>
+          <li>画像特徴抽出 - image feature extraction</li>
+          <li>ロバスト画像処理 - robust image processing</li>
+          <li>三次元画像取得・処理 - 3D imaging</li>
+          <li>全方向ステレオカメラ - stereo omni-directional camera system</li>
+          <li>ロボットビジョン - robot vision systems</li>
+          <li>VR/MR/AR - Virtual Reality systems</li>
+        </ul>
       </section>
 
       <!-- ----------------------------------------------------------------- -->
@@ -1315,277 +1327,317 @@
       <!-- ----------------------------------------------------------------- -->
       <section id="awards">
         <h2>Awards &amp; Honors</h2>
-        <p>
-          <span class="icon-check"></span>
-          産総研論文賞(2022)<br />
-          <span class="icon-check"></span>
-          ACCV 2020 Best Paper Honorable Mention Award.（2020）<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム優秀学術賞（2019）<br />
-          <span class="icon-check"></span>
-          産総研論文賞(2019)<br />
-          <span class="icon-check"></span>
-          平成25年小田原論文賞 (2013)<br />
-          <span class="icon-check"></span>
-          平成23年度科学技術分野の文部科学大臣表彰 若手科学者賞 (2011)<br />
-          <span class="icon-check"></span>
-          平成19年画像センシングシンポジウムオーディエンス賞 (2007)<br />
-          <span class="icon-check"></span>
-          平成18年上半期産総研MIP賞大賞 (2006)<br />
-          <span class="icon-check"></span>
-          平成18年小田原論文賞 (2006)<br />
-          <span class="icon-check"></span>
-          平成15年画像センシングシンポジウム優秀論文賞 (2003)<br /><br />
+        <ul class="custom-list">
+          <li>産総研論文賞(2022)</li>
+          <li>ACCV 2020 Best Paper Honorable Mention Award.（2020）</li>
+          <li>画像センシングシンポジウム優秀学術賞（2019）</li>
+          <li>産総研論文賞(2019)</li>
+          <li>平成25年小田原論文賞 (2013)</li>
+          <li>平成23年度科学技術分野の文部科学大臣表彰 若手科学者賞 (2011)</li>
+          <li>平成19年画像センシングシンポジウムオーディエンス賞 (2007)</li>
+          <li>平成18年上半期産総研MIP賞大賞 (2006)</li>
+          <li>平成18年小田原論文賞 (2006)</li>
+          <li>平成15年画像センシングシンポジウム優秀論文賞 (2003)</li>
+          <br />
 
           （以下，指導学生による受賞）
 
-          <br />
-          <span class="icon-check"></span>
-          筑波大学システム情報工学研究群(博士後期課程)研究群長表彰(2024年度)<br />
-          <span class="icon-check"></span>
-          DIA2025研究奨励賞(2025)<br />
-          <span class="icon-check"></span>
-          筑波大学システム情報工学研究科(博士後期課程)研究科長表彰(2021年度)<br />
-          <span class="icon-check"></span>
-          精密工学会画像応用技術専門委員会若手奨励賞(2019)<br />
-          <span class="icon-check"></span>
-          平成29年MIRU学生優秀賞受賞 (2017)<br />
-          <span class="icon-check"></span>
-          平成28年精密工学会画像応用技術専門委員会若手奨励賞(2016)<br />
-          <span class="icon-check"></span>
-          平成27年精密工学会画像応用技術専門委員会若手奨励賞(2015)<br />
-        </p>
+          <br /><br />
+          <li>
+            筑波大学システム情報工学研究群(博士後期課程)研究群長表彰(2024年度)
+          </li>
+          <li>DIA2025研究奨励賞(2025)</li>
+          <li>
+            筑波大学システム情報工学研究科(博士後期課程)研究科長表彰(2021年度)
+          </li>
+          <li>精密工学会画像応用技術専門委員会若手奨励賞(2019)</li>
+          <li>平成29年MIRU学生優秀賞受賞 (2017)</li>
+          <li>平成28年精密工学会画像応用技術専門委員会若手奨励賞(2016)</li>
+          <li>平成27年精密工学会画像応用技術専門委員会若手奨励賞(2015)</li>
+        </ul>
       </section>
 
       <!-- ----------------------------------------------------------------- -->
       <section id="society">
         <h2>Professional Activities</h2>
-        <p>
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2025）, 組織委員,
-          ステアリングコミッティ, 2024-2025.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2024), プログラム委員,
-          2024.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2024）, 組織委員,
-          ステアリングコミッティ, 2023-2024.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2023), プログラム委員,
-          2023.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2023）, 組織委員,
-          ステアリングコミッティ, 2022-2023.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2022), プログラム委員,
-          2022.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2022）, 組織委員,
-          ステアリングコミッティ, 2021-2022.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2021), プログラム委員,
-          2021.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2021）, 組織委員,
-          ステアリングコミッティ, 2020-2021.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2020), 実行委員, 2020.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2020）, 組織委員,
-          ステアリングコミッティ, 2019-2020.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2019), 実行委員, 2019.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2019）, 実行委員長, 2018-2019.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2018), 実行委員, 2018.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2018）, 実行委員長, 2017-2018.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2017), 実行委員, 2017.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2017）, 運営委員長, 2016-2017.<br />
-          <span class="icon-check"></span>
-          動的画像処理実利用化ワークショップ (DIA2017), プログラム委員,
-          2016-2017.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2016), 実行委員, 2016.<br />
-          <span class="icon-check"></span>
-          動的画像処理実利用化ワークショップ (DIA2016), プログラム委員,
-          2015-2016.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2016）, プログラム委員長,
-          2015-2016.<br />
-          <span class="icon-check"></span>
-          JEITA 認識形入力方式標準化専門委員会 委員長, 2016-2021<br />
-          <span class="icon-check"></span>
-          動的画像処理実利用化ワークショップ (DIA2015), プログラム副委員長,
-          2014-2015.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2015), 実行委員, 2015.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2015）, 表彰小委員会委員,
-          2014-2015.<br />
-          <span class="icon-check"></span>
-          電子情報通信学会
-          情報・システムソサイエティ学会誌編集連絡委員／会誌編集委員
-          2015-2016.<br />
-          <span class="icon-check"></span>
-          画像応用技術専門委員会　委員 2015-.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2014), 実行委員, 2014.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2014）,
-          オーガナイズドセッション部会長, 2013-2014.<br />
-          <span class="icon-check"></span>
-          The 20th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2014), Program Committee, 2013-2014.<br />
-          <span class="icon-check"></span>
-          2013 International Symposium on Optomechatronic Technologies
-          (ISOT2013), Program Committee, 2012-2013.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2013), 実行委員, 2013.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2013）, 表彰小委員会副委員長,
-          2012-2013.<br />
-          <span class="icon-check"></span>
-          The 19th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2013), Scientific Committee, 2012-2013.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2012), 実行委員, 2012.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2012）, プログラム委員長,
-          2011-2012.<br />
-          <span class="icon-check"></span>
-          The 18th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2012), Scientific Committee, 2011-2012.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2011), 実行委員, 2011.<br />
-          <span class="icon-check"></span>
-          電子情報通信学会英文論文誌MVA特集号, 論文編集委員幹事, 2011.<br />
-          <span class="icon-check"></span>
-          IAPR Conference on Machine Vision Applications (MVA2011), Secretary to
-          Program Chair, 2010-2011.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII2011）, 表彰小委員会副委員長,
-          2010-.<br />
-          <span class="icon-check"></span>
-          The 17th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2011), 組織委員, 2011.<br />
-          <span class="icon-check"></span>
-          JEITA 認識形入力方式標準化専門委員会 委員, 2010-2015<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2010), 実行委員, 2010.<br />
-          <span class="icon-check"></span>
-          The 16th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2010), 組織委員, 2010.<br />
-          <span class="icon-check"></span>
-          電気学会「スマートビジョン協同研究委員会」, 協同研究委員, 2009-.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2009), 実行委員幹事, 2009.<br />
-          <span class="icon-check"></span>
-          The 15th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2009), 組織委員, 2009.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2008), 実行委員幹事, 2008.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII08）, 実行委員, 2008.<br />
-          <span class="icon-check"></span>
-          The 14th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2008), 組織委員, 2008.<br />
-          <span class="icon-check"></span>
-          電気学会「ビジョンのシステム制御技術への適用協同研究委員会」,
-          協同研究委員, 2007-2009.<br />
-          <span class="icon-check"></span>
-          動的画像処理実利用化ワークショップ（DIA2008）, プログラム委員,
-          2007-2008.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2007), 実行委員幹事補佐,
-          2007.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII07）, 実行委員, 2007.<br />
-          <span class="icon-check"></span>
-          電気学会「多次元センシング情報の産業利用に関する調査専門委員会」,
-          調査専門委員, 2007-.<br />
-          <span class="icon-check"></span>
-          The 13th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2007), 組織委員, 2007.<br />
-          <span class="icon-check"></span>
-          動的画像処理実利用化ワークショップ (DIA2007), 実行委員, 2006.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2006), 実行委員, 2006.<br />
-          <span class="icon-check"></span>
-          The 12th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2006), 組織委員, 2006.<br />
-          <span class="icon-check"></span>
-          電気学会「画像監視および画像認識のシステム制御技術への適用調査専門委員会」,
-          調査専門委員, 2005-2007.<br />
-          <span class="icon-check"></span>
-          画像センシングシンポジウム（SSII06）, プログラム委員, 2005.<br />
-          <span class="icon-check"></span>
-          電子情報通信学会英文論文誌MVA特集号, 論文編集委員, 2005.<br />
-          <span class="icon-check"></span>
-          SPIE International Symposium on Optomechatronic Technologies 2005
-          (ISOT2005), 実行委員, 2005.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2005), 実行委員, 2005.<br />
-          <span class="icon-check"></span>
-          The 11th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2005), 組織委員, 2005.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2004), 実行委員, 2004.<br />
-          <span class="icon-check"></span>
-          IAPR Conference on Machine Vision Applications (MVA2005), 実行委員,
-          2004-2005.<br />
-          <span class="icon-check"></span>
-          動的画像処理実利用化ワークショップ (DIA2004), 実行委員, 2004.<br />
-          <span class="icon-check"></span>
-          The 10th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2004), 組織委員, 2004.<br />
-          <span class="icon-check"></span>
-          ビジョン技術の実利用ワークショップ (ViEW2003), 実行委員, 2003.<br />
-          <span class="icon-check"></span>
-          The 9th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2003), 組織委員, 2003.<br />
-          <span class="icon-check"></span>
-          The 8th Korea-Japan Joint Workshop Frontiers of Computer Vision
-          (FCV2002), 組織委員, 2002.<br />
-        </p>
+        <ul class="custom-list">
+          <li>
+            画像センシングシンポジウム（SSII2025）, 組織委員,
+            ステアリングコミッティ, 2024-2025.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2024), プログラム委員, 2024.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2024）, 組織委員,
+            ステアリングコミッティ, 2023-2024.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2023), プログラム委員, 2023.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2023）, 組織委員,
+            ステアリングコミッティ, 2022-2023.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2022), プログラム委員, 2022.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2022）, 組織委員,
+            ステアリングコミッティ, 2021-2022.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2021), プログラム委員, 2021.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2021）, 組織委員,
+            ステアリングコミッティ, 2020-2021.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2020), 実行委員, 2020.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2020）, 組織委員,
+            ステアリングコミッティ, 2019-2020.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2019), 実行委員, 2019.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2019）, 実行委員長, 2018-2019.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2018), 実行委員, 2018.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2018）, 実行委員長, 2017-2018.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2017), 実行委員, 2017.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2017）, 運営委員長, 2016-2017.
+          </li>
+          <li>
+            動的画像処理実利用化ワークショップ (DIA2017), プログラム委員,
+            2016-2017.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2016), 実行委員, 2016.
+          </li>
+          <li>
+            動的画像処理実利用化ワークショップ (DIA2016), プログラム委員,
+            2015-2016.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2016）, プログラム委員長, 2015-2016.
+          </li>
+          <li>JEITA 認識形入力方式標準化専門委員会 委員長, 2016-2021</li>
+          <li>
+            動的画像処理実利用化ワークショップ (DIA2015), プログラム副委員長,
+            2014-2015.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2015), 実行委員, 2015.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2015）, 表彰小委員会委員, 2014-2015.
+          </li>
+          <li>
+            電子情報通信学会
+            情報・システムソサイエティ学会誌編集連絡委員／会誌編集委員
+            2015-2016.
+          </li>
+          <li>画像応用技術専門委員会　委員 2015-.</li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2014), 実行委員, 2014.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2014）,
+            オーガナイズドセッション部会長, 2013-2014.
+          </li>
+          <li>
+            The 20th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2014), Program Committee, 2013-2014.
+          </li>
+          <li>
+            2013 International Symposium on Optomechatronic Technologies
+            (ISOT2013), Program Committee, 2012-2013.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2013), 実行委員, 2013.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2013）, 表彰小委員会副委員長,
+            2012-2013.
+          </li>
+          <li>
+            The 19th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2013), Scientific Committee, 2012-2013.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2012), 実行委員, 2012.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2012）, プログラム委員長, 2011-2012.
+          </li>
+          <li>
+            The 18th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2012), Scientific Committee, 2011-2012.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2011), 実行委員, 2011.
+          </li>
+          <li>電子情報通信学会英文論文誌MVA特集号, 論文編集委員幹事, 2011.</li>
+          <li>
+            IAPR Conference on Machine Vision Applications (MVA2011), Secretary
+            to Program Chair, 2010-2011.
+          </li>
+          <li>
+            画像センシングシンポジウム（SSII2011）, 表彰小委員会副委員長, 2010-.
+          </li>
+          <li>
+            The 17th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2011), 組織委員, 2011.
+          </li>
+          <li>JEITA 認識形入力方式標準化専門委員会 委員, 2010-2015</li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2010), 実行委員, 2010.
+          </li>
+          <li>
+            The 16th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2010), 組織委員, 2010.
+          </li>
+          <li>
+            電気学会「スマートビジョン協同研究委員会」, 協同研究委員, 2009-.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2009), 実行委員幹事, 2009.
+          </li>
+          <li>
+            The 15th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2009), 組織委員, 2009.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2008), 実行委員幹事, 2008.
+          </li>
+          <li>画像センシングシンポジウム（SSII08）, 実行委員, 2008.</li>
+          <li>
+            The 14th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2008), 組織委員, 2008.
+          </li>
+          <li>
+            電気学会「ビジョンのシステム制御技術への適用協同研究委員会」,
+            協同研究委員, 2007-2009.
+          </li>
+          <li>
+            動的画像処理実利用化ワークショップ（DIA2008）, プログラム委員,
+            2007-2008.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2007), 実行委員幹事補佐,
+            2007.
+          </li>
+          <li>画像センシングシンポジウム（SSII07）, 実行委員, 2007.</li>
+          <li>
+            電気学会「多次元センシング情報の産業利用に関する調査専門委員会」,
+            調査専門委員, 2007-.
+          </li>
+          <li>
+            The 13th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2007), 組織委員, 2007.
+          </li>
+          <li>動的画像処理実利用化ワークショップ (DIA2007), 実行委員, 2006.</li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2006), 実行委員, 2006.
+          </li>
+          <li>
+            The 12th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2006), 組織委員, 2006.
+          </li>
+          <li>
+            電気学会「画像監視および画像認識のシステム制御技術への適用調査専門委員会」,
+            調査専門委員, 2005-2007.
+          </li>
+          <li>画像センシングシンポジウム（SSII06）, プログラム委員, 2005.</li>
+          <li>電子情報通信学会英文論文誌MVA特集号, 論文編集委員, 2005.</li>
+          <li>
+            SPIE International Symposium on Optomechatronic Technologies 2005
+            (ISOT2005), 実行委員, 2005.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2005), 実行委員, 2005.
+          </li>
+          <li>
+            The 11th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2005), 組織委員, 2005.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2004), 実行委員, 2004.
+          </li>
+          <li>
+            IAPR Conference on Machine Vision Applications (MVA2005), 実行委員,
+            2004-2005.
+          </li>
+          <li>動的画像処理実利用化ワークショップ (DIA2004), 実行委員, 2004.</li>
+          <li>
+            The 10th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2004), 組織委員, 2004.
+          </li>
+          <li>
+            ビジョン技術の実利用ワークショップ (ViEW2003), 実行委員, 2003.
+          </li>
+          <li>
+            The 9th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2003), 組織委員, 2003.
+          </li>
+          <li>
+            The 8th Korea-Japan Joint Workshop Frontiers of Computer Vision
+            (FCV2002), 組織委員, 2002.
+          </li>
+        </ul>
       </section>
 
       <!-- ----------------------------------------------------------------- -->
       <section id="academic">
         <h2>Academic Appointments</h2>
-        <p>
-          <span class="icon-check"></span>
-          筑波大学大学院 教授（連携大学院）(2008-2017 准教授，2017-教授)<br />
-          Professor (Cooperative Graduate School Program), University of
-          Tsukuba<br />
+        <ul class="custom-list">
+          <li>
+            筑波大学大学院 教授（連携大学院）(2008-2017 准教授，2017-教授)<br />
+            Professor (Cooperative Graduate School Program), University of
+            Tsukuba
+          </li>
 
-          <span class="icon-check"></span>
-          筑波大学非常勤講師 (2008-)「情報学特別講義」<br />
-          Part-time instructor, University of Tsukuba<br />
+          <li>
+            筑波大学非常勤講師 (2008-)「情報学特別講義」<br />
+            Part-time instructor, University of Tsukuba
+          </li>
 
-          <span class="icon-check"></span>
-          東京工業大学 非常勤講師（2015-2021）「ロボット技術」<br />
-          Part-time instructor, Tokyo Institute of Technology<br />
+          <li>
+            東京工業大学 非常勤講師（2015-2021）「ロボット技術」<br />
+            Part-time instructor, Tokyo Institute of Technology
+          </li>
 
-          <span class="icon-check"></span>
-          筑波大学非常勤講師 (2011-2015)「先端情報技術」<br />
-          Part-time instructor, University of Tsukuba<br />
+          <li>
+            筑波大学非常勤講師 (2011-2015)「先端情報技術」<br />
+            Part-time instructor, University of Tsukuba
+          </li>
 
-          <span class="icon-check"></span>
-          電気通信大学 非常勤講師 (2009-2015)「情報システム学特別講義 I」<br />
-          Part-time instructor, University of Electro-Communications<br />
+          <li>
+            電気通信大学 非常勤講師 (2009-2015)「情報システム学特別講義 I」<br />
+            Part-time instructor, University of Electro-Communications
+          </li>
 
-          <span class="icon-check"></span>
-          東京大学 非常勤講師（2007）「学際理数情報学特論」<br />
-          Part-time instructor, University of Tokyo<br />
+          <li>
+            東京大学 非常勤講師（2007）「学際理数情報学特論」<br />
+            Part-time instructor, University of Tokyo
+          </li>
 
-          <span class="icon-check"></span>
-          北海道工業大学 非常勤講師（1998-2000）「静力学・動力学の応用」<br />
-          Part-time instructor, Hokkaido Institute of Technology<br />
-        </p>
+          <li>
+            北海道工業大学 非常勤講師（1998-2000）「静力学・動力学の応用」<br />
+            Part-time instructor, Hokkaido Institute of Technology
+          </li>
+        </ul>
       </section>
 
       <!-- ----------------------------------------------------------------- -->
